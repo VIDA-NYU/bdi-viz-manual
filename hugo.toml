@@ -29,7 +29,7 @@ enableEmoji = true
     ["Helvetica", "300, 400, 600, 700"],
   ]
 
-  sans_serif_font = "Roboto"     # Default is System font
+  sans_serif_font = "Helvetica"     # Default is System font
   secondary_font  = "Helvetica"     # Default is System font
 
     [params.footer]
