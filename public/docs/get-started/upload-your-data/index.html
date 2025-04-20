@@ -117,6 +117,16 @@
                                             <li class=" no-icon"><a class="sidebar-nested-link" href="http://localhost:1313/bdi-viz-manual/docs/get-started/explore-matches/">Explore Matches</a></li>
                                         
                                     
+                                        
+                                        
+                                            <li class=" no-icon"><a class="sidebar-nested-link" href="http://localhost:1313/bdi-viz-manual/docs/get-started/user-operation/">Perform User Operations</a></li>
+                                        
+                                    
+                                        
+                                        
+                                            <li class=" no-icon"><a class="sidebar-nested-link" href="http://localhost:1313/bdi-viz-manual/docs/get-started/export-your-mappings/">Export Your Mappings</a></li>
+                                        
+                                    
                                 </ul>
                             </div>
                         </li>
@@ -254,7 +264,10 @@
     <nav id="TableOfContents">
   <ul>
     <li><a href="#start-a-new-matching-task">Start a New Matching Task</a></li>
-    <li><a href="#upload-source-csv-file">Upload Source CSV File</a></li>
+    <li><a href="#upload-source-csv-file-required">Upload Source CSV File (Required)</a></li>
+    <li><a href="#upload-target-csv-file">Upload Target CSV File</a></li>
+    <li><a href="#upload-target-schema-json-file">Upload Target Schema JSON File</a></li>
+    <li><a href="#launch-matching-task">Launch Matching Task</a></li>
   </ul>
 </nav>
     </toc></div>
@@ -267,7 +280,10 @@
 <nav id="toc-mobile">
   <ul class="dropdown-menu">
     <li><a href="#start-a-new-matching-task">Start a New Matching Task</a></li>
-    <li><a href="#upload-source-csv-file">Upload Source CSV File</a></li>
+    <li><a href="#upload-source-csv-file-required">Upload Source CSV File (Required)</a></li>
+    <li><a href="#upload-target-csv-file">Upload Target CSV File</a></li>
+    <li><a href="#upload-target-schema-json-file">Upload Target Schema JSON File</a></li>
+    <li><a href="#launch-matching-task">Launch Matching Task</a></li>
   </ul>
 </nav></div>
                                         <div class="docs-content col-12 col-xl-9 mt-0">
@@ -315,7 +331,69 @@
 </li>
 </ul>
 <p>To begin exploring schema matches, you’ll first need to upload these three types of files. These provide the information needed to visualize and compare your source dataset with a standardized target schema.</p>
-<h2 id="upload-source-csv-file">Upload Source CSV File <a href="#upload-source-csv-file" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>Select a local .csv file that contains your raw or unaligned biomedical dataset.</p>
+<h2 id="upload-source-csv-file-required">Upload Source CSV File (Required) <a href="#upload-source-csv-file-required" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>Select a local .csv file that contains your raw or unaligned biomedical dataset.</p>
+<p>Example:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Case_ID</th>
+          <th>Gender</th>
+          <th>Ethnicity_Self_Identify</th>
+          <th>Path_Stage_Reg_Lymph_Nodes_pN</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>C1234</td>
+          <td>Male</td>
+          <td>Asian</td>
+          <td>pN1</td>
+      </tr>
+      <tr>
+          <td>C5678</td>
+          <td>Female</td>
+          <td>White</td>
+          <td>pN2</td>
+      </tr>
+      <tr>
+          <td>C1111</td>
+          <td>Unknown</td>
+          <td>Unknown</td>
+          <td>pNX</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="upload-target-csv-file">Upload Target CSV File <a href="#upload-target-csv-file" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><blockquote>
+<p>If this is empty, we use GDC v3.3.0 by defualt.</p></blockquote>
+<p>Select a .csv file that represents the standardized biomedical data format (e.g., GDC or PDC).</p>
+<p>Example:</p>
+<table>
+  <thead>
+      <tr>
+          <th>submitter_id</th>
+          <th>gender</th>
+          <th>race</th>
+          <th>ajcc_pathologic_n</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>T001</td>
+          <td>Male</td>
+          <td>Asian</td>
+          <td>N1</td>
+      </tr>
+      <tr>
+          <td>T002</td>
+          <td>Female</td>
+          <td>White</td>
+          <td>N2</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="upload-target-schema-json-file">Upload Target Schema JSON File <a href="#upload-target-schema-json-file" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><blockquote>
+<p>If this is empty, we use GDC v3.3.0 by defualt.</p></blockquote>
+<p>Choose the corresponding .json file that describes the structure and metadata of the target schema.</p>
 <p>Example:</p>
 
 
@@ -332,13 +410,37 @@
   
 
   <div class="prism-codeblock ">
-  <pre id="dcbeada" class="language-csv ">
-  <code>Case_ID, Gender, Ethnicity_Self_Identify, Path_Stage_Reg_Lymph_Nodes_pN
-C1234, Male, Asian, pN1
-C5678, Female, White, pN2
-C1111, Unknown, Unknown, pNX</code>
+  <pre id="f7f43f9" class="language-json ">
+  <code>{
+    &#34;age_at_index&#34;: {
+        &#34;column_name&#34;: &#34;age_at_index&#34;,
+        &#34;category&#34;: &#34;clinical&#34;,
+        &#34;node&#34;: &#34;demographic&#34;,
+        &#34;type&#34;: &#34;integer&#34;,
+        &#34;description&#34;: &#34;The patient&#39;s age (in years) on the reference or anchor date used during date obfuscation.&#34;,
+        &#34;minimum&#34;: 0
+    },
+    &#34;education_level&#34;: {
+        &#34;column_name&#34;: &#34;education_level&#34;,
+        &#34;category&#34;: &#34;clinical&#34;,
+        &#34;node&#34;: &#34;demographic&#34;,
+        &#34;type&#34;: &#34;enum&#34;,
+        &#34;description&#34;: &#34;The years of schooling completed in graded public, private, or parochial schools, and in colleges, universities, or professional schools.&#34;,
+        &#34;enum&#34;: [
+            &#34;College Degree&#34;,
+            &#34;High School Graduate or GED&#34;,
+            &#34;Professional or Graduate Degree&#34;,
+            &#34;Some High School or Less&#34;,
+            &#34;Vocational College or Some College&#34;,
+            &#34;Unknown&#34;,
+            &#34;Not Reported&#34;
+        ]
+    },
+}</code>
   </pre>
   </div>
+<h2 id="launch-matching-task">Launch Matching Task <a href="#launch-matching-task" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>After uploading your files, click the <strong>&ldquo;Import CSV&rdquo;</strong> button to initiate the matching process. The system will begin processing your data, which may take a few minutes to complete.</p>
+<p>During this time, our matching algorithm analyzes your input files and generates recommendations for schema alignment. A loading indicator will display the progress as the system works to identify potential matches between your source data and the target schema.</p>
 
     </div>
 
@@ -552,6 +654,20 @@ C1111, Unknown, Unknown, pNX</code>
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 
     
@@ -564,7 +680,7 @@ C1111, Unknown, Unknown, pNX</code>
                 href: "\/bdi-viz-manual\/docs\/get-started\/upload-your-data\/",
                 title: "Upload Your Data",
                 description: "Start a new schema matching task by upload your data files.",
-                content: "Start a New Matching Task linkClick the rightmost button labeled “New Matching Task” to begin. This will open the file upload interface (see screenshot below).\nYou will see three drop boxes stacked from top to bottom:\nSource CSV File – for your raw dataset\nTarget CSV File – for the reference standard dataset\nTarget Schema JSON File – for metadata and attribute definitions\nTo begin exploring schema matches, you’ll first need to upload these three types of files. These provide the information needed to visualize and compare your source dataset with a standardized target schema.\nUpload Source CSV File linkSelect a local .csv file that contains your raw or unaligned biomedical dataset.\nExample:\nCase_ID, Gender, Ethnicity_Self_Identify, Path_Stage_Reg_Lymph_Nodes_pN C1234, Male, Asian, pN1 C5678, Female, White, pN2 C1111, Unknown, Unknown, pNX "
+                content: "Start a New Matching Task linkClick the rightmost button labeled “New Matching Task” to begin. This will open the file upload interface (see screenshot below).\nYou will see three drop boxes stacked from top to bottom:\nSource CSV File – for your raw dataset\nTarget CSV File – for the reference standard dataset\nTarget Schema JSON File – for metadata and attribute definitions\nTo begin exploring schema matches, you’ll first need to upload these three types of files. These provide the information needed to visualize and compare your source dataset with a standardized target schema.\nUpload Source CSV File (Required) linkSelect a local .csv file that contains your raw or unaligned biomedical dataset.\nExample:\nCase_ID Gender Ethnicity_Self_Identify Path_Stage_Reg_Lymph_Nodes_pN C1234 Male Asian pN1 C5678 Female White pN2 C1111 Unknown Unknown pNX Upload Target CSV File link If this is empty, we use GDC v3.3.0 by defualt.\nSelect a .csv file that represents the standardized biomedical data format (e.g., GDC or PDC).\nExample:\nsubmitter_id gender race ajcc_pathologic_n T001 Male Asian N1 T002 Female White N2 Upload Target Schema JSON File link If this is empty, we use GDC v3.3.0 by defualt.\nChoose the corresponding .json file that describes the structure and metadata of the target schema.\nExample:\n{ \"age_at_index\": { \"column_name\": \"age_at_index\", \"category\": \"clinical\", \"node\": \"demographic\", \"type\": \"integer\", \"description\": \"The patient's age (in years) on the reference or anchor date used during date obfuscation.\", \"minimum\": 0 }, \"education_level\": { \"column_name\": \"education_level\", \"category\": \"clinical\", \"node\": \"demographic\", \"type\": \"enum\", \"description\": \"The years of schooling completed in graded public, private, or parochial schools, and in colleges, universities, or professional schools.\", \"enum\": [ \"College Degree\", \"High School Graduate or GED\", \"Professional or Graduate Degree\", \"Some High School or Less\", \"Vocational College or Some College\", \"Unknown\", \"Not Reported\" ] }, } Launch Matching Task linkAfter uploading your files, click the “Import CSV” button to initiate the matching process. The system will begin processing your data, which may take a few minutes to complete.\nDuring this time, our matching algorithm analyzes your input files and generates recommendations for schema alignment. A loading indicator will display the progress as the system works to identify potential matches between your source data and the target schema.\n"
             }
         );
     index.add(
@@ -573,7 +689,7 @@ C1111, Unknown, Unknown, pNX</code>
                 href: "\/bdi-viz-manual\/docs\/get-started\/explore-matches\/",
                 title: "Explore Matches",
                 description: "Once the files finished loading, you will be presented with the main BDIViz interface.",
-                content: ""
+                content: " Once your files are uploaded, BDIViz will load the full interface for exploring match candidates between your source and target datasets.\nInteractive Heatmap linkThis is the central visual of BDIViz. Each cell in the heatmap represents a match candidate between a source attribute (on the y-axis) and a target attribute (on the x-axis).\nHeatmap Components link Heatmap Nodes X-Axis Expandable Node Top Tabs (above heatmap) Each cell in the heatmap represents a match candidate between a source attribute (on the y-axis) and a target attribute (on the x-axis).\nColor intensity represents match strength: darker = higher match score. Green indicates accepted matches; red indicates rejected ones. Click on a node to inspect further details. The x-axis of the heatmap represents the target schema’s attribute space in a structured, hierarchical layout—specifically designed to support the complexity of biomedical data models like the Genomic Data Commons (GDC).\nThis hierarchy includes:\nCategories (e.g., “clinical,” “biospecimen”) Nodes (e.g., “diagnosis,” “treatment”) Target Attributes as leaf nodes Color coding helps differentiate between categories, while curved connectors visually represent hierarchical relationships. Users can hover over any part of the hierarchy to highlight supercategories, specific categories, or individual columns, aiding navigation and contextual understanding.\nOnce you click on a heatmap node, the node expand and shows a stacked heatmap.\nThe upper histogram shows the distribution of values from the source column.\nThe lower histogram shows the distribution from the target column.\nThese visuals help assess whether the values in the two columns are statistically or categorically aligned. For example, if both columns share similar categories with comparable frequency distributions, it suggests a strong match.\nInterpretation Tip: Matching distributions with similar peaks (e.g., a high frequency of “Male” and “Female” values) may indicate semantic alignment. Dissimilar distributions can signal a mismatch or a need for closer inspection.\nAll: Displays all potential matches.\nAccepted: Shows only those that have been manually confirmed.\nUnmatched: Lists only those source attributes with no confirmed match.\nExpand On Hover: This toggle controls if the expandable node will be expanded on mouse hover or not(on click).\nFilters and Search Tools linkBDIViz provides several ways to customize and narrow your view:\nSource Attribute Similarity Threshold Similar Attributes Search Bar Lets you choose which column to focus on.\nOnce click you will able to see this dropdown menu showing all the source attributes:\nAll: Shows all source attributes in a paginatable manner. Attributes in green: The attributes that already have at least one accpeted candidate. Attributes in grey: The attributes that is discarded by user. Adjusts the minimum score a candidate must meet to appear. Values range from 0 (show all) to 1 (only highest similarity).\nDetermines how many similar source columns appear in the y-axis for better comparative context.\nNote: This only apply when Source Attribute is not set to All.\nLets you highlight specific target attributes by name or keyword.\nLower Panel Visuals linkWhen a node is selected from the heatmap, the bottom panels expand to provide deeper insights:\nValue Comparisons UpSet Plot Visual representation of fuzzy-matched value pairs between the selected source and target columns.\nEach row shows a unique source value and its closest string-matched counterpart(s) from the target.\nHelps validate or question whether two attributes should be considered a match.\nthe UpSet Plot provides a detailed breakdown of how each individual matcher contributed to the overall score of the selected candidate.\nEach matcher is represented as a row, and each column represents a candidate match. A dot is shown where a matcher supports a given match.\nLLM Agent Panel link Overview Diagnosis: Summarizes whether the current match is likely valid or not, based on metadata, column names, and prior interactions.\nExplanation Cards:\nEach card explains one rationale (e.g., shared terms, similar distributions, matching patterns).\nClick to expand each explanation.\nFeedback Buttons: Let you provide a thumbs-up or thumbs-down to help improve the model’s future reasoning.\nTarget Schema Descriptions: Additional metadata from sources like GDC are displayed for further context.\n"
             }
         );
     index.add(
@@ -588,6 +704,24 @@ C1111, Unknown, Unknown, pNX</code>
     index.add(
             {
                 id:  3 ,
+                href: "\/bdi-viz-manual\/docs\/get-started\/user-operation\/",
+                title: "Perform User Operations",
+                description: "Interactively manipulate on each match candidate.",
+                content: " The Shortcut Panel provides quick-access buttons for managing match candidates. Located at the top-left corner of the BDIViz interface, it offers essential operations to streamline your workflow.\nAvailable Actions link Button Symbol Function Visual Effect Accept ✓ Confirms the selected source-to-target candidate as a valid match Cell turns green Reject ✕ Marks the selected match as invalid Cell turns red Discard 🗑️ Removes source attribute from consideration when no suitable match exists Attribute appears grayed out Undo ⟲ Reverts your most recent operation Restores previous state Redo ⟳ Reapplies the most recently undone action Reapplies change Note: All actions are logged in the Timeline Panel on the right, creating a complete audit trail of your decision-making process.\nWorkflow Tips link Use these shortcuts to rapidly process multiple candidates The Timeline Panel allows you to track and review all your decisions Undo/Redo functionality ensures you can correct mistakes without losing progress Visual color coding (green/red/gray) helps you quickly identify the status of each match "
+            }
+        );
+    index.add(
+            {
+                id:  4 ,
+                href: "\/bdi-viz-manual\/docs\/get-started\/export-your-mappings\/",
+                title: "Export Your Mappings",
+                description: "Export your matching result.",
+                content: " Exporting Your Results linkAfter completing your schema matching process, you can export your validated mappings for downstream use.\nExport Process link Locate the Export button in the Shortcut Panel at the top-left corner of the interface Click the button to initiate the export process A dialog will appear with format options Available Export Formats link CSV Format JSON Format The CSV export provides a transformed dataset with your source data mapped to the target schema.\nFeatures:\nSource columns are renamed to their matched target attributes Only accepted matches are included Ready for immediate use in analytics or data submission Example CSV Output:\nsubmitter_id gender race ajcc_pathologic_n C1234 Male Asian pN1 C5678 Female White pN2 C1111 Unknown Unknown pNX This format is ideal for:\nData integration workflows Direct uploads to target systems Documentation of transformations The JSON export provides a structured representation of your mapping decisions with additional metadata.\nFeatures:\nComplete mapping information including scores and timestamps Includes metadata about the matching process Suitable for programmatic processing Example JSON Output:\n[ { \"sourceColumn\": \"Tumor_Focality\", \"targetColumn\": \"tumor_focality\", \"valueMatches\": [ { \"from\": \"Multifocal\", \"to\": \"Multifocal\" }, { \"from\": \"Unifocal\", \"to\": \"Unifocal\" } ] }, { \"sourceColumn\": \"Ethnicity\", \"targetColumn\": \"ethnicity\", \"valueMatches\": [ { \"from\": \"Hispanic or Latino\", \"to\": \"hispanic or latino\" }, { \"from\": \"Not reported\", \"to\": \"not reported\" }, { \"from\": \"Not-Hispanic or Latino\", \"to\": \"not hispanic or latino\" } ] }, ] "
+            }
+        );
+    index.add(
+            {
+                id:  5 ,
                 href: "\/bdi-viz-manual\/docs\/",
                 title: "BDIViz Documentations",
                 description: "Explore our guides and examples to deploy and improve your data integration workflow with BDIViz.",
@@ -596,7 +730,7 @@ C1111, Unknown, Unknown, pNX</code>
         );
     index.add(
             {
-                id:  4 ,
+                id:  6 ,
                 href: "\/bdi-viz-manual\/docs\/get-started\/",
                 title: "Get Started",
                 description: "Start your first BDIViz workflow.",

@@ -14,10 +14,10 @@
 
 <html lang="en-us"><head><script src="/bdi-viz-manual/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=bdi-viz-manual/livereload" data-no-instant defer></script>
     <meta charset="utf-8" />
-    <title>Overview | BDIViz User Manual</title>
+    <title>Perform User Operations | BDIViz User Manual</title>
     <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="BDIViz: An Interactive Visualization System for Biomedical Schema Matching with LLM-Supported Validation">
+    <meta name="description" content="Interactively manipulate on each match candidate.">
     <meta name="keywords" content="Documentation, Hugo, Hugo Theme, Bootstrap" />
     <meta name="author" content="Colin Wilson - Lotus Labs" />
     <meta name="email" content="support@aigis.uk" />
@@ -30,15 +30,15 @@
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/bdi-viz-manual/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/bdi-viz-manual/favicon-16x16.png">
 <link rel="manifest" crossorigin="use-credentials" href="http://localhost:1313/bdi-viz-manual/site.webmanifest">
-<meta property="og:title" content="Overview" />
-<meta property="og:description" content="BDIViz: An Interactive Visualization System for Biomedical Schema Matching with LLM-Supported Validation" />
+<meta property="og:title" content="Perform User Operations" />
+<meta property="og:description" content="Interactively manipulate on each match candidate." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/bdi-viz-manual/docs/overview/" /><meta property="og:image" content="http://localhost:1313/bdi-viz-manual/opengraph/card-base-2_hu_c0929b2d1a8d54a8.png"/><meta property="article:section" content="docs" />
+<meta property="og:url" content="http://localhost:1313/bdi-viz-manual/docs/get-started/user-operation/" /><meta property="og:image" content="http://localhost:1313/bdi-viz-manual/opengraph/card-base-2_hu_93f464d239bd848c.png"/><meta property="article:section" content="docs" />
 <meta property="article:published_time" content="2025-04-19T13:38:17-04:00" />
 <meta property="article:modified_time" content="2025-04-19T13:38:17-04:00" /><meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="http://localhost:1313/bdi-viz-manual/opengraph/card-base-2_hu_c0929b2d1a8d54a8.png"/>
-<meta name="twitter:title" content="Overview"/>
-<meta name="twitter:description" content="BDIViz: An Interactive Visualization System for Biomedical Schema Matching with LLM-Supported Validation"/>
+<meta name="twitter:image" content="http://localhost:1313/bdi-viz-manual/opengraph/card-base-2_hu_93f464d239bd848c.png"/>
+<meta name="twitter:title" content="Perform User Operations"/>
+<meta name="twitter:description" content="Interactively manipulate on each match candidate."/>
 
     
         <link rel="alternate" type="application/atom+xml" title="Atom feed for BDIViz User Manual" href="/index.xml" />
@@ -90,7 +90,7 @@
                 
                     
                         
-                        <li class="current">
+                        <li class="">
                             <a class="sidebar-root-link" href="http://localhost:1313/bdi-viz-manual/docs/overview/">
                                 
                                 Overview
@@ -100,11 +100,11 @@
                 
                     
                     
-                        <li class="sidebar-dropdown no-icon ">
+                        <li class="sidebar-dropdown no-icon current active">
                             <button class="btn">
                                 Get Started
                             </button>
-                            <div class="sidebar-submenu ">
+                            <div class="sidebar-submenu d-block">
                                 <ul>
                                     
                                         
@@ -119,7 +119,7 @@
                                     
                                         
                                         
-                                            <li class=" no-icon"><a class="sidebar-nested-link" href="http://localhost:1313/bdi-viz-manual/docs/get-started/user-operation/">Perform User Operations</a></li>
+                                            <li class="current no-icon"><a class="sidebar-nested-link" href="http://localhost:1313/bdi-viz-manual/docs/get-started/user-operation/">Perform User Operations</a></li>
                                         
                                     
                                         
@@ -240,10 +240,18 @@
                     <meta itemprop="position" content='1' />
                 </li>
             
+            
+                <li class="breadcrumb-item text-capitalize" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a itemprop="item" href="/bdi-viz-manual/docs/get-started/">
+                        <span itemprop="name">Get Started</span>
+                    </a>
+                    <meta itemprop="position" content='2' />
+                </li>
+            
         
             <li class="breadcrumb-item text-capitalize active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <span itemprop="name">Overview</span>
-                <meta itemprop="position" content='2' />
+                <span itemprop="name">Perform User Operations</span>
+                <meta itemprop="position" content='3' />
             </li>
         
     </ul>
@@ -255,10 +263,8 @@
     <div class="fw-bold text-uppercase mb-2">On this page</div>
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#gear-getting-started">&#x2699;&#xfe0f; Getting Started</a></li>
-    <li><a href="#gear-introduction">&#x2699;&#xfe0f; Introduction</a></li>
-    <li><a href="#gear-features">&#x2699;&#xfe0f; Features</a></li>
-    <li><a href="#camera-demo">&#x1f4f7; Demo</a></li>
+    <li><a href="#available-actions">Available Actions</a></li>
+    <li><a href="#workflow-tips">Workflow Tips</a></li>
   </ul>
 </nav>
     </toc></div>
@@ -270,118 +276,93 @@
                                             </button>
 <nav id="toc-mobile">
   <ul class="dropdown-menu">
-    <li><a href="#gear-getting-started">&#x2699;&#xfe0f; Getting Started</a></li>
-    <li><a href="#gear-introduction">&#x2699;&#xfe0f; Introduction</a></li>
-    <li><a href="#gear-features">&#x2699;&#xfe0f; Features</a></li>
-    <li><a href="#camera-demo">&#x1f4f7; Demo</a></li>
+    <li><a href="#available-actions">Available Actions</a></li>
+    <li><a href="#workflow-tips">Workflow Tips</a></li>
   </ul>
 </nav></div>
                                         <div class="docs-content col-12 col-xl-9 mt-0">
                                             <div class="mb-0 d-flex">
                                                 
                                                 <h1 class="content-title mb-0">
-                                                    Overview
+                                                    Perform User Operations
                                                     
                                                 </h1>
                                             </div>
                                             
-                                                <p class="lead mb-3">BDIViz: An Interactive Visualization System for Biomedical Schema Matching with LLM-Supported Validation</p>
+                                                <p class="lead mb-3">Interactively manipulate on each match candidate.</p>
                                             
                                             <div id="content" class="main-content" data-bs-spy="scroll" data-bs-root-margin="0px 0px -65%" data-bs-target="#toc-mobile">
                                                 
     
     <div data-prismjs-copy="" data-prismjs-copy-success="" data-prismjs-copy-error="">
-        <h2 id="gear-getting-started">&#x2699;&#xfe0f; Getting Started <a href="#gear-getting-started" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>First, install the required dependencies:</p>
+        <p>
 
 
-
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-
-  <div class="prism-codeblock ">
-  <pre id="93826af" class="language-bash ">
-  <code>npm i .</code>
-  </pre>
-  </div>
-<p>Then, run the development server:</p>
 
 
 
   
-  
-  
+
+
 
   
+    
+      <img src="/bdi-viz-manual/images/shortcut-panel.gif" alt="shortcut-panel-gif" width="1202" height="620" loading="lazy">
+    
   
-  
-  
-
-  
-
-  <div class="prism-codeblock ">
-  <pre id="a41f5dc" class="language-bash ">
-  <code>npm run dev</code>
-  </pre>
-  </div>
-<h2 id="gear-introduction">&#x2699;&#xfe0f; Introduction <a href="#gear-introduction" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p><strong>BDIViz</strong> is an interactive web-based application developed as part of the ARPA-H ASKEM project to support schema matching and value mapping tasks in biomedical data integration. It provides users with a rich visual interface—including heatmaps, explanations, and value comparisons—to streamline the process of aligning raw biomedical datasets with standardized data schemas such as the Genomic Data Commons (GDC) and Proteomic Data Commons (PDC).</p>
-<p><strong>BDIViz</strong> is model agnostic, meaning it can be used with any schema matching model. It is designed to work with the <a href="https://github.com/VIDA-NYU/bdi-kit" rel="external" target="_blank">BDI-Kit<svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M14 5c-.552 0-1-.448-1-1s.448-1 1-1h6c.552 0 1 .448 1 1v6c0 .552-.448 1-1 1s-1-.448-1-1v-3.586l-7.293 7.293c-.391.39-1.024.39-1.414 0-.391-.391-.391-1.024 0-1.414l7.293-7.293h-3.586zm-9 2c-.552 0-1 .448-1 1v11c0 .552.448 1 1 1h11c.552 0 1-.448 1-1v-4.563c0-.552.448-1 1-1s1 .448 1 1v4.563c0 1.657-1.343 3-3 3h-11c-1.657 0-3-1.343-3-3v-11c0-1.657 1.343-3 3-3h4.563c.552 0 1 .448 1 1s-.448 1-1 1h-4.563z"/></svg></a> module, which is a Python library that provides a set of tools for schema matching and value mapping tasks. The BDI-Kit module includes a variety of schema matching algorithms, including supervised and unsupervised methods, as well as tools for data preprocessing and feature extraction.</p>
-<h2 id="gear-features">&#x2699;&#xfe0f; Features <a href="#gear-features" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><ul>
-<li>🔍 <strong>Interactive Heatmap</strong> for exploring source-target column match candidates</li>
-<li>📊 <strong>Value Comparison Table</strong> using fuzzy matching on raw values</li>
-<li>🤖 <strong>LLM-Powered Agent Panel</strong> for dynamic match explanations and feedback</li>
-<li>⏪ <strong>Timeline View</strong> to trace user actions (accept, reject, discard)</li>
-<li>🎯 <strong>Control Panel</strong> for adjusting similarity threshold and navigating source columns</li>
-<li>📤 <strong>Export Curated Mappings</strong> as JSON or CSV for downstream use</li>
+</p>
+<p>The Shortcut Panel provides quick-access buttons for managing match candidates. Located at the top-left corner of the BDIViz interface, it offers essential operations to streamline your workflow.</p>
+<h2 id="available-actions">Available Actions <a href="#available-actions" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><table>
+  <thead>
+      <tr>
+          <th>Button</th>
+          <th>Symbol</th>
+          <th>Function</th>
+          <th>Visual Effect</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Accept</strong></td>
+          <td>✓</td>
+          <td>Confirms the selected source-to-target candidate as a valid match</td>
+          <td>Cell turns <strong>green</strong></td>
+      </tr>
+      <tr>
+          <td><strong>Reject</strong></td>
+          <td>✕</td>
+          <td>Marks the selected match as invalid</td>
+          <td>Cell turns <strong>red</strong></td>
+      </tr>
+      <tr>
+          <td><strong>Discard</strong></td>
+          <td>🗑️</td>
+          <td>Removes source attribute from consideration when no suitable match exists</td>
+          <td>Attribute appears <strong>grayed out</strong></td>
+      </tr>
+      <tr>
+          <td><strong>Undo</strong></td>
+          <td>⟲</td>
+          <td>Reverts your most recent operation</td>
+          <td>Restores previous state</td>
+      </tr>
+      <tr>
+          <td><strong>Redo</strong></td>
+          <td>⟳</td>
+          <td>Reapplies the most recently undone action</td>
+          <td>Reapplies change</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote>
+<p><strong>Note:</strong> All actions are logged in the Timeline Panel on the right, creating a complete audit trail of your decision-making process.</p></blockquote>
+<h2 id="workflow-tips">Workflow Tips <a href="#workflow-tips" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><ul>
+<li>Use these shortcuts to rapidly process multiple candidates</li>
+<li>The Timeline Panel allows you to track and review all your decisions</li>
+<li>Undo/Redo functionality ensures you can correct mistakes without losing progress</li>
+<li>Visual color coding (green/red/gray) helps you quickly identify the status of each match</li>
 </ul>
-<h2 id="camera-demo">&#x1f4f7; Demo <a href="#camera-demo" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>Video demo:
-<a href="https://drive.google.com/file/d/1RY3XjRmLIkBNjcZWkUZhG3vA-ZvPc6Ug/view?usp=drive_link" rel="external" target="_blank">
 
-
-
-
-
-  
-
-
-
-  
-<svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M14 5c-.552 0-1-.448-1-1s.448-1 1-1h6c.552 0 1 .448 1 1v6c0 .552-.448 1-1 1s-1-.448-1-1v-3.586l-7.293 7.293c-.391.39-1.024.39-1.414 0-.391-.391-.391-1.024 0-1.414l7.293-7.293h-3.586zm-9 2c-.552 0-1 .448-1 1v11c0 .552.448 1 1 1h11c.552 0 1-.448 1-1v-4.563c0-.552.448-1 1-1s1 .448 1 1v4.563c0 1.657-1.343 3-3 3h-11c-1.657 0-3-1.343-3-3v-11c0-1.657 1.343-3 3-3h4.563c.552 0 1 .448 1 1s-.448 1-1 1h-4.563z"/></svg></a></p>
-<!-- [BDIViz Demo](https://drive.google.com/file/d/1eAbDicO0oXIbbVg56m3H8xdNDDsBGBLI/view?usp=drive_link) -->
-<p>Live Demo:
-<a href="https://bdiviz-dev.users.hsrn.nyu.edu/dashboard/" rel="external" target="_blank">https://bdiviz-dev.users.hsrn.nyu.edu/dashboard/<svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M14 5c-.552 0-1-.448-1-1s.448-1 1-1h6c.552 0 1 .448 1 1v6c0 .552-.448 1-1 1s-1-.448-1-1v-3.586l-7.293 7.293c-.391.39-1.024.39-1.414 0-.391-.391-.391-1.024 0-1.414l7.293-7.293h-3.586zm-9 2c-.552 0-1 .448-1 1v11c0 .552.448 1 1 1h11c.552 0 1-.448 1-1v-4.563c0-.552.448-1 1-1s1 .448 1 1v4.563c0 1.657-1.343 3-3 3h-11c-1.657 0-3-1.343-3-3v-11c0-1.657 1.343-3 3-3h4.563c.552 0 1 .448 1 1s-.448 1-1 1h-4.563z"/></svg></a></p>
-<!-- ## :gear: Sequence Diagram
-```mermaid
-
-sequenceDiagram
-    actor U as User
-    box Lightyellow BDI-Viz
-    participant B as React App
-    participant S as Flask Server
-    end
-
-    U->>B: Input Source/Target csv
-    B->>S: Request Schema Matching
-    Note right of S: Default Model
-    S->>B: Response Matching Candidates
-
-    U->>B: Accept/Reject/Refine Matches
-    B->>S: [Agent] Digest User Actions
-    S->>B: [Agent] Possible Reasons
-    Note left of B: Reason 1: Exact Match <br>Reason 2: Value Similarity <br>Reason 3: Prefix/Suffix Match <br>Reason 4: Synonym Match <br>Reason 5: etc.
-    B->>U: What do you think is the best reason for this action?
-    U->>B: Select Reason 3
-    B->>S: [Agent] Update Model/Dataset
-    Note right of S: FT Model 3
-    S->>B: Response Matching Candidates
-``` -->
     </div>
 
     
@@ -393,22 +374,22 @@ sequenceDiagram
 
 	<div class="row flex-xl-nowrap ">
 	<div class="col-sm-6 pt-2 doc-next">
-		<a href="/bdi-viz-manual/docs/get-started/explore-matches/">
+		<a href="/bdi-viz-manual/docs/overview/">
 			<div class="card h-100 my-1">
 				<div class="card-body py-2">
-                    <p class="card-title fs-5 fw-semibold lh-base mb-0"><i class="material-icons align-middle">navigate_before</i> Explore Matches</p>
-					<p class="card-text ms-2">Once the files finished …</p>
+                    <p class="card-title fs-5 fw-semibold lh-base mb-0"><i class="material-icons align-middle">navigate_before</i> Overview</p>
+					<p class="card-text ms-2">BDIViz: An Interactive …</p>
 					
 				</div>
 			</div>
 		</a>
         </div>
 	<div class="col-sm-6 pt-2 doc-prev">
-		<a class="ms-auto" href="/bdi-viz-manual/docs/get-started/user-operation/">
+		<a class="ms-auto" href="/bdi-viz-manual/docs/get-started/export-your-mappings/">
 			<div class="card h-100 my-1 text-end">
 				<div class="card-body py-2">
-                    <p class="card-title fs-5 fw-semibold lh-base mb-0">Perform User Operations <i class="material-icons align-middle">navigate_next</i></p>
-					<p class="card-text me-2">Interactively manipulate on …</p>
+                    <p class="card-title fs-5 fw-semibold lh-base mb-0">Export Your Mappings <i class="material-icons align-middle">navigate_next</i></p>
+					<p class="card-text me-2">Export your matching result.</p>
 					
 				</div>
 			</div>
