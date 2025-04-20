@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Get Started on BDIViz User Manual</title>
+    <link>http://localhost:1313/bdi-viz-manual/docs/get-started/</link>
+    <description>Recent content in Get Started on BDIViz User Manual</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 19 Apr 2025 13:38:17 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/bdi-viz-manual/docs/get-started/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Upload Your Data</title>
+      <link>http://localhost:1313/bdi-viz-manual/docs/get-started/upload-your-data/</link>
+      <pubDate>Sat, 19 Apr 2025 13:38:17 -0400</pubDate>
+      <guid>http://localhost:1313/bdi-viz-manual/docs/get-started/upload-your-data/</guid>
+      <description>&lt;h2 id=&#34;start-a-new-matching-task&#34;&gt;Start a New Matching Task &lt;a href=&#34;#start-a-new-matching-task&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Click the rightmost button labeled &amp;ldquo;New Matching Task&amp;rdquo; to begin. This will open the file upload interface (see screenshot below).&lt;/p&gt;&#xA;&lt;p&gt;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;  &#xA;&#xA;&#xA;&#xA;  &#xA;    &#xA;      &lt;img src=&#34;http://localhost:1313/bdi-viz-manual/images/new-matching-task.gif&#34; alt=&#34;new-matching-task-gif&#34; width=&#34;1143&#34; height=&#34;607&#34; loading=&#34;lazy&#34;&gt;&#xA;    &#xA;  &#xA;&lt;/p&gt;&#xA;&lt;p&gt;You will see three drop boxes stacked from top to bottom:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Source CSV File&lt;/strong&gt; – for your raw dataset&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Target CSV File&lt;/strong&gt; – for the reference standard dataset&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Target Schema JSON File&lt;/strong&gt; – for metadata and attribute definitions&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;To begin exploring schema matches, you’ll first need to upload these three types of files. These provide the information needed to visualize and compare your source dataset with a standardized target schema.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Explore Matches</title>
+      <link>http://localhost:1313/bdi-viz-manual/docs/get-started/explore-matches/</link>
+      <pubDate>Sat, 19 Apr 2025 13:38:17 -0400</pubDate>
+      <guid>http://localhost:1313/bdi-viz-manual/docs/get-started/explore-matches/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

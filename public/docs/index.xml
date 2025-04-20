@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BDIViz Documentations on BDIViz User Manual</title>
+    <link>http://localhost:1313/bdi-viz-manual/docs/</link>
+    <description>Recent content in BDIViz Documentations on BDIViz User Manual</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 19 Apr 2025 13:38:17 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/bdi-viz-manual/docs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Overview</title>
+      <link>http://localhost:1313/bdi-viz-manual/docs/overview/</link>
+      <pubDate>Sat, 19 Apr 2025 13:38:17 -0400</pubDate>
+      <guid>http://localhost:1313/bdi-viz-manual/docs/overview/</guid>
+      <description>&lt;h2 id=&#34;gear-getting-started&#34;&gt;&amp;#x2699;&amp;#xfe0f; Getting Started &lt;a href=&#34;#gear-getting-started&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;First, install the required dependencies:&lt;/p&gt;&#xA;&#xA;&#xA;&#xA;  &#xA;  &#xA;  &#xA;&#xA;  &#xA;  &#xA;  &#xA;  &#xA;&#xA;  &#xA;&#xA;  &lt;div class=&#34;prism-codeblock &#34;&gt;&#xA;  &lt;pre id=&#34;93826af&#34; class=&#34;language-bash &#34;&gt;&#xA;  &lt;code&gt;npm i .&lt;/code&gt;&#xA;  &lt;/pre&gt;&#xA;  &lt;/div&gt;&#xA;&lt;p&gt;Then, run the development server:&lt;/p&gt;&#xA;&#xA;&#xA;&#xA;  &#xA;  &#xA;  &#xA;&#xA;  &#xA;  &#xA;  &#xA;  &#xA;&#xA;  &#xA;&#xA;  &lt;div class=&#34;prism-codeblock &#34;&gt;&#xA;  &lt;pre id=&#34;a41f5dc&#34; class=&#34;language-bash &#34;&gt;&#xA;  &lt;code&gt;npm run dev&lt;/code&gt;&#xA;  &lt;/pre&gt;&#xA;  &lt;/div&gt;&#xA;&lt;h2 id=&#34;gear-introduction&#34;&gt;&amp;#x2699;&amp;#xfe0f; Introduction &lt;a href=&#34;#gear-introduction&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;BDIViz&lt;/strong&gt; is an interactive web-based application developed as part of the ARPA-H ASKEM project to support schema matching and value mapping tasks in biomedical data integration. It provides users with a rich visual interface—including heatmaps, explanations, and value comparisons—to streamline the process of aligning raw biomedical datasets with standardized data schemas such as the Genomic Data Commons (GDC) and Proteomic Data Commons (PDC).&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
