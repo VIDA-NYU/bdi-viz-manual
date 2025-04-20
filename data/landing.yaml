@@ -51,44 +51,29 @@ featureGrid:
     - title: Interactive Heatmap
       icon: grid_view
       description: Visualize schema matching candidates across all columns using an intuitive heatmap interface. Color-coded cues help quickly identify strong and weak matches.
-      ctaLink:
-        text: learn more
-        url: /docs/
+      # ctaLink:
+      #   text: learn more
+      #   url: /docs/
 
     - title: Value Comparison
       icon: compare_arrows
       description: Easily compare unique values between source and target columns using fuzzy matching and histograms to validate semantic alignment.
-      ctaLink:
-        text: learn more
-        url: /docs/
 
     - title: LLM Agent Explanations
       icon: psychology
       description: Get contextual explanations for candidate matches powered by large language models. Understand the rationale behind every recommendation.
-      ctaLink:
-        text: learn more
-        url: /docs/
 
     - title: Timeline & Undo/Redo
       icon: history
       description: Track every decision with a timeline view and easily reverse or reapply actions using undo/redo support.
-      ctaLink:
-        text: learn more
-        url: /docs/
 
     - title: Export & Integration
       icon: cloud_download
       description: Export your final mappings as CSV or JSON to use in downstream tools, or integrate with other pipelines such as Beaker or BDIKit.
-      ctaLink:
-        text: learn more
-        url: /docs/
 
     - title: Built for Biomedicine
       icon: science
       description: Tailored for biomedical researchers, BDIViz supports common data commons like GDC and PDC, and was co-designed with domain experts through the ARPA-H ASKEM project.
-      ctaLink:
-        text: learn more
-        url: /docs/
 
 # Image compare
 imageCompare:
