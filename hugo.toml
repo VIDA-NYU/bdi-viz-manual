@@ -1,6 +1,7 @@
 baseURL = 'https://vida-nyu.github.io/bdi-viz-manual'
 languageCode = 'en-us'
 title = 'BDIViz User Manual'
+enableEmoji = true
 
 [module]
     [[module.imports]]
@@ -14,7 +15,34 @@ title = 'BDIViz User Manual'
     unsafe = true
 
 [[menu.primary]]
-    name  = "Docs"
+    name  = "Documentations"
     url = "/docs/"
     identifier = "docs"
     weight = 10
+
+
+[params]
+
+  # Google Fonts
+  google_fonts = [
+    ["Roboto", "300, 400, 600, 700"],
+    ["Helvetica", "300, 400, 600, 700"],
+  ]
+
+  sans_serif_font = "Roboto"     # Default is System font
+  secondary_font  = "Helvetica"     # Default is System font
+
+    [params.footer]
+        copyright = "© :YEAR: NYU VIDA Lab."
+        version   = true # include git commit info in footer
+    
+    [params.docs]
+        toc = true
+        prism = true                                # enable syntax highlighting via Prism
+        navDesc         = true 
+        navDescTrunc    = 30
+        listDescTrunc   = 100
+        backToTop       = true
+        descriptions    = true 
+        intLinkTooltip  = true
+        logoLinkURL     = "/bdi-viz-manual"

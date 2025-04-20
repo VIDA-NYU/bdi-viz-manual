@@ -1,0 +1,95 @@
+# Hero
+hero:
+  enable: true
+  weight: 10
+  template: hero
+
+
+  backgroundImage:
+    path: "/images"
+    filename:
+      desktop: "gradient-mobile.webp"
+      mobile: "gradient-mobile.webp"
+
+  badge:
+    text: v0.1.0
+    color: primary # primary, secondary, success, danger, warning, info, light, dark
+    pill: false # boolean
+    soft: true # boolean
+
+  title: "BDIViz"
+  subtitle: "**BDIViz** is an interactive web-based visualization tool developed as part of the **ARPA-H ASKEM/BDF project**. It supports schema matching and value mapping tasks in biomedical data integration, helping researchers align their raw datasets with standardized formats such as the Genomic Data Commons (GDC) and Proteomic Data Commons (PDC)."
+
+  image:
+    path: "/images" # path to image under configured assets directory. default 'images'
+    filename: "bdiviz-screenshot.png" # filename of your hero image (including file extension)
+    alt: "BDIViz Screenshot" # Optional but recommended
+    boxShadow: true # default 'false' (excludes .svg images)
+    rounded: true # round the image corners? default 'false' (excludes .svg images)
+
+  ctaButton:
+    icon: rocket_launch
+    btnText: "Get Started"
+    url: "docs"
+  cta2Button:
+    icon: construction
+    btnText: "In Development"
+    url: "https://github.com/VIDA-NYU/bdi-viz-react"
+
+  info: "**Open Source** MIT Licensed."
+
+# Feature Grid
+featureGrid:
+  enable: true
+  weight: 20
+  template: feature grid
+
+  title: Why choose BDIViz?
+  subtitle: BDIViz is a visualization-driven, expert-in-the-loop tool designed to simplify and improve schema matching and value mapping in biomedical data integration. Explore the key features that make BDIViz intuitive, powerful, and research-ready.
+
+  items:
+    - title: Interactive Heatmap
+      icon: grid_view
+      description: Visualize schema matching candidates across all columns using an intuitive heatmap interface. Color-coded cues help quickly identify strong and weak matches.
+      ctaLink:
+        text: learn more
+        url: /docs/
+
+    - title: Value Comparison
+      icon: compare_arrows
+      description: Easily compare unique values between source and target columns using fuzzy matching and histograms to validate semantic alignment.
+      ctaLink:
+        text: learn more
+        url: /docs/
+
+    - title: LLM Agent Explanations
+      icon: psychology
+      description: Get contextual explanations for candidate matches powered by large language models. Understand the rationale behind every recommendation.
+      ctaLink:
+        text: learn more
+        url: /docs/
+
+    - title: Timeline & Undo/Redo
+      icon: history
+      description: Track every decision with a timeline view and easily reverse or reapply actions using undo/redo support.
+      ctaLink:
+        text: learn more
+        url: /docs/
+
+    - title: Export & Integration
+      icon: cloud_download
+      description: Export your final mappings as CSV or JSON to use in downstream tools, or integrate with other pipelines such as Beaker or BDIKit.
+      ctaLink:
+        text: learn more
+        url: /docs/
+
+    - title: Built for Biomedicine
+      icon: science
+      description: Tailored for biomedical researchers, BDIViz supports common data commons like GDC and PDC, and was co-designed with domain experts through the ARPA-H ASKEM project.
+      ctaLink:
+        text: learn more
+        url: /docs/
+
+# Image compare
+imageCompare:
+  enable: false
