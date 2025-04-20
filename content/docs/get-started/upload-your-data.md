@@ -30,9 +30,11 @@ To begin exploring schema matches, you’ll first need to upload these three typ
 Select a local .csv file that contains your raw or unaligned biomedical dataset.
 
 Example:
-```csv
-Case_ID, Gender, Ethnicity_Self_Identify, Path_Stage_Reg_Lymph_Nodes_pN
-C1234, Male, Asian, pN1
-C5678, Female, White, pN2
-C1111, Unknown, Unknown, pNX
-```
+
+| Case_ID | Gender  | Ethnicity_Self_Identify | Path_Stage_Reg_Lymph_Nodes_pN |
+|---------|---------|-------------------------|-------------------------------|
+| C1234   | Male    | Asian                   | pN1                           |
+| C5678   | Female  | White                   | pN2                           |
+| C1111   | Unknown | Unknown                 | pNX                           |
+
+
