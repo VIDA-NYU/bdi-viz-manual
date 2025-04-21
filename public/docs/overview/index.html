@@ -132,6 +132,25 @@
                         </li>
                     
                 
+                    
+                    
+                        <li class="sidebar-dropdown no-icon ">
+                            <button class="btn">
+                                Installation
+                            </button>
+                            <div class="sidebar-submenu ">
+                                <ul>
+                                    
+                                        
+                                        
+                                            <li class=" no-icon"><a class="sidebar-nested-link" href="http://localhost:1313/bdi-viz-manual/docs/installation/install-on-linux/">Install on Linux/Unix</a></li>
+                                        
+                                    
+                                </ul>
+                            </div>
+                        </li>
+                    
+                
             
         </ul>
         
@@ -393,11 +412,11 @@ sequenceDiagram
 
 	<div class="row flex-xl-nowrap ">
 	<div class="col-sm-6 pt-2 doc-next">
-		<a href="/bdi-viz-manual/docs/get-started/explore-matches/">
+		<a href="/bdi-viz-manual/docs/installation/install-on-linux/">
 			<div class="card h-100 my-1">
 				<div class="card-body py-2">
-                    <p class="card-title fs-5 fw-semibold lh-base mb-0"><i class="material-icons align-middle">navigate_before</i> Explore Matches</p>
-					<p class="card-text ms-2">Once the files finished …</p>
+                    <p class="card-title fs-5 fw-semibold lh-base mb-0"><i class="material-icons align-middle">navigate_before</i> Install on Linux/Unix</p>
+					<p class="card-text ms-2">Step-by-step guide for …</p>
 					
 				</div>
 			</div>
@@ -619,6 +638,20 @@ sequenceDiagram
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 
     
@@ -646,6 +679,15 @@ sequenceDiagram
     index.add(
             {
                 id:  2 ,
+                href: "\/bdi-viz-manual\/docs\/installation\/install-on-linux\/",
+                title: "Install on Linux/Unix",
+                description: "Step-by-step guide for installing and configuring BDIViz on Linux and Unix-based systems",
+                content: "Prerequisites linkBefore installing BDIViz on your Linux system, ensure you have the following prerequisites:\nA Linux distribution (Ubuntu, Debian, CentOS, etc.) with amd64 architecture Docker Engine installed and running (version 19.03 or later) At least 4GB of RAM and 10GB of free disk space Internet connection to pull the Docker image Install Docker (if not already installed) linkIf you don’t have Docker installed, follow these steps to install it:\nUbuntu/Debian CentOS/RHEL Arch Linux sudo apt update sudo apt install \\ ca-certificates \\ curl \\ gnupg \\ lsb-release sudo mkdir -p /etc/apt/keyrings curl -fsSL https://download.docker.com/linux/ubuntu/gpg | \\ sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg echo \\ \"deb [arch=$(dpkg --print-architecture) \\ signed-by=/etc/apt/keyrings/docker.gpg] \\ https://download.docker.com/linux/ubuntu \\ $(lsb_release -cs) stable\" | \\ sudo tee /etc/apt/sources.list.d/docker.list \u003e /dev/null sudo apt update sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin sudo systemctl enable docker sudo systemctl start docker sudo yum install -y yum-utils sudo yum-config-manager \\ --add-repo https://download.docker.com/linux/centos/docker-ce.repo sudo yum install docker-ce docker-ce-cli containerd.io docker-compose-plugin sudo systemctl enable docker sudo systemctl start docker sudo pacman -Syu sudo pacman -S docker sudo systemctl enable docker sudo systemctl start docker Run BDIViz Using Docker linkOnce Docker is installed and running, follow these steps to run BDIViz using the edenwu/bdi-viz-react:devel image:\n1. Pull the Docker image link docker pull edenwu/bdi-viz-react:devel 2. Run the container link docker run -d \\ --name bdiviz \\ -p 3000:3000 \\ edenwu/bdi-viz-react:devel This will start the BDIViz container in detached mode and expose the web application at http://localhost:3000.\n3. Verify the container is running linkYou can verify the container is up using:\ndocker ps If everything is working correctly, you should see bdiviz listed in the output.\n4. Stop the container linkWhen you’re done, you can stop the container with:\ndocker stop bdiviz And if needed, remove it:\ndocker rm bdiviz Note link Make sure port 3000 is available on your host machine. You can bind-mount local volumes or customize environment variables for advanced use (e.g., persistent storage, configuration injection). To update the image, simply pull the latest tag again and restart the container: docker pull edenwu/bdi-viz-react:devel docker stop bdiviz \u0026\u0026 docker rm bdiviz docker run -d --name bdiviz -p 3000:3000 edenwu/bdi-viz-react:devel "
+            }
+        );
+    index.add(
+            {
+                id:  3 ,
                 href: "\/bdi-viz-manual\/docs\/overview\/",
                 title: "Overview",
                 description: "BDIViz: An Interactive Visualization System for Biomedical Schema Matching with LLM-Supported Validation",
@@ -654,7 +696,7 @@ sequenceDiagram
         );
     index.add(
             {
-                id:  3 ,
+                id:  4 ,
                 href: "\/bdi-viz-manual\/docs\/get-started\/user-operation\/",
                 title: "Perform User Operations",
                 description: "Interactively manipulate on each match candidate.",
@@ -663,7 +705,7 @@ sequenceDiagram
         );
     index.add(
             {
-                id:  4 ,
+                id:  5 ,
                 href: "\/bdi-viz-manual\/docs\/get-started\/export-your-mappings\/",
                 title: "Export Your Mappings",
                 description: "Export your matching result.",
@@ -672,7 +714,7 @@ sequenceDiagram
         );
     index.add(
             {
-                id:  5 ,
+                id:  6 ,
                 href: "\/bdi-viz-manual\/docs\/",
                 title: "BDIViz Documentations",
                 description: "Explore our guides and examples to deploy and improve your data integration workflow with BDIViz.",
@@ -681,10 +723,19 @@ sequenceDiagram
         );
     index.add(
             {
-                id:  6 ,
+                id:  7 ,
                 href: "\/bdi-viz-manual\/docs\/get-started\/",
                 title: "Get Started",
                 description: "Start your first BDIViz workflow.",
+                content: ""
+            }
+        );
+    index.add(
+            {
+                id:  8 ,
+                href: "\/bdi-viz-manual\/docs\/installation\/",
+                title: "Installation",
+                description: "Installation guide for setting up BDIViz on your system",
                 content: ""
             }
         );

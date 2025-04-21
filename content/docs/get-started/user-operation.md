@@ -1,34 +1,58 @@
 ---
 weight: 300
 title: "Perform User Operations"
-description: "Interactively manipulate on each match candidate."
+description: "Interactively evaluate and manage each schema match candidate."
 icon: "edit"
 date: "2025-04-19T13:38:17-04:00"
-lastmod: "2025-04-19T13:38:17-04:00"
+lastmod: "2025-04-21T11:00:00-04:00"
 draft: false
 toc: true
 ---
 
+## Overview
+
+BDIViz provides a streamlined interface for managing match candidates directly within the heatmap view. The **Shortcut Panel**, located at the top-left of the screen, offers essential interactive tools for evaluating and adjusting alignment results.
 
 ![shortcut-panel-gif](./images/shortcut-panel.gif)
 
-The Shortcut Panel provides quick-access buttons for managing match candidates. Located at the top-left corner of the BDIViz interface, it offers essential operations to streamline your workflow.
+These operations allow users to mark candidates as accepted, rejected, or discarded, while also providing undo/redo functionality for iterative refinement.
+
+---
 
 ## Available Actions
 
-| Button | Symbol | Function | Visual Effect |
-|--------|--------|----------|--------------|
-| **Accept** | ✓ | Confirms the selected source-to-target candidate as a valid match | Cell turns **green** |
-| **Reject** | ✕ | Marks the selected match as invalid | Cell turns **red** |
-| **Discard** | 🗑️ | Removes source attribute from consideration when no suitable match exists | Attribute appears **grayed out** |
-| **Undo** | ⟲ | Reverts your most recent operation | Restores previous state |
-| **Redo** | ⟳ | Reapplies the most recently undone action | Reapplies change |
+The table below summarizes the core user operations available via the Shortcut Panel:
 
-> **Note:** All actions are logged in the Timeline Panel on the right, creating a complete audit trail of your decision-making process.
+| Action      | Icon  | Description                                                                 | Visual Indicator       |
+|-------------|-------|-----------------------------------------------------------------------------|-------------------------|
+| **Accept**  | ✓     | Confirms a source-to-target column pair as a valid schema match             | Cell turns **green**    |
+| **Reject**  | ✕     | Flags the candidate as an invalid or incorrect match                        | Cell turns **red**      |
+| **Discard** | 🗑️     | Removes the source attribute from matching consideration                    | Attribute grays out     |
+| **Undo**    | ⟲     | Reverts the most recent operation                                            | Previous state restored |
+| **Redo**    | ⟳     | Reapplies the most recently undone operation                                 | Last change re-applied  |
 
-## Workflow Tips
+> All user operations are recorded in the **Timeline Panel** (located on the right), enabling traceability and decision auditing.
 
-- Use these shortcuts to rapidly process multiple candidates
-- The Timeline Panel allows you to track and review all your decisions
-- Undo/Redo functionality ensures you can correct mistakes without losing progress
-- Visual color coding (green/red/gray) helps you quickly identify the status of each match
+---
+
+## Best Practices
+
+- **Leverage Keyboard Shortcuts**: Speed up match decisions using shortcut buttons or hotkeys (where supported).
+- **Work Iteratively**: Use **Undo** and **Redo** freely to experiment and refine decisions without permanent impact.
+- **Stay Organized**: The **Timeline Panel** logs every action in sequence, helping you track progress or revisit past decisions.
+- **Interpret Colors Quickly**:
+  - ✅ **Green**: Accepted match
+  - ❌ **Red**: Rejected match
+  - 🚫 **Gray**: Discarded source attribute
+
+---
+
+## Next Steps
+
+After reviewing and operating on match candidates:
+
+- Review the Timeline Panel to validate key decisions.
+- Use filters and the heatmap overview to identify remaining unmatched attributes.
+- Proceed to export your confirmed mappings or refine further with the help of the LLM Agent Panel.
+
+For more advanced functionality or customization, refer to the [Usage Guide](/docs/usage) or contact the support team via [Support](/support).

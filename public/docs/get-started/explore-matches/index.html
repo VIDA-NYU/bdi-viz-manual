@@ -17,7 +17,7 @@
     <title>Explore Matches | BDIViz User Manual</title>
     <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Once the files finished loading, you will be presented with the main BDIViz interface.">
+    <meta name="description" content="Explore schema alignment candidates using the BDIViz interactive heatmap interface.">
     <meta name="keywords" content="Documentation, Hugo, Hugo Theme, Bootstrap" />
     <meta name="author" content="Colin Wilson - Lotus Labs" />
     <meta name="email" content="support@aigis.uk" />
@@ -31,14 +31,14 @@
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/bdi-viz-manual/favicon-16x16.png">
 <link rel="manifest" crossorigin="use-credentials" href="http://localhost:1313/bdi-viz-manual/site.webmanifest">
 <meta property="og:title" content="Explore Matches" />
-<meta property="og:description" content="Once the files finished loading, you will be presented with the main BDIViz interface." />
+<meta property="og:description" content="Explore schema alignment candidates using the BDIViz interactive heatmap interface." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/bdi-viz-manual/docs/get-started/explore-matches/" /><meta property="og:image" content="http://localhost:1313/bdi-viz-manual/opengraph/card-base-2_hu_d616e7214955c9d0.png"/><meta property="article:section" content="docs" />
+<meta property="og:url" content="http://localhost:1313/bdi-viz-manual/docs/get-started/explore-matches/" /><meta property="og:image" content="http://localhost:1313/bdi-viz-manual/opengraph/card-base-2_hu_f1c431ab6e61a472.png"/><meta property="article:section" content="docs" />
 <meta property="article:published_time" content="2025-04-19T13:38:17-04:00" />
-<meta property="article:modified_time" content="2025-04-19T13:38:17-04:00" /><meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="http://localhost:1313/bdi-viz-manual/opengraph/card-base-2_hu_d616e7214955c9d0.png"/>
+<meta property="article:modified_time" content="2025-04-21T11:00:00-04:00" /><meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://localhost:1313/bdi-viz-manual/opengraph/card-base-2_hu_f1c431ab6e61a472.png"/>
 <meta name="twitter:title" content="Explore Matches"/>
-<meta name="twitter:description" content="Once the files finished loading, you will be presented with the main BDIViz interface."/>
+<meta name="twitter:description" content="Explore schema alignment candidates using the BDIViz interactive heatmap interface."/>
 
     
         <link rel="alternate" type="application/atom+xml" title="Atom feed for BDIViz User Manual" href="/index.xml" />
@@ -125,6 +125,30 @@
                                         
                                         
                                             <li class=" no-icon"><a class="sidebar-nested-link" href="http://localhost:1313/bdi-viz-manual/docs/get-started/export-your-mappings/">Export Your Mappings</a></li>
+                                        
+                                    
+                                </ul>
+                            </div>
+                        </li>
+                    
+                
+                    
+                    
+                        <li class="sidebar-dropdown no-icon ">
+                            <button class="btn">
+                                Installation
+                            </button>
+                            <div class="sidebar-submenu ">
+                                <ul>
+                                    
+                                        
+                                        
+                                            <li class=" no-icon"><a class="sidebar-nested-link" href="http://localhost:1313/bdi-viz-manual/docs/installation/install-on-linux/">Install on Linux/Unix</a></li>
+                                        
+                                    
+                                        
+                                        
+                                            <li class=" no-icon"><a class="sidebar-nested-link" href="http://localhost:1313/bdi-viz-manual/docs/installation/install-on-macos/">Install on MacOS</a></li>
                                         
                                     
                                 </ul>
@@ -263,14 +287,16 @@
     <div class="fw-bold text-uppercase mb-2">On this page</div>
     <nav id="TableOfContents">
   <ul>
+    <li><a href="#overview">Overview</a></li>
     <li><a href="#interactive-heatmap">Interactive Heatmap</a>
       <ul>
-        <li><a href="#heatmap-components">Heatmap Components</a></li>
+        <li><a href="#key-features">Key Features</a></li>
       </ul>
     </li>
-    <li><a href="#filters-and-search-tools">Filters and Search Tools</a></li>
-    <li><a href="#lower-panel-visuals">Lower Panel Visuals</a></li>
+    <li><a href="#filters-and-search-controls">Filters and Search Controls</a></li>
+    <li><a href="#lower-panel-match-details">Lower Panel: Match Details</a></li>
     <li><a href="#llm-agent-panel">LLM Agent Panel</a></li>
+    <li><a href="#whats-next">What’s Next?</a></li>
   </ul>
 </nav>
     </toc></div>
@@ -282,14 +308,16 @@
                                             </button>
 <nav id="toc-mobile">
   <ul class="dropdown-menu">
+    <li><a href="#overview">Overview</a></li>
     <li><a href="#interactive-heatmap">Interactive Heatmap</a>
       <ul>
-        <li><a href="#heatmap-components">Heatmap Components</a></li>
+        <li><a href="#key-features">Key Features</a></li>
       </ul>
     </li>
-    <li><a href="#filters-and-search-tools">Filters and Search Tools</a></li>
-    <li><a href="#lower-panel-visuals">Lower Panel Visuals</a></li>
+    <li><a href="#filters-and-search-controls">Filters and Search Controls</a></li>
+    <li><a href="#lower-panel-match-details">Lower Panel: Match Details</a></li>
     <li><a href="#llm-agent-panel">LLM Agent Panel</a></li>
+    <li><a href="#whats-next">What’s Next?</a></li>
   </ul>
 </nav></div>
                                         <div class="docs-content col-12 col-xl-9 mt-0">
@@ -301,15 +329,15 @@
                                                 </h1>
                                             </div>
                                             
-                                                <p class="lead mb-3">Once the files finished loading, you will be presented with the main BDIViz interface.</p>
+                                                <p class="lead mb-3">Explore schema alignment candidates using the BDIViz interactive heatmap interface.</p>
                                             
                                             <div id="content" class="main-content" data-bs-spy="scroll" data-bs-root-margin="0px 0px -65%" data-bs-target="#toc-mobile">
                                                 
     
     <div data-prismjs-copy="" data-prismjs-copy-success="" data-prismjs-copy-error="">
-        <blockquote>
-<p>Once your files are uploaded, BDIViz will load the full interface for exploring match candidates between your source and target datasets.</p></blockquote>
-<h2 id="interactive-heatmap">Interactive Heatmap <a href="#interactive-heatmap" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>This is the central visual of BDIViz. Each cell in the heatmap represents a match candidate between a source attribute (on the y-axis) and a target attribute (on the x-axis).</p>
+        <h2 id="overview">Overview <a href="#overview" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>After uploading your files, BDIViz launches its main interface, allowing you to visually explore match candidates between your source dataset and the target schema.</p>
+<hr>
+<h2 id="interactive-heatmap">Interactive Heatmap <a href="#interactive-heatmap" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>The heatmap is the primary visualization tool in BDIViz. Each cell represents a match candidate between a source attribute (y-axis) and a target attribute (x-axis).</p>
 <p>
 
 
@@ -326,7 +354,7 @@
     
   
 </p>
-<h3 id="heatmap-components">Heatmap Components <a href="#heatmap-components" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h3>
+<h3 id="key-features">Key Features <a href="#key-features" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h3>
 <nav>
 	<div class="nav nav-tabs" id="nav-tab" role="tablist">
 
@@ -338,26 +366,26 @@
 		
 
 		<a class="nav-link  active"
-		   id="ebfacdTab" data-bs-toggle="tab" data-bs-target="#ebfacd"
-		   type="button" role="tab" aria-controls="ebfacd" aria-selected="true">Heatmap Nodes</a>
+		   id="bfdaecTab" data-bs-toggle="tab" data-bs-target="#bfdaec"
+		   type="button" role="tab" aria-controls="bfdaec" aria-selected="true">Heatmap Cells</a>
 
 		
 
 		<a class="nav-link "
-		   id="efcadbTab" data-bs-toggle="tab" data-bs-target="#efcadb"
-		   type="button" role="tab" aria-controls="efcadb" aria-selected="true">X-Axis</a>
+		   id="adfecbTab" data-bs-toggle="tab" data-bs-target="#adfecb"
+		   type="button" role="tab" aria-controls="adfecb" aria-selected="true">X-Axis Hierarchy</a>
 
 		
 
 		<a class="nav-link "
-		   id="efbdcaTab" data-bs-toggle="tab" data-bs-target="#efbdca"
-		   type="button" role="tab" aria-controls="efbdca" aria-selected="true">Expandable Node</a>
+		   id="badefcTab" data-bs-toggle="tab" data-bs-target="#badefc"
+		   type="button" role="tab" aria-controls="badefc" aria-selected="true">Expandable Nodes</a>
 
 		
 
 		<a class="nav-link "
-		   id="fcedabTab" data-bs-toggle="tab" data-bs-target="#fcedab"
-		   type="button" role="tab" aria-controls="fcedab" aria-selected="true">Top Tabs (above heatmap)</a>
+		   id="fabedcTab" data-bs-toggle="tab" data-bs-target="#fabedc"
+		   type="button" role="tab" aria-controls="fabedc" aria-selected="true">Heatmap Top Tabs</a>
 
 		
 
@@ -373,13 +401,14 @@
 
 
 
-<div class="tab-pane fade show active" id="ebfacd" role="tabpanel" aria-labelledby="nav-1">
 
-	<p>Each cell in the heatmap represents a match candidate between a source attribute (on the y-axis) and a target attribute (on the x-axis).</p>
+<div class="tab-pane fade show active" id="bfdaec" role="tabpanel" aria-labelledby="nav-1">
+
+	<p>Each cell corresponds to a potential match:</p>
 <ul>
-<li>Color intensity represents match strength: darker = higher match score.</li>
-<li>Green indicates accepted matches; red indicates rejected ones.</li>
-<li>Click on a node to inspect further details.</li>
+<li><strong>Color intensity</strong> indicates similarity score (darker = stronger match).</li>
+<li><strong>Green</strong> = accepted match, <strong>Red</strong> = rejected match.</li>
+<li>Click on a cell to inspect match details.</li>
 </ul>
 
 
@@ -390,7 +419,8 @@
 
 
 
-<div class="tab-pane fade" id="efcadb" role="tabpanel" aria-labelledby="nav-1">
+
+<div class="tab-pane fade" id="adfecb" role="tabpanel" aria-labelledby="nav-1">
 
 	<p>
 
@@ -408,14 +438,13 @@
     
   
 </p>
-<p>The x-axis of the heatmap represents the target schema’s attribute space in a structured, hierarchical layout—specifically designed to support the complexity of biomedical data models like the Genomic Data Commons (GDC).</p>
-<p>This hierarchy includes:</p>
+<p>The x-axis displays the target schema&rsquo;s structure as a semantic hierarchy:</p>
 <ul>
-<li><strong>Categories</strong> (e.g., &ldquo;clinical,&rdquo; &ldquo;biospecimen&rdquo;)</li>
-<li><strong>Nodes</strong> (e.g., &ldquo;diagnosis,&rdquo; &ldquo;treatment&rdquo;)</li>
-<li><strong>Target Attributes</strong> as leaf nodes</li>
+<li><strong>Category Level</strong>: e.g., <code>clinical</code>, <code>biospecimen</code></li>
+<li><strong>Node Level</strong>: e.g., <code>diagnosis</code>, <code>treatment</code></li>
+<li><strong>Leaf Nodes</strong>: individual target attributes</li>
 </ul>
-<p>Color coding helps differentiate between categories, while curved connectors visually represent hierarchical relationships. Users can hover over any part of the hierarchy to highlight supercategories, specific categories, or individual columns, aiding navigation and contextual understanding.</p>
+<p>Color and curved connectors help clarify relationships and improve navigation.</p>
 
 
 </div>
@@ -425,19 +454,16 @@
 
 
 
-<div class="tab-pane fade" id="efbdca" role="tabpanel" aria-labelledby="nav-1">
 
-	<p>Once you click on a heatmap node, the node expand and shows a stacked heatmap.</p>
+<div class="tab-pane fade" id="badefc" role="tabpanel" aria-labelledby="nav-1">
+
+	<p>Clicking a heatmap node reveals a stacked histogram panel:</p>
 <ul>
-<li>
-<p><strong>The upper histogram</strong> shows the distribution of values from the source column.</p>
-</li>
-<li>
-<p><strong>The lower histogram</strong> shows the distribution from the target column.</p>
-</li>
+<li><strong>Top Chart</strong>: Source column value distribution</li>
+<li><strong>Bottom Chart</strong>: Target column value distribution</li>
 </ul>
-<p>These visuals help assess whether the values in the two columns are statistically or categorically aligned. For example, if both columns share similar categories with comparable frequency distributions, it suggests a strong match.</p>
-<p><em><strong>Interpretation Tip:</strong> Matching distributions with similar peaks (e.g., a high frequency of &ldquo;Male&rdquo; and &ldquo;Female&rdquo; values) may indicate semantic alignment. Dissimilar distributions can signal a mismatch or a need for closer inspection.</em></p>
+<p>Use this to evaluate whether the two columns share meaningful overlap.</p>
+<p><strong>Tip:</strong> Similar distributions (e.g., shared categories like &ldquo;Male&rdquo; and &ldquo;Female&rdquo;) often suggest semantic alignment.</p>
 <p>
 
 
@@ -463,7 +489,8 @@
 
 
 
-<div class="tab-pane fade" id="fcedab" role="tabpanel" aria-labelledby="nav-1">
+
+<div class="tab-pane fade" id="fabedc" role="tabpanel" aria-labelledby="nav-1">
 
 	<p>
 
@@ -481,27 +508,22 @@
     
   
 </p>
+<p>The top-level filter tabs help narrow your focus:</p>
 <ul>
-<li>
-<p><strong>All:</strong> Displays all potential matches.</p>
-</li>
-<li>
-<p><strong>Accepted:</strong> Shows only those that have been manually confirmed.</p>
-</li>
-<li>
-<p><strong>Unmatched:</strong> Lists only those source attributes with no confirmed match.</p>
-</li>
-<li>
-<p><strong>Expand On Hover:</strong> <em>This toggle controls if the expandable node will be expanded on mouse hover or not(on click).</em></p>
-</li>
+<li><strong>All</strong>: View all candidate matches</li>
+<li><strong>Accepted</strong>: Only show confirmed matches</li>
+<li><strong>Unmatched</strong>: Only show source columns with no confirmed match</li>
+<li><strong>Expand on Hover</strong>: Toggle whether expanded histograms appear on hover or click</li>
 </ul>
 
 
 </div>
 
 
+
 </div>
-<h2 id="filters-and-search-tools">Filters and Search Tools <a href="#filters-and-search-tools" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>BDIViz provides several ways to customize and narrow your view:</p>
+<hr>
+<h2 id="filters-and-search-controls">Filters and Search Controls <a href="#filters-and-search-controls" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>Fine-tune the heatmap view using a suite of filters:</p>
 
 <nav>
 	<div class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -514,26 +536,26 @@
 		
 
 		<a class="nav-link  active"
-		   id="abcdfeTab" data-bs-toggle="tab" data-bs-target="#abcdfe"
-		   type="button" role="tab" aria-controls="abcdfe" aria-selected="true">Source Attribute</a>
+		   id="befacdTab" data-bs-toggle="tab" data-bs-target="#befacd"
+		   type="button" role="tab" aria-controls="befacd" aria-selected="true">Source Attribute Selector</a>
 
 		
 
 		<a class="nav-link "
-		   id="bcdfaeTab" data-bs-toggle="tab" data-bs-target="#bcdfae"
-		   type="button" role="tab" aria-controls="bcdfae" aria-selected="true">Similarity Threshold</a>
+		   id="dcbaefTab" data-bs-toggle="tab" data-bs-target="#dcbaef"
+		   type="button" role="tab" aria-controls="dcbaef" aria-selected="true">Similarity Threshold</a>
 
 		
 
 		<a class="nav-link "
-		   id="edfabcTab" data-bs-toggle="tab" data-bs-target="#edfabc"
-		   type="button" role="tab" aria-controls="edfabc" aria-selected="true">Similar Attributes</a>
+		   id="cdebfaTab" data-bs-toggle="tab" data-bs-target="#cdebfa"
+		   type="button" role="tab" aria-controls="cdebfa" aria-selected="true">Similar Attributes Displayed</a>
 
 		
 
 		<a class="nav-link "
-		   id="efcbdaTab" data-bs-toggle="tab" data-bs-target="#efcbda"
-		   type="button" role="tab" aria-controls="efcbda" aria-selected="true">Search Bar</a>
+		   id="dbeafcTab" data-bs-toggle="tab" data-bs-target="#dbeafc"
+		   type="button" role="tab" aria-controls="dbeafc" aria-selected="true">Search Bar</a>
 
 		
 
@@ -549,9 +571,10 @@
 
 
 
-<div class="tab-pane fade show active" id="abcdfe" role="tabpanel" aria-labelledby="nav-1">
 
-	<p>Lets you choose which column to focus on.</p>
+<div class="tab-pane fade show active" id="befacd" role="tabpanel" aria-labelledby="nav-1">
+
+	<p>Select a specific source column to examine.</p>
 <p>
 
 
@@ -568,11 +591,11 @@
     
   
 </p>
-<p>Once click you will able to see this dropdown menu showing all the source attributes:</p>
+<p>Dropdown key:</p>
 <ul>
-<li><strong>All:</strong> Shows all source attributes in a paginatable manner.</li>
-<li><strong>Attributes in green:</strong> The attributes that already have at least one accpeted candidate.</li>
-<li><strong>Attributes in grey:</strong> The attributes that is discarded by user.</li>
+<li><strong>Green</strong>: Already matched</li>
+<li><strong>Grey</strong>: Manually discarded</li>
+<li><strong>All</strong>: Show all source attributes</li>
 </ul>
 <p>
 
@@ -599,22 +622,14 @@
 
 
 
-<div class="tab-pane fade" id="bcdfae" role="tabpanel" aria-labelledby="nav-1">
 
-	<p>Adjusts the minimum score a candidate must meet to appear. Values range from 0 (show all) to 1 (only highest similarity).</p>
+<div class="tab-pane fade" id="dcbaef" role="tabpanel" aria-labelledby="nav-1">
 
-
-</div>
-
-
-
-
-
-
-<div class="tab-pane fade" id="edfabc" role="tabpanel" aria-labelledby="nav-1">
-
-	<p>Determines how many similar source columns appear in the y-axis for better comparative context.</p>
-<p><strong>Note:</strong> This only apply when <strong>Source Attribute</strong> is not set to <strong>All</strong>.</p>
+	<p>Set a minimum similarity score for visible candidates. Range: <code>0.0 – 1.0</code>.</p>
+<ul>
+<li><code>0.0</code>: Show all matches</li>
+<li><code>1.0</code>: Show only perfect matches</li>
+</ul>
 
 
 </div>
@@ -624,16 +639,34 @@
 
 
 
-<div class="tab-pane fade" id="efcbda" role="tabpanel" aria-labelledby="nav-1">
 
-	<p>Lets you highlight specific target attributes by name or keyword.</p>
+<div class="tab-pane fade" id="cdebfa" role="tabpanel" aria-labelledby="nav-1">
+
+	<p>Controls how many similar source attributes appear on the heatmap when a single source column is selected.</p>
+<blockquote>
+<p>Note: Only applies when Source Attribute ≠ &ldquo;All&rdquo;.</p></blockquote>
 
 
 </div>
 
 
+
+
+
+
+
+<div class="tab-pane fade" id="dbeafc" role="tabpanel" aria-labelledby="nav-1">
+
+	<p>Quickly locate and highlight target attributes by name or keyword.</p>
+
+
 </div>
-<h2 id="lower-panel-visuals">Lower Panel Visuals <a href="#lower-panel-visuals" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>When a node is selected from the heatmap, the bottom panels expand to provide deeper insights:</p>
+
+
+
+</div>
+<hr>
+<h2 id="lower-panel-match-details">Lower Panel: Match Details <a href="#lower-panel-match-details" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>Clicking on any heatmap node reveals deeper insights below:</p>
 
 <nav>
 	<div class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -646,14 +679,14 @@
 		
 
 		<a class="nav-link  active"
-		   id="fedacbTab" data-bs-toggle="tab" data-bs-target="#fedacb"
-		   type="button" role="tab" aria-controls="fedacb" aria-selected="true">Value Comparisons</a>
+		   id="abcedfTab" data-bs-toggle="tab" data-bs-target="#abcedf"
+		   type="button" role="tab" aria-controls="abcedf" aria-selected="true">Value Comparisons</a>
 
 		
 
 		<a class="nav-link "
-		   id="cdbafeTab" data-bs-toggle="tab" data-bs-target="#cdbafe"
-		   type="button" role="tab" aria-controls="cdbafe" aria-selected="true">UpSet Plot</a>
+		   id="cbdfaeTab" data-bs-toggle="tab" data-bs-target="#cbdfae"
+		   type="button" role="tab" aria-controls="cbdfae" aria-selected="true">UpSet Plot</a>
 
 		
 
@@ -669,7 +702,8 @@
 
 
 
-<div class="tab-pane fade show active" id="fedacb" role="tabpanel" aria-labelledby="nav-1">
+
+<div class="tab-pane fade show active" id="abcedf" role="tabpanel" aria-labelledby="nav-1">
 
 	<p>
 
@@ -687,9 +721,11 @@
     
   
 </p>
-<p>Visual representation of fuzzy-matched value pairs between the selected source and target columns.</p>
-<p>Each row shows a unique source value and its closest string-matched counterpart(s) from the target.</p>
-<p>Helps validate or question whether two attributes should be considered a match.</p>
+<p>Visualizes string-based fuzzy matching between source and target values.</p>
+<ul>
+<li>Each row: one source value + its closest matches</li>
+<li>Use to validate whether mapping is semantically and syntactically justified</li>
+</ul>
 
 
 </div>
@@ -699,7 +735,8 @@
 
 
 
-<div class="tab-pane fade" id="cdbafe" role="tabpanel" aria-labelledby="nav-1">
+
+<div class="tab-pane fade" id="cbdfae" role="tabpanel" aria-labelledby="nav-1">
 
 	<p>
 
@@ -717,14 +754,20 @@
     
   
 </p>
-<p>the UpSet Plot provides a detailed breakdown of how each individual matcher contributed to the overall score of the selected candidate.</p>
-<p>Each matcher is represented as a row, and each column represents a candidate match. A dot is shown where a matcher supports a given match.</p>
+<p>Visualizes how different matchers contributed to the candidate match score.</p>
+<ul>
+<li>Each row: a matcher</li>
+<li>Each column: a candidate</li>
+<li>Dots indicate support from that matcher</li>
+</ul>
 
 
 </div>
 
 
+
 </div>
+<hr>
 <h2 id="llm-agent-panel">LLM Agent Panel <a href="#llm-agent-panel" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>
 
 
@@ -741,27 +784,23 @@
     
   
 </p>
+<p>An embedded LLM-powered assistant provides contextual insights:</p>
 <ul>
-<li>
-<p><strong>Overview Diagnosis:</strong> Summarizes whether the current match is likely valid or not, based on metadata, column names, and prior interactions.</p>
-</li>
-<li>
-<p><strong>Explanation Cards:</strong></p>
+<li><strong>Diagnosis Summary</strong>: Determines if a match is likely valid based on metadata, column names, and user history</li>
+<li><strong>Explanation Cards</strong>: Highlight key reasons (e.g., name similarity, value overlap)
 <ul>
-<li>
-<p>Each card explains one rationale (e.g., shared terms, similar distributions, matching patterns).</p>
-</li>
-<li>
-<p>Click to expand each explanation.</p>
-</li>
-<li>
-<p>Feedback Buttons: Let you provide a <strong>thumbs-up</strong> or <strong>thumbs-down</strong> to help improve the model’s future reasoning.</p>
-</li>
+<li>Click to expand for more detail</li>
+<li>Provide feedback via 👍/👎 to refine model accuracy</li>
 </ul>
 </li>
-<li>
-<p><strong>Target Schema Descriptions:</strong> Additional metadata from sources like GDC are displayed for further context.</p>
-</li>
+<li><strong>Target Schema Metadata</strong>: Enriched descriptions pulled from sources such as GDC</li>
+</ul>
+<hr>
+<h2 id="whats-next">What’s Next? <a href="#whats-next" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>After reviewing the matches:</p>
+<ul>
+<li>Accept or reject individual match suggestions</li>
+<li>Use filtering to prioritize high-confidence matches</li>
+<li>Proceed to export, refine, or apply your matched schema for downstream harmonization tasks</li>
 </ul>
 
     </div>
@@ -779,18 +818,18 @@
 			<div class="card h-100 my-1">
 				<div class="card-body py-2">
                     <p class="card-title fs-5 fw-semibold lh-base mb-0"><i class="material-icons align-middle">navigate_before</i> Upload Your Data</p>
-					<p class="card-text ms-2">Start a new schema matching …</p>
+					<p class="card-text ms-2">Begin a new schema matching …</p>
 					
 				</div>
 			</div>
 		</a>
         </div>
 	<div class="col-sm-6 pt-2 doc-prev">
-		<a class="ms-auto" href="/bdi-viz-manual/docs/overview/">
+		<a class="ms-auto" href="/bdi-viz-manual/docs/installation/install-on-linux/">
 			<div class="card h-100 my-1 text-end">
 				<div class="card-body py-2">
-                    <p class="card-title fs-5 fw-semibold lh-base mb-0">Overview <i class="material-icons align-middle">navigate_next</i></p>
-					<p class="card-text me-2">BDIViz: An Interactive …</p>
+                    <p class="card-title fs-5 fw-semibold lh-base mb-0">Install on Linux/Unix <i class="material-icons align-middle">navigate_next</i></p>
+					<p class="card-text me-2">Step-by-step guide for …</p>
 					
 				</div>
 			</div>
@@ -1001,6 +1040,27 @@
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 
     
@@ -1012,8 +1072,8 @@
                 id:  0 ,
                 href: "\/bdi-viz-manual\/docs\/get-started\/upload-your-data\/",
                 title: "Upload Your Data",
-                description: "Start a new schema matching task by upload your data files.",
-                content: "Start a New Matching Task linkClick the rightmost button labeled “New Matching Task” to begin. This will open the file upload interface (see screenshot below).\nYou will see three drop boxes stacked from top to bottom:\nSource CSV File – for your raw dataset\nTarget CSV File – for the reference standard dataset\nTarget Schema JSON File – for metadata and attribute definitions\nTo begin exploring schema matches, you’ll first need to upload these three types of files. These provide the information needed to visualize and compare your source dataset with a standardized target schema.\nUpload Source CSV File (Required) linkSelect a local .csv file that contains your raw or unaligned biomedical dataset.\nExample:\nCase_ID Gender Ethnicity_Self_Identify Path_Stage_Reg_Lymph_Nodes_pN C1234 Male Asian pN1 C5678 Female White pN2 C1111 Unknown Unknown pNX Upload Target CSV File link If this is empty, we use GDC v3.3.0 by defualt.\nSelect a .csv file that represents the standardized biomedical data format (e.g., GDC or PDC).\nExample:\nsubmitter_id gender race ajcc_pathologic_n T001 Male Asian N1 T002 Female White N2 Upload Target Schema JSON File link If this is empty, we use GDC v3.3.0 by defualt.\nChoose the corresponding .json file that describes the structure and metadata of the target schema.\nExample:\n{ \"age_at_index\": { \"column_name\": \"age_at_index\", \"category\": \"clinical\", \"node\": \"demographic\", \"type\": \"integer\", \"description\": \"The patient's age (in years) on the reference or anchor date used during date obfuscation.\", \"minimum\": 0 }, \"education_level\": { \"column_name\": \"education_level\", \"category\": \"clinical\", \"node\": \"demographic\", \"type\": \"enum\", \"description\": \"The years of schooling completed in graded public, private, or parochial schools, and in colleges, universities, or professional schools.\", \"enum\": [ \"College Degree\", \"High School Graduate or GED\", \"Professional or Graduate Degree\", \"Some High School or Less\", \"Vocational College or Some College\", \"Unknown\", \"Not Reported\" ] }, } Launch Matching Task linkAfter uploading your files, click the “Import CSV” button to initiate the matching process. The system will begin processing your data, which may take a few minutes to complete.\nDuring this time, our matching algorithm analyzes your input files and generates recommendations for schema alignment. A loading indicator will display the progress as the system works to identify potential matches between your source data and the target schema.\n"
+                description: "Begin a new schema matching task by uploading your dataset files.",
+                content: "1. Start a New Matching Task linkTo begin, click the “New Matching Task” button located on the far right of the navigation bar. This will open the upload interface.\nThe interface presents three drop zones:\nSource CSV File – Your input dataset Target CSV File – The standardized reference dataset Target Schema JSON File – Metadata for interpreting the reference schema These files are essential for initiating schema matching and visual comparison.\n2. Upload Required Files linkA. Source CSV File (Required) linkUpload a .csv file containing your unstructured or raw biomedical dataset. This will be used as the basis for matching.\nExample:\nCase_ID Gender Ethnicity_Self_Identify Path_Stage_Reg_Lymph_Nodes_pN C1234 Male Asian pN1 C5678 Female White pN2 C1111 Unknown Unknown pNX B. Target CSV File (Optional) linkIf omitted, the system will default to the GDC v3.3.0 schema.\nUpload a .csv file that reflects the reference or gold-standard biomedical dataset (e.g., GDC, PDC).\nExample:\nsubmitter_id gender race ajcc_pathologic_n T001 Male Asian N1 T002 Female White N2 C. Target Schema JSON File (Optional) linkIf omitted, the system will use the GDC v3.3.0 schema definition.\nUpload a .json file that defines metadata and attributes for the target schema.\nExample:\n{ \"age_at_index\": { \"column_name\": \"age_at_index\", \"category\": \"clinical\", \"node\": \"demographic\", \"type\": \"integer\", \"description\": \"The patient's age (in years) on the reference or anchor date used during date obfuscation.\", \"minimum\": 0 }, \"education_level\": { \"column_name\": \"education_level\", \"category\": \"clinical\", \"node\": \"demographic\", \"type\": \"enum\", \"description\": \"The years of schooling completed in graded public, private, or parochial schools, and in colleges, universities, or professional schools.\", \"enum\": [ \"College Degree\", \"High School Graduate or GED\", \"Professional or Graduate Degree\", \"Some High School or Less\", \"Vocational College or Some College\", \"Unknown\", \"Not Reported\" ] } } 3. Launch the Matching Task linkOnce all necessary files are uploaded, click the “Import CSV” button to start processing.\nThe system will:\nAnalyze your source data in relation to the reference schema Generate schema alignment recommendations Display a loading indicator while processing is in progress This step may take several minutes depending on the size of your dataset.\nNext Steps linkAfter the task is launched, you will be redirected to the schema matching workspace where you can:\nReview alignment suggestions Accept or reject proposed matches Explore value mappings and distributions interactively "
             }
         );
     index.add(
@@ -1021,13 +1081,31 @@
                 id:  1 ,
                 href: "\/bdi-viz-manual\/docs\/get-started\/explore-matches\/",
                 title: "Explore Matches",
-                description: "Once the files finished loading, you will be presented with the main BDIViz interface.",
-                content: " Once your files are uploaded, BDIViz will load the full interface for exploring match candidates between your source and target datasets.\nInteractive Heatmap linkThis is the central visual of BDIViz. Each cell in the heatmap represents a match candidate between a source attribute (on the y-axis) and a target attribute (on the x-axis).\nHeatmap Components link Heatmap Nodes X-Axis Expandable Node Top Tabs (above heatmap) Each cell in the heatmap represents a match candidate between a source attribute (on the y-axis) and a target attribute (on the x-axis).\nColor intensity represents match strength: darker = higher match score. Green indicates accepted matches; red indicates rejected ones. Click on a node to inspect further details. The x-axis of the heatmap represents the target schema’s attribute space in a structured, hierarchical layout—specifically designed to support the complexity of biomedical data models like the Genomic Data Commons (GDC).\nThis hierarchy includes:\nCategories (e.g., “clinical,” “biospecimen”) Nodes (e.g., “diagnosis,” “treatment”) Target Attributes as leaf nodes Color coding helps differentiate between categories, while curved connectors visually represent hierarchical relationships. Users can hover over any part of the hierarchy to highlight supercategories, specific categories, or individual columns, aiding navigation and contextual understanding.\nOnce you click on a heatmap node, the node expand and shows a stacked heatmap.\nThe upper histogram shows the distribution of values from the source column.\nThe lower histogram shows the distribution from the target column.\nThese visuals help assess whether the values in the two columns are statistically or categorically aligned. For example, if both columns share similar categories with comparable frequency distributions, it suggests a strong match.\nInterpretation Tip: Matching distributions with similar peaks (e.g., a high frequency of “Male” and “Female” values) may indicate semantic alignment. Dissimilar distributions can signal a mismatch or a need for closer inspection.\nAll: Displays all potential matches.\nAccepted: Shows only those that have been manually confirmed.\nUnmatched: Lists only those source attributes with no confirmed match.\nExpand On Hover: This toggle controls if the expandable node will be expanded on mouse hover or not(on click).\nFilters and Search Tools linkBDIViz provides several ways to customize and narrow your view:\nSource Attribute Similarity Threshold Similar Attributes Search Bar Lets you choose which column to focus on.\nOnce click you will able to see this dropdown menu showing all the source attributes:\nAll: Shows all source attributes in a paginatable manner. Attributes in green: The attributes that already have at least one accpeted candidate. Attributes in grey: The attributes that is discarded by user. Adjusts the minimum score a candidate must meet to appear. Values range from 0 (show all) to 1 (only highest similarity).\nDetermines how many similar source columns appear in the y-axis for better comparative context.\nNote: This only apply when Source Attribute is not set to All.\nLets you highlight specific target attributes by name or keyword.\nLower Panel Visuals linkWhen a node is selected from the heatmap, the bottom panels expand to provide deeper insights:\nValue Comparisons UpSet Plot Visual representation of fuzzy-matched value pairs between the selected source and target columns.\nEach row shows a unique source value and its closest string-matched counterpart(s) from the target.\nHelps validate or question whether two attributes should be considered a match.\nthe UpSet Plot provides a detailed breakdown of how each individual matcher contributed to the overall score of the selected candidate.\nEach matcher is represented as a row, and each column represents a candidate match. A dot is shown where a matcher supports a given match.\nLLM Agent Panel link Overview Diagnosis: Summarizes whether the current match is likely valid or not, based on metadata, column names, and prior interactions.\nExplanation Cards:\nEach card explains one rationale (e.g., shared terms, similar distributions, matching patterns).\nClick to expand each explanation.\nFeedback Buttons: Let you provide a thumbs-up or thumbs-down to help improve the model’s future reasoning.\nTarget Schema Descriptions: Additional metadata from sources like GDC are displayed for further context.\n"
+                description: "Explore schema alignment candidates using the BDIViz interactive heatmap interface.",
+                content: "Overview linkAfter uploading your files, BDIViz launches its main interface, allowing you to visually explore match candidates between your source dataset and the target schema.\nInteractive Heatmap linkThe heatmap is the primary visualization tool in BDIViz. Each cell represents a match candidate between a source attribute (y-axis) and a target attribute (x-axis).\nKey Features link Heatmap Cells X-Axis Hierarchy Expandable Nodes Heatmap Top Tabs Each cell corresponds to a potential match:\nColor intensity indicates similarity score (darker = stronger match). Green = accepted match, Red = rejected match. Click on a cell to inspect match details. The x-axis displays the target schema’s structure as a semantic hierarchy:\nCategory Level: e.g., clinical, biospecimen Node Level: e.g., diagnosis, treatment Leaf Nodes: individual target attributes Color and curved connectors help clarify relationships and improve navigation.\nClicking a heatmap node reveals a stacked histogram panel:\nTop Chart: Source column value distribution Bottom Chart: Target column value distribution Use this to evaluate whether the two columns share meaningful overlap.\nTip: Similar distributions (e.g., shared categories like “Male” and “Female”) often suggest semantic alignment.\nThe top-level filter tabs help narrow your focus:\nAll: View all candidate matches Accepted: Only show confirmed matches Unmatched: Only show source columns with no confirmed match Expand on Hover: Toggle whether expanded histograms appear on hover or click Filters and Search Controls linkFine-tune the heatmap view using a suite of filters:\nSource Attribute Selector Similarity Threshold Similar Attributes Displayed Search Bar Select a specific source column to examine.\nDropdown key:\nGreen: Already matched Grey: Manually discarded All: Show all source attributes Set a minimum similarity score for visible candidates. Range: 0.0 – 1.0.\n0.0: Show all matches 1.0: Show only perfect matches Controls how many similar source attributes appear on the heatmap when a single source column is selected.\nNote: Only applies when Source Attribute ≠ “All”.\nQuickly locate and highlight target attributes by name or keyword.\nLower Panel: Match Details linkClicking on any heatmap node reveals deeper insights below:\nValue Comparisons UpSet Plot Visualizes string-based fuzzy matching between source and target values.\nEach row: one source value + its closest matches Use to validate whether mapping is semantically and syntactically justified Visualizes how different matchers contributed to the candidate match score.\nEach row: a matcher Each column: a candidate Dots indicate support from that matcher LLM Agent Panel link An embedded LLM-powered assistant provides contextual insights:\nDiagnosis Summary: Determines if a match is likely valid based on metadata, column names, and user history Explanation Cards: Highlight key reasons (e.g., name similarity, value overlap) Click to expand for more detail Provide feedback via 👍/👎 to refine model accuracy Target Schema Metadata: Enriched descriptions pulled from sources such as GDC What’s Next? linkAfter reviewing the matches:\nAccept or reject individual match suggestions Use filtering to prioritize high-confidence matches Proceed to export, refine, or apply your matched schema for downstream harmonization tasks "
             }
         );
     index.add(
             {
                 id:  2 ,
+                href: "\/bdi-viz-manual\/docs\/installation\/install-on-linux\/",
+                title: "Install on Linux/Unix",
+                description: "Step-by-step guide for installing and configuring BDIViz on Linux and Unix-based systems",
+                content: "Prerequisites linkBefore installing BDIViz on your Linux system, ensure you have the following prerequisites:\nA Linux distribution (Ubuntu, Debian, CentOS, etc.) with amd64 architecture Docker Engine installed and running (version 19.03 or later) At least 4GB of RAM and 10GB of free disk space Internet connection to pull the Docker image Install Docker (if not already installed) linkIf you don’t have Docker installed, follow these steps to install it:\nUbuntu/Debian CentOS/RHEL Arch Linux sudo apt update sudo apt install \\ ca-certificates \\ curl \\ gnupg \\ lsb-release sudo mkdir -p /etc/apt/keyrings curl -fsSL https://download.docker.com/linux/ubuntu/gpg | \\ sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg echo \\ \"deb [arch=$(dpkg --print-architecture) \\ signed-by=/etc/apt/keyrings/docker.gpg] \\ https://download.docker.com/linux/ubuntu \\ $(lsb_release -cs) stable\" | \\ sudo tee /etc/apt/sources.list.d/docker.list \u003e /dev/null sudo apt update sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin sudo systemctl enable docker sudo systemctl start docker sudo yum install -y yum-utils sudo yum-config-manager \\ --add-repo https://download.docker.com/linux/centos/docker-ce.repo sudo yum install docker-ce docker-ce-cli containerd.io docker-compose-plugin sudo systemctl enable docker sudo systemctl start docker sudo pacman -Syu sudo pacman -S docker sudo systemctl enable docker sudo systemctl start docker Run BDIViz Using Docker linkOnce Docker is installed and running, follow these steps to run BDIViz using the edenwu/bdi-viz-react:amd64 image:\n1. Pull the Docker image link docker pull edenwu/bdi-viz-react:amd64 2. Run the container link docker run -d \\ --name bdiviz \\ -p 3000:3000 \\ edenwu/bdi-viz-react:amd64 This will start the BDIViz container in detached mode and expose the web application at http://localhost:3000.\n3. Verify the container is running linkYou can verify the container is up using:\ndocker ps If everything is working correctly, you should see bdiviz listed in the output.\n4. Stop the container linkWhen you’re done, you can stop the container with:\ndocker stop bdiviz And if needed, remove it:\ndocker rm bdiviz Note link Make sure port 3000 is available on your host machine. You can bind-mount local volumes or customize environment variables for advanced use (e.g., persistent storage, configuration injection). To update the image, simply pull the latest tag again and restart the container: docker pull edenwu/bdi-viz-react:amd64 docker stop bdiviz \u0026\u0026 docker rm bdiviz docker run -d --name bdiviz -p 3000:3000 edenwu/bdi-viz-react:amd64 Troubleshooting link Port already in use? Try using a different port: docker run -d --name bdiviz-mac -p 8080:3000 edenwu/bdi-viz-react:arm64 Then access it at http://localhost:8080. Docker daemon not running? Open Docker Desktop and make sure it’s active. Still stuck? Feel free to reach out or open an issue on the GitHub repository. "
+            }
+        );
+    index.add(
+            {
+                id:  3 ,
+                href: "\/bdi-viz-manual\/docs\/installation\/install-on-macos\/",
+                title: "Install on MacOS",
+                description: "Step-by-step guide for installing and configuring BDIViz on MacOS(ARM64) systems",
+                content: "Prerequisites linkBefore setting up BDIViz on your Mac, ensure your system meets the following requirements:\nMac computer with Apple Silicon (M1, M2, M3, etc.) – ARM64 architecture macOS 12.0 Monterey or later Docker Desktop for Mac (ARM64 version) At least 4GB of RAM and 10GB of free disk space Internet connection to pull the Docker image Install Docker Desktop for Mac link Download Docker Desktop for Mac (Apple Silicon): 👉 https://www.docker.com/products/docker-desktop/\nOpen the downloaded .dmg file and drag Docker to your Applications folder.\nLaunch Docker Desktop from Spotlight or Applications.\nGrant permissions if prompted and wait for Docker to start (you should see the Docker icon in the menu bar).\nOpen Terminal and verify installation:\ndocker --version You should see an output like:\nDocker version 24.0.0, build xxxxxxxx Run BDIViz Using Docker link1. Pull the Docker image link docker pull edenwu/bdi-viz-react:arm64 2. Run the container link docker run -d \\ --name bdiviz \\ -p 3000:3000 \\ edenwu/bdi-viz-react:arm64 This will start the BDIViz container in detached mode and expose the web application at http://localhost:3000.\n3. Verify the container is running linkYou can verify the container is up using:\ndocker ps If everything is working correctly, you should see bdiviz listed in the output.\n4. Stop the container linkWhen you’re done, you can stop the container with:\ndocker stop bdiviz And if needed, remove it:\ndocker rm bdiviz Note link Make sure port 3000 is available on your host machine. You can bind-mount local volumes or customize environment variables for advanced use (e.g., persistent storage, configuration injection). To update the image, simply pull the latest tag again and restart the container: docker pull edenwu/bdi-viz-react:amd64 docker stop bdiviz \u0026\u0026 docker rm bdiviz docker run -d --name bdiviz -p 3000:3000 edenwu/bdi-viz-react:amd64 Troubleshooting link Port already in use? Try using a different port: docker run -d --name bdiviz-mac -p 8080:3000 edenwu/bdi-viz-react:arm64 Then access it at http://localhost:8080. Docker daemon not running? Open Docker Desktop and make sure it’s active. Still stuck? Feel free to reach out or open an issue on the GitHub repository. "
+            }
+        );
+    index.add(
+            {
+                id:  4 ,
                 href: "\/bdi-viz-manual\/docs\/overview\/",
                 title: "Overview",
                 description: "BDIViz: An Interactive Visualization System for Biomedical Schema Matching with LLM-Supported Validation",
@@ -1036,25 +1114,25 @@
         );
     index.add(
             {
-                id:  3 ,
+                id:  5 ,
                 href: "\/bdi-viz-manual\/docs\/get-started\/user-operation\/",
                 title: "Perform User Operations",
-                description: "Interactively manipulate on each match candidate.",
-                content: " The Shortcut Panel provides quick-access buttons for managing match candidates. Located at the top-left corner of the BDIViz interface, it offers essential operations to streamline your workflow.\nAvailable Actions link Button Symbol Function Visual Effect Accept ✓ Confirms the selected source-to-target candidate as a valid match Cell turns green Reject ✕ Marks the selected match as invalid Cell turns red Discard 🗑️ Removes source attribute from consideration when no suitable match exists Attribute appears grayed out Undo ⟲ Reverts your most recent operation Restores previous state Redo ⟳ Reapplies the most recently undone action Reapplies change Note: All actions are logged in the Timeline Panel on the right, creating a complete audit trail of your decision-making process.\nWorkflow Tips link Use these shortcuts to rapidly process multiple candidates The Timeline Panel allows you to track and review all your decisions Undo/Redo functionality ensures you can correct mistakes without losing progress Visual color coding (green/red/gray) helps you quickly identify the status of each match "
+                description: "Interactively evaluate and manage each schema match candidate.",
+                content: "Overview linkBDIViz provides a streamlined interface for managing match candidates directly within the heatmap view. The Shortcut Panel, located at the top-left of the screen, offers essential interactive tools for evaluating and adjusting alignment results.\nThese operations allow users to mark candidates as accepted, rejected, or discarded, while also providing undo/redo functionality for iterative refinement.\nAvailable Actions linkThe table below summarizes the core user operations available via the Shortcut Panel:\nAction Icon Description Visual Indicator Accept ✓ Confirms a source-to-target column pair as a valid schema match Cell turns green Reject ✕ Flags the candidate as an invalid or incorrect match Cell turns red Discard 🗑️ Removes the source attribute from matching consideration Attribute grays out Undo ⟲ Reverts the most recent operation Previous state restored Redo ⟳ Reapplies the most recently undone operation Last change re-applied All user operations are recorded in the Timeline Panel (located on the right), enabling traceability and decision auditing.\nBest Practices link Leverage Keyboard Shortcuts: Speed up match decisions using shortcut buttons or hotkeys (where supported). Work Iteratively: Use Undo and Redo freely to experiment and refine decisions without permanent impact. Stay Organized: The Timeline Panel logs every action in sequence, helping you track progress or revisit past decisions. Interpret Colors Quickly: ✅ Green: Accepted match ❌ Red: Rejected match 🚫 Gray: Discarded source attribute Next Steps linkAfter reviewing and operating on match candidates:\nReview the Timeline Panel to validate key decisions. Use filters and the heatmap overview to identify remaining unmatched attributes. Proceed to export your confirmed mappings or refine further with the help of the LLM Agent Panel. For more advanced functionality or customization, refer to the Usage Guide or contact the support team via Support.\n"
             }
         );
     index.add(
             {
-                id:  4 ,
+                id:  6 ,
                 href: "\/bdi-viz-manual\/docs\/get-started\/export-your-mappings\/",
                 title: "Export Your Mappings",
-                description: "Export your matching result.",
-                content: " Exporting Your Results linkAfter completing your schema matching process, you can export your validated mappings for downstream use.\nExport Process link Locate the Export button in the Shortcut Panel at the top-left corner of the interface Click the button to initiate the export process A dialog will appear with format options Available Export Formats link CSV Format JSON Format The CSV export provides a transformed dataset with your source data mapped to the target schema.\nFeatures:\nSource columns are renamed to their matched target attributes Only accepted matches are included Ready for immediate use in analytics or data submission Example CSV Output:\nsubmitter_id gender race ajcc_pathologic_n C1234 Male Asian pN1 C5678 Female White pN2 C1111 Unknown Unknown pNX This format is ideal for:\nData integration workflows Direct uploads to target systems Documentation of transformations The JSON export provides a structured representation of your mapping decisions with additional metadata.\nFeatures:\nComplete mapping information including scores and timestamps Includes metadata about the matching process Suitable for programmatic processing Example JSON Output:\n[ { \"sourceColumn\": \"Tumor_Focality\", \"targetColumn\": \"tumor_focality\", \"valueMatches\": [ { \"from\": \"Multifocal\", \"to\": \"Multifocal\" }, { \"from\": \"Unifocal\", \"to\": \"Unifocal\" } ] }, { \"sourceColumn\": \"Ethnicity\", \"targetColumn\": \"ethnicity\", \"valueMatches\": [ { \"from\": \"Hispanic or Latino\", \"to\": \"hispanic or latino\" }, { \"from\": \"Not reported\", \"to\": \"not reported\" }, { \"from\": \"Not-Hispanic or Latino\", \"to\": \"not hispanic or latino\" } ] }, ] "
+                description: "Export the results of your schema matching task in multiple formats for downstream integration and analysis.",
+                content: "Overview linkOnce your schema matching task is complete, BDIViz enables you to export the validated mappings for use in data integration pipelines, reporting workflows, or system submissions.\nHow to Export linkTo begin exporting your results:\nNavigate to the Shortcut Panel (top-left corner of the interface). Click the Export button. A dialog will appear prompting you to select your preferred export format (CSV or JSON). Export Formats linkBDIViz supports two export options designed for different use cases:\nCSV Format JSON Format The CSV export transforms your original dataset using only the accepted column mappings.\nKey Features: link Source columns are renamed to their matched target attributes Only accepted matches are included Resulting dataset is ready for immediate analysis or upload Example Output: link submitter_id gender race ajcc_pathologic_n C1234 Male Asian pN1 C5678 Female White pN2 C1111 Unknown Unknown pNX Best For: link Data harmonization pipelines Uploads to repositories (e.g., GDC, PDC) Sharing aligned datasets with collaborators The JSON export provides a structured record of all mapping operations with detailed metadata.\nKey Features: link Includes column-level mappings and value-level match pairs Records additional metadata like match scores and timestamps Machine-readable for downstream processing or reproducibility Example Output: link [ { \"sourceColumn\": \"Tumor_Focality\", \"targetColumn\": \"tumor_focality\", \"valueMatches\": [ { \"from\": \"Multifocal\", \"to\": \"Multifocal\" }, { \"from\": \"Unifocal\", \"to\": \"Unifocal\" } ] }, { \"sourceColumn\": \"Ethnicity\", \"targetColumn\": \"ethnicity\", \"valueMatches\": [ { \"from\": \"Hispanic or Latino\", \"to\": \"hispanic or latino\" }, { \"from\": \"Not reported\", \"to\": \"not reported\" }, { \"from\": \"Not-Hispanic or Latino\", \"to\": \"not hispanic or latino\" } ] } ] Best For: link Programmatic ingestion and audit trails Reuse in automated systems Reconstructing or refining schema alignment processes Final Notes link Ensure all intended mappings are accepted before exporting; rejected and discarded mappings will not be included. Use the Timeline Panel to review decisions prior to export. Both formats can be downloaded directly to your local machine. "
             }
         );
     index.add(
             {
-                id:  5 ,
+                id:  7 ,
                 href: "\/bdi-viz-manual\/docs\/",
                 title: "BDIViz Documentations",
                 description: "Explore our guides and examples to deploy and improve your data integration workflow with BDIViz.",
@@ -1063,10 +1141,19 @@
         );
     index.add(
             {
-                id:  6 ,
+                id:  8 ,
                 href: "\/bdi-viz-manual\/docs\/get-started\/",
                 title: "Get Started",
                 description: "Start your first BDIViz workflow.",
+                content: ""
+            }
+        );
+    index.add(
+            {
+                id:  9 ,
+                href: "\/bdi-viz-manual\/docs\/installation\/",
+                title: "Installation",
+                description: "Installation guide for setting up BDIViz on your system",
                 content: ""
             }
         );

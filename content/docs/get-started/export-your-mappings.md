@@ -1,97 +1,104 @@
 ---
 weight: 400
 title: "Export Your Mappings"
-description: "Export your matching result."
+description: "Export the results of your schema matching task in multiple formats for downstream integration and analysis."
 icon: "export"
 date: "2025-04-19T13:38:17-04:00"
-lastmod: "2025-04-19T13:38:17-04:00"
+lastmod: "2025-04-21T11:00:00-04:00"
 draft: false
 toc: true
 ---
 
+## Overview
+
+Once your schema matching task is complete, BDIViz enables you to export the validated mappings for use in data integration pipelines, reporting workflows, or system submissions.
+
 ![export-matches-gif](./images/export-matches.gif)
 
-## Exporting Your Results
+---
 
-After completing your schema matching process, you can export your validated mappings for downstream use.
+## How to Export
 
-### Export Process
+To begin exporting your results:
 
-1. Locate the **Export** button in the Shortcut Panel at the top-left corner of the interface
-2. Click the button to initiate the export process
-3. A dialog will appear with format options
+1. Navigate to the **Shortcut Panel** (top-left corner of the interface).
+2. Click the **Export** button.
+3. A dialog will appear prompting you to select your preferred export format (CSV or JSON).
 
-### Available Export Formats
+---
+
+## Export Formats
+
+BDIViz supports two export options designed for different use cases:
 
 {{< tabs tabTotal="2">}}
+
 {{% tab tabName="CSV Format" %}}
 
-The CSV export provides a transformed dataset with your source data mapped to the target schema.
+The CSV export transforms your original dataset using only the accepted column mappings.
 
-**Features:**
+### Key Features:
 - Source columns are renamed to their matched target attributes
 - Only accepted matches are included
-- Ready for immediate use in analytics or data submission
+- Resulting dataset is ready for immediate analysis or upload
 
-**Example CSV Output:**
+### Example Output:
+
 | submitter_id | gender | race  | ajcc_pathologic_n |
 |--------------|--------|-------|-------------------|
-| C1234   | Male    | Asian                   | pN1                           |
-| C5678   | Female  | White                   | pN2                           |
-| C1111   | Unknown | Unknown                 | pNX                           |
+| C1234        | Male   | Asian | pN1               |
+| C5678        | Female | White | pN2               |
+| C1111        | Unknown| Unknown| pNX              |
 
+### Best For:
+- Data harmonization pipelines
+- Uploads to repositories (e.g., GDC, PDC)
+- Sharing aligned datasets with collaborators
 
-This format is ideal for:
-- Data integration workflows
-- Direct uploads to target systems
-- Documentation of transformations
 {{% /tab %}}
+
 {{% tab tabName="JSON Format" %}}
 
-The JSON export provides a structured representation of your mapping decisions with additional metadata.
+The JSON export provides a structured record of all mapping operations with detailed metadata.
 
-**Features:**
-- Complete mapping information including scores and timestamps
-- Includes metadata about the matching process
-- Suitable for programmatic processing
+### Key Features:
+- Includes column-level mappings and value-level match pairs
+- Records additional metadata like match scores and timestamps
+- Machine-readable for downstream processing or reproducibility
 
-**Example JSON Output:**
+### Example Output:
+
 ```json
 [
   {
     "sourceColumn": "Tumor_Focality",
     "targetColumn": "tumor_focality",
     "valueMatches": [
-      {
-        "from": "Multifocal",
-        "to": "Multifocal"
-      },
-      {
-        "from": "Unifocal",
-        "to": "Unifocal"
-      }
+      { "from": "Multifocal", "to": "Multifocal" },
+      { "from": "Unifocal", "to": "Unifocal" }
     ]
   },
   {
     "sourceColumn": "Ethnicity",
     "targetColumn": "ethnicity",
     "valueMatches": [
-      {
-        "from": "Hispanic or Latino",
-        "to": "hispanic or latino"
-      },
-      {
-        "from": "Not reported",
-        "to": "not reported"
-      },
-      {
-        "from": "Not-Hispanic or Latino",
-        "to": "not hispanic or latino"
-      }
+      { "from": "Hispanic or Latino", "to": "hispanic or latino" },
+      { "from": "Not reported", "to": "not reported" },
+      { "from": "Not-Hispanic or Latino", "to": "not hispanic or latino" }
     ]
-  },
+  }
 ]
 ```
 
+### Best For:
+- Programmatic ingestion and audit trails
+- Reuse in automated systems
+- Reconstructing or refining schema alignment processes
+
 {{% /tab %}}
 {{< /tabs >}}
+
+## Final Notes
+- Ensure all intended mappings are **accepted** before exporting; rejected and discarded mappings will not be included.
+- Use the **Timeline Panel** to review decisions prior to export.
+- Both formats can be downloaded directly to your local machine.
