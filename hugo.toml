@@ -46,3 +46,4 @@ enableEmoji = true
         descriptions    = true 
         intLinkTooltip  = true
         logoLinkURL     = "/bdi-viz-manual"
+        extLinkNewTab   = true

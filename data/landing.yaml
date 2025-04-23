@@ -11,8 +11,14 @@ hero:
       desktop: "gradient-mobile.webp"
       mobile: "gradient-mobile.webp"
 
+  # titleLogo:
+  #   path: "images/logos"
+  #   filename: "vida-logo.png"
+  #   alt: "NYU VIDA"
+  #   height: 80px
+
   badge:
-    text: v0.1.0
+    text: b0.0.1
     color: primary # primary, secondary, success, danger, warning, info, light, dark
     pill: false # boolean
     soft: true # boolean
@@ -32,7 +38,7 @@ hero:
     btnText: "Get Started"
     url: "docs"
   cta2Button:
-    icon: construction
+    icon: code
     btnText: "In Development"
     url: "https://github.com/VIDA-NYU/bdi-viz-react"
 

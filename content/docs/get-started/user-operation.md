@@ -54,5 +54,3 @@ After reviewing and operating on match candidates:
 - Review the Timeline Panel to validate key decisions.
 - Use filters and the heatmap overview to identify remaining unmatched attributes.
 - Proceed to export your confirmed mappings or refine further with the help of the LLM Agent Panel.
-
-For more advanced functionality or customization, refer to the [Usage Guide](/docs/usage) or contact the support team via [Support](/support).
