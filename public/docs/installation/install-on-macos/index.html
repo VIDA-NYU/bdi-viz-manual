@@ -100,6 +100,25 @@
                 
                     
                     
+                        <li class="sidebar-dropdown no-icon ">
+                            <button class="btn">
+                                Get Started
+                            </button>
+                            <div class="sidebar-submenu ">
+                                <ul>
+                                    
+                                        
+                                        
+                                            <li class=" no-icon"><a class="sidebar-nested-link" href="http://localhost:1313/bdi-viz-manual/docs/get-started/dataset-to-gdc/">Dataset to GDC Usecase</a></li>
+                                        
+                                    
+                                </ul>
+                            </div>
+                        </li>
+                    
+                
+                    
+                    
                         <li class="sidebar-dropdown no-icon current active">
                             <button class="btn">
                                 Installation
@@ -819,6 +838,20 @@ Then access it at http://localhost:8080.</li>
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 
     
@@ -837,6 +870,15 @@ Then access it at http://localhost:8080.</li>
     index.add(
             {
                 id:  1 ,
+                href: "\/bdi-viz-manual\/docs\/get-started\/dataset-to-gdc\/",
+                title: "Dataset to GDC Usecase",
+                description: "Step-by-step guide for a Dataset to GDC matching case",
+                content: "Install BDIViz to Your Machine 🚀 linkIf you are using a AMD64 machine, refer to this guide. If you are using an ARM64 machine (like Apple Silicon Macs), refer to this guide.\nOverview 🔍 linkThis guide walks you through the process of matching your biomedical dataset to the Genomic Data Commons (GDC) schema using BDIViz. The GDC is a standardized data repository that requires specific formatting and schema alignment.\nStep 1: Load the Clark Dataset and Start a New Task 📊 link Download the sample dataset by Clark et al Open your web browser and navigate to http://localhost:3000 Click the “New Matching Task” button in the navigation bar Drag and drop the Clark dataset CSV file into the Source CSV File drop zone Leave the Target CSV File and Target Schema JSON File fields empty to use the default GDC v3.3.0 schema Click “Import CSV” to begin processing Step 2: Identify and Confirm Easy Matches 🔎 linkOnce the heatmap appears, you’ll notice some obvious matches with darker cells that have already been automatically accepted (indicated by green cells with checkmarks):\nExact Name and Value Matches: Find the cell where Gender (source) intersects with gender (GDC) Click on this cell to examine the match details You’ll see that both attribute names are similar and the values align perfectly (Male → Male, Female → Female) Note that this match is already accepted by default (green color with checkmark) Similar Names with Aligned Distributions: Locate the cell where BMI (source) intersects with bmi (GDC) Click to review the match details Notice that both the attribute names match and the numerical distributions align This match is also already accepted by default (green color with checkmark) Step 3: Explore and Evaluate Complex Matches 🧐 linkNow let’s handle more complex matching scenarios:\nEthnicity_Self_Identify Evaluation:\nFind the cell where Ethnicity_Self_Identify (source) intersects with ethnicity (GDC) Click to examine the match details Despite the similar attribute names, you’ll notice the values are very different: Source values include “Asian”, “White”, etc. GDC ethnicity values include “hispanic or latino”, “not hispanic or latino”, etc. Click the Reject (✕) button to mark this as an invalid match Finding the Correct Match for Ethnicity_Self_Identify:\nNow check the cell where Ethnicity_Self_Identify (source) intersects with race (GDC) Click to review the match details You’ll see that the values align well: “Asian” in source matches “asian” in GDC “White” in source matches “white” in GDC Click the Accept (✓) button to confirm this match Step 4: Continue Reviewing All Source Attributes 📋 linkRepeat this process for each source attribute:\nClick on cells with darker shading (indicating stronger match candidates) Review the attribute names and value distributions Use the Shortcut Panel to: Accept (✓) valid matches Reject (✕) invalid matches Discard (🗑️) attributes you don’t want to match Step 5: Export Your Mapped Dataset 📤 linkOnce you’ve evaluated all matches:\nClick the Export button in the Shortcut Panel Choose CSV format to get your dataset with GDC-compliant column names Download the file to your computer What’s Next? 🚀 linkFor exploring more BDIViz usages and detailed manual, please see User Manual\n"
+            }
+        );
+    index.add(
+            {
+                id:  2 ,
                 href: "\/bdi-viz-manual\/docs\/manual\/explore-matches\/",
                 title: "Explore Matches",
                 description: "Explore schema alignment candidates using the BDIViz interactive heatmap interface.",
@@ -845,7 +887,7 @@ Then access it at http://localhost:8080.</li>
         );
     index.add(
             {
-                id:  2 ,
+                id:  3 ,
                 href: "\/bdi-viz-manual\/docs\/installation\/install-on-linux\/",
                 title: "Install on Linux/Unix",
                 description: "Step-by-step guide for installing and configuring BDIViz on Linux and Unix-based systems",
@@ -854,7 +896,7 @@ Then access it at http://localhost:8080.</li>
         );
     index.add(
             {
-                id:  3 ,
+                id:  4 ,
                 href: "\/bdi-viz-manual\/docs\/installation\/install-on-macos\/",
                 title: "Install on MacOS",
                 description: "Step-by-step guide for installing and configuring BDIViz on MacOS(ARM64) systems",
@@ -863,7 +905,7 @@ Then access it at http://localhost:8080.</li>
         );
     index.add(
             {
-                id:  4 ,
+                id:  5 ,
                 href: "\/bdi-viz-manual\/docs\/overview\/",
                 title: "Overview",
                 description: "BDIViz: An Interactive Visualization System for Biomedical Schema Matching with LLM-Supported Validation",
@@ -872,7 +914,7 @@ Then access it at http://localhost:8080.</li>
         );
     index.add(
             {
-                id:  5 ,
+                id:  6 ,
                 href: "\/bdi-viz-manual\/docs\/manual\/user-operation\/",
                 title: "Perform User Operations",
                 description: "Interactively evaluate and manage each schema match candidate.",
@@ -881,7 +923,7 @@ Then access it at http://localhost:8080.</li>
         );
     index.add(
             {
-                id:  6 ,
+                id:  7 ,
                 href: "\/bdi-viz-manual\/docs\/manual\/export-your-mappings\/",
                 title: "Export Your Mappings",
                 description: "Export the results of your schema matching task in multiple formats for downstream integration and analysis.",
@@ -890,7 +932,7 @@ Then access it at http://localhost:8080.</li>
         );
     index.add(
             {
-                id:  7 ,
+                id:  8 ,
                 href: "\/bdi-viz-manual\/docs\/",
                 title: "BDIViz Documentations",
                 description: "Explore our guides and examples to deploy and improve your data integration workflow with BDIViz.",
@@ -899,7 +941,16 @@ Then access it at http://localhost:8080.</li>
         );
     index.add(
             {
-                id:  8 ,
+                id:  9 ,
+                href: "\/bdi-viz-manual\/docs\/get-started\/",
+                title: "Get Started",
+                description: "Start your first BDIViz workflow",
+                content: ""
+            }
+        );
+    index.add(
+            {
+                id:  10 ,
                 href: "\/bdi-viz-manual\/docs\/installation\/",
                 title: "Installation",
                 description: "Installation guide for setting up BDIViz on your system",
@@ -908,10 +959,10 @@ Then access it at http://localhost:8080.</li>
         );
     index.add(
             {
-                id:  9 ,
+                id:  11 ,
                 href: "\/bdi-viz-manual\/docs\/manual\/",
                 title: "User Manual",
-                description: "Start your first BDIViz workflow.",
+                description: "Detailed user manual to BDIViz workflow",
                 content: ""
             }
         );

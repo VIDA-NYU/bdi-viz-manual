@@ -100,6 +100,25 @@
                     
                         <li class="sidebar-dropdown no-icon ">
                             <button class="btn">
+                                Get Started
+                            </button>
+                            <div class="sidebar-submenu ">
+                                <ul>
+                                    
+                                        
+                                        
+                                            <li class=" no-icon"><a class="sidebar-nested-link" href="http://localhost:1313/bdi-viz-manual/docs/get-started/dataset-to-gdc/">Dataset to GDC Schema Alignment</a></li>
+                                        
+                                    
+                                </ul>
+                            </div>
+                        </li>
+                    
+                
+                    
+                    
+                        <li class="sidebar-dropdown no-icon ">
+                            <button class="btn">
                                 Installation
                             </button>
                             <div class="sidebar-submenu ">
@@ -309,6 +328,23 @@
         </div>
         
         <div id="list-item" class="col-md-4 col-12 mt-4 pt-2">
+            <a class="text-decoration-none text-reset" href="http://localhost:1313/bdi-viz-manual/docs/get-started/">
+                <div class="card h-100 features feature-full-bg rounded p-4 position-relative overflow-hidden border-1">
+                    <span class="icon-color d-flex my-3">
+                        <i class="material-icons align-middle">rocket</i>
+                        
+                        <i class="material-icons icon-faint align-middle ms-auto" title="Directory">folder</i>
+                    </span>
+                    <div class="card-body p-0 content">
+                        <p class="fs-5 fw-semibold card-title mb-1">Get Started</p>
+                        <p class="para card-text mb-0">Start your first BDIViz workflow</p>
+                    </div>
+                    
+                </div>
+            </a>
+        </div>
+        
+        <div id="list-item" class="col-md-4 col-12 mt-4 pt-2">
             <a class="text-decoration-none text-reset" href="http://localhost:1313/bdi-viz-manual/docs/installation/">
                 <div class="card h-100 features feature-full-bg rounded p-4 position-relative overflow-hidden border-1">
                     <span class="icon-color d-flex my-3">
@@ -329,13 +365,13 @@
             <a class="text-decoration-none text-reset" href="http://localhost:1313/bdi-viz-manual/docs/manual/">
                 <div class="card h-100 features feature-full-bg rounded p-4 position-relative overflow-hidden border-1">
                     <span class="icon-color d-flex my-3">
-                        <i class="material-icons align-middle">rocket</i>
+                        <i class="material-icons align-middle">book</i>
                         
                         <i class="material-icons icon-faint align-middle ms-auto" title="Directory">folder</i>
                     </span>
                     <div class="card-body p-0 content">
                         <p class="fs-5 fw-semibold card-title mb-1">User Manual</p>
-                        <p class="para card-text mb-0">Start your first BDIViz workflow.</p>
+                        <p class="para card-text mb-0">Detailed user manual to BDIViz workflow</p>
                     </div>
                     
                 </div>
@@ -572,6 +608,20 @@
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 
     
@@ -590,6 +640,15 @@
     index.add(
             {
                 id:  1 ,
+                href: "\/bdi-viz-manual\/docs\/get-started\/dataset-to-gdc\/",
+                title: "Dataset to GDC Schema Alignment",
+                description: "Comprehensive guide for mapping biomedical datasets to the GDC schema standard",
+                content: "Installation 🛠️ linkFor system-specific installation instructions:\nAMD64 architecture: Follow the Linux/Unix installation guide ARM64 architecture (Apple Silicon): Follow the MacOS installation guide Introduction 📚 linkThis guide demonstrates the process of aligning a biomedical dataset with the Genomic Data Commons (GDC) schema using BDIViz. The GDC maintains standardized data repositories that require specific formatting and schema compliance for successful data submission and integration.\nStep 1: Dataset Preparation and Task Initialization 🚀 link Download the Clark et al. sample dataset Navigate to http://localhost:3000 in your web browser Select “New Matching Task” from the navigation bar Upload the Clark dataset CSV file to the Source CSV File drop zone Leave the Target CSV File and Target Schema JSON File fields empty to utilize the default GDC v3.3.0 schema Click “Import CSV” to initiate the matching process Step 2: Validating High-Confidence Matches ✅ linkThe system automatically identifies and suggests high-confidence matches, indicated by darker cells in the heatmap. Review these initial suggestions:\nDirect Attribute Matches:\nLocate the matching candidate Gender (source) -\u003e gender (GDC) in the heatmap cell Click the heatmap cell to expand the embedded node The embedded node contains unique value distributions for both attributes Verify that both attribute names and values align (Male → Male, Female → Female) Note that high-confidence matches are pre-accepted (indicated by green cells with checkmarks) Numerical Attribute Alignment:\nExamine the matching candidate BMI (source) -\u003e bmi (GDC) in the heatmap cell Click the heatmap cell to expand the embedded node The embedded node shows value bin distributions for numerical data Observe that both attribute names and numerical distributions correspond appropriately This match should also be pre-accepted (green cell with checkmark) Step 3: Explore Complex Attribute Matches 🧩 linkAddress more nuanced matching scenarios that require human judgment:\nEvaluating Semantic Differences:\nLocate the matching candidate Ethnicity_Self_Identify (source) -\u003e ethnicity (GDC) in the heatmap cell Click the heatmap cell to expand the embedded node Scroll down to check the value comparisons table in the embedded node Note the significant value discrepancies: Source values include “Asian”, “White”, etc. GDC ethnicity values include “hispanic or latino”, “not hispanic or latino”, etc. Click the Reject (✕) button on the top left Shortcut Panel to invalidate this incorrect match Identifying Cross-Category Matches:\nExamine the matching candidate Ethnicity_Self_Identify (source) -\u003e race (GDC) in the heatmap cell Click the heatmap cell to expand the embedded node Scroll down to check the value comparisons table in the embedded node Confirm that the values correspond appropriately: “Asian” in source aligns with “asian” in GDC “White” in source aligns with “white” in GDC Click the Accept (✓) button on the top left Shortcut Panel to confirm this cross-category match Step 4: Leverage the LLM Agent for Complex Matching Decisions 🤖 linkThe integrated LLM Agent provides valuable insights for challenging attribute matches:\nEvaluating Pathological Staging to Lymph Node Count:\nExamine the potential match Path_Stage_Reg_Lymph_Nodes_pN (source) -\u003e lymph_nodes_positive (GDC) Consult the Agent Panel on the left side of the interface Review the “Semantic No Match” card which indicates: Source attribute represents a classification system (pN0, pN1, etc.) Target attribute represents a numerical count of positive lymph nodes Based on this analysis, reject this match using the Shortcut Panel Distinguishing Staging from Testing Metrics:\nEvaluate the potential match Path_Stage_Reg_Lymph_Nodes_pN (source) -\u003e lymph_nodes_tested (GDC) Expand the “Pattern No Match” card in the Agent Panel Note the critical insight that source values (pN0, pN1, pNX) represent staging categories Confirm these do not align with the expected numeric values for lymph nodes tested Reject this match using the Shortcut Panel Identifying Non-Obvious Semantic Equivalence:\nAssess the potential match Path_Stage_Reg_Lymph_Nodes_pN (source) -\u003e ajcc_pathologic_n (GDC) Despite different naming conventions, examine the value distributions Consult the “Semantic Match” card in the Agent Panel Verify that both attributes represent pathological lymph node staging in cancer systems Accept this match using the Shortcut Panel Step 5: Systematic Review of All Source Attributes 🔍 linkMethodically evaluate each remaining source attribute:\nPrioritize heatmap cells with darker shading (indicating stronger match candidates) Click each heatmap cell to expand the embedded node and evaluate both attribute names and value distributions Utilize the top left Shortcut Panel to: Accept (✓) valid and appropriate matches Reject (✕) invalid or misaligned matches Discard (🗑️) attributes that should be excluded from the mapping process Step 6: Exporting the GDC-Compliant Dataset 📤 linkAfter completing the evaluation process:\nSelect the Export button from the top left Shortcut Panel Choose CSV format to generate a dataset with GDC-compliant column names Save the transformed file to your local system Further Resources 📖 linkFor advanced functionality and detailed operational guidance, please refer to the comprehensive User Manual.\n"
+            }
+        );
+    index.add(
+            {
+                id:  2 ,
                 href: "\/bdi-viz-manual\/docs\/manual\/explore-matches\/",
                 title: "Explore Matches",
                 description: "Explore schema alignment candidates using the BDIViz interactive heatmap interface.",
@@ -598,7 +657,7 @@
         );
     index.add(
             {
-                id:  2 ,
+                id:  3 ,
                 href: "\/bdi-viz-manual\/docs\/installation\/install-on-linux\/",
                 title: "Install on Linux/Unix",
                 description: "Step-by-step guide for installing and configuring BDIViz on Linux and Unix-based systems",
@@ -607,7 +666,7 @@
         );
     index.add(
             {
-                id:  3 ,
+                id:  4 ,
                 href: "\/bdi-viz-manual\/docs\/installation\/install-on-macos\/",
                 title: "Install on MacOS",
                 description: "Step-by-step guide for installing and configuring BDIViz on MacOS(ARM64) systems",
@@ -616,7 +675,7 @@
         );
     index.add(
             {
-                id:  4 ,
+                id:  5 ,
                 href: "\/bdi-viz-manual\/docs\/overview\/",
                 title: "Overview",
                 description: "BDIViz: An Interactive Visualization System for Biomedical Schema Matching with LLM-Supported Validation",
@@ -625,7 +684,7 @@
         );
     index.add(
             {
-                id:  5 ,
+                id:  6 ,
                 href: "\/bdi-viz-manual\/docs\/manual\/user-operation\/",
                 title: "Perform User Operations",
                 description: "Interactively evaluate and manage each schema match candidate.",
@@ -634,7 +693,7 @@
         );
     index.add(
             {
-                id:  6 ,
+                id:  7 ,
                 href: "\/bdi-viz-manual\/docs\/manual\/export-your-mappings\/",
                 title: "Export Your Mappings",
                 description: "Export the results of your schema matching task in multiple formats for downstream integration and analysis.",
@@ -643,7 +702,7 @@
         );
     index.add(
             {
-                id:  7 ,
+                id:  8 ,
                 href: "\/bdi-viz-manual\/docs\/",
                 title: "BDIViz Documentations",
                 description: "Explore our guides and examples to deploy and improve your data integration workflow with BDIViz.",
@@ -652,7 +711,16 @@
         );
     index.add(
             {
-                id:  8 ,
+                id:  9 ,
+                href: "\/bdi-viz-manual\/docs\/get-started\/",
+                title: "Get Started",
+                description: "Start your first BDIViz workflow",
+                content: ""
+            }
+        );
+    index.add(
+            {
+                id:  10 ,
                 href: "\/bdi-viz-manual\/docs\/installation\/",
                 title: "Installation",
                 description: "Installation guide for setting up BDIViz on your system",
@@ -661,10 +729,10 @@
         );
     index.add(
             {
-                id:  9 ,
+                id:  11 ,
                 href: "\/bdi-viz-manual\/docs\/manual\/",
                 title: "User Manual",
-                description: "Start your first BDIViz workflow.",
+                description: "Detailed user manual to BDIViz workflow",
                 content: ""
             }
         );

@@ -14,10 +14,10 @@
 
 <html lang="en-us"><head><script src="/bdi-viz-manual/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=bdi-viz-manual/livereload" data-no-instant defer></script>
     <meta charset="utf-8" />
-    <title>Overview | BDIViz User Manual</title>
+    <title>Dataset to GDC Schema Alignment | BDIViz User Manual</title>
     <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="BDIViz: An Interactive Visualization System for Biomedical Schema Matching with LLM-Supported Validation">
+    <meta name="description" content="Comprehensive guide for mapping biomedical datasets to the GDC schema standard">
     <meta name="keywords" content="Documentation, Hugo, Hugo Theme, Bootstrap" />
     <meta name="author" content="Colin Wilson - Lotus Labs" />
     <meta name="email" content="support@aigis.uk" />
@@ -30,15 +30,15 @@
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/bdi-viz-manual/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/bdi-viz-manual/favicon-16x16.png">
 <link rel="manifest" crossorigin="use-credentials" href="http://localhost:1313/bdi-viz-manual/site.webmanifest">
-<meta property="og:title" content="Overview" />
-<meta property="og:description" content="BDIViz: An Interactive Visualization System for Biomedical Schema Matching with LLM-Supported Validation" />
+<meta property="og:title" content="Dataset to GDC Schema Alignment" />
+<meta property="og:description" content="Comprehensive guide for mapping biomedical datasets to the GDC schema standard" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/bdi-viz-manual/docs/overview/" /><meta property="og:image" content="http://localhost:1313/bdi-viz-manual/opengraph/card-base-2_hu_c0929b2d1a8d54a8.png"/><meta property="article:section" content="docs" />
+<meta property="og:url" content="http://localhost:1313/bdi-viz-manual/docs/get-started/dataset-to-gdc/" /><meta property="og:image" content="http://localhost:1313/bdi-viz-manual/opengraph/card-base-2_hu_7c30a31a7dccdb84.png"/><meta property="article:section" content="docs" />
 <meta property="article:published_time" content="2025-04-19T13:38:17-04:00" />
 <meta property="article:modified_time" content="2025-04-19T13:38:17-04:00" /><meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="http://localhost:1313/bdi-viz-manual/opengraph/card-base-2_hu_c0929b2d1a8d54a8.png"/>
-<meta name="twitter:title" content="Overview"/>
-<meta name="twitter:description" content="BDIViz: An Interactive Visualization System for Biomedical Schema Matching with LLM-Supported Validation"/>
+<meta name="twitter:image" content="http://localhost:1313/bdi-viz-manual/opengraph/card-base-2_hu_7c30a31a7dccdb84.png"/>
+<meta name="twitter:title" content="Dataset to GDC Schema Alignment"/>
+<meta name="twitter:description" content="Comprehensive guide for mapping biomedical datasets to the GDC schema standard"/>
 
     
         <link rel="alternate" type="application/atom+xml" title="Atom feed for BDIViz User Manual" href="/index.xml" />
@@ -90,7 +90,7 @@
                 
                     
                         
-                        <li class="current">
+                        <li class="">
                             <a class="sidebar-root-link" href="http://localhost:1313/bdi-viz-manual/docs/overview/">
                                 
                                 Overview
@@ -100,16 +100,16 @@
                 
                     
                     
-                        <li class="sidebar-dropdown no-icon ">
+                        <li class="sidebar-dropdown no-icon current active">
                             <button class="btn">
                                 Get Started
                             </button>
-                            <div class="sidebar-submenu ">
+                            <div class="sidebar-submenu d-block">
                                 <ul>
                                     
                                         
                                         
-                                            <li class=" no-icon"><a class="sidebar-nested-link" href="http://localhost:1313/bdi-viz-manual/docs/get-started/dataset-to-gdc/">Dataset to GDC Schema Alignment</a></li>
+                                            <li class="current no-icon"><a class="sidebar-nested-link" href="http://localhost:1313/bdi-viz-manual/docs/get-started/dataset-to-gdc/">Dataset to GDC Schema Alignment</a></li>
                                         
                                     
                                 </ul>
@@ -283,10 +283,18 @@
                     <meta itemprop="position" content='1' />
                 </li>
             
+            
+                <li class="breadcrumb-item text-capitalize" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a itemprop="item" href="/bdi-viz-manual/docs/get-started/">
+                        <span itemprop="name">Get Started</span>
+                    </a>
+                    <meta itemprop="position" content='2' />
+                </li>
+            
         
             <li class="breadcrumb-item text-capitalize active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <span itemprop="name">Overview</span>
-                <meta itemprop="position" content='2' />
+                <span itemprop="name">Dataset to GDC Schema Alignment</span>
+                <meta itemprop="position" content='3' />
             </li>
         
     </ul>
@@ -298,10 +306,15 @@
     <div class="fw-bold text-uppercase mb-2">On this page</div>
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#gear-getting-started">&#x2699;&#xfe0f; Getting Started</a></li>
-    <li><a href="#gear-introduction">&#x2699;&#xfe0f; Introduction</a></li>
-    <li><a href="#gear-features">&#x2699;&#xfe0f; Features</a></li>
-    <li><a href="#camera-demo">&#x1f4f7; Demo</a></li>
+    <li><a href="#installation-">Installation 🛠️</a></li>
+    <li><a href="#introduction-">Introduction 📚</a></li>
+    <li><a href="#step-1-dataset-preparation-and-task-initialization-">Step 1: Dataset Preparation and Task Initialization 🚀</a></li>
+    <li><a href="#step-2-validating-high-confidence-matches-">Step 2: Validating High-Confidence Matches ✅</a></li>
+    <li><a href="#step-3-explore-complex-attribute-matches-">Step 3: Explore Complex Attribute Matches 🧩</a></li>
+    <li><a href="#step-4-leverage-the-llm-agent-for-complex-matching-decisions-">Step 4: Leverage the LLM Agent for Complex Matching Decisions 🤖</a></li>
+    <li><a href="#step-5-systematic-review-of-all-source-attributes-">Step 5: Systematic Review of All Source Attributes 🔍</a></li>
+    <li><a href="#step-6-exporting-the-gdc-compliant-dataset-">Step 6: Exporting the GDC-Compliant Dataset 📤</a></li>
+    <li><a href="#further-resources-">Further Resources 📖</a></li>
   </ul>
 </nav>
     </toc></div>
@@ -313,79 +326,47 @@
                                             </button>
 <nav id="toc-mobile">
   <ul class="dropdown-menu">
-    <li><a href="#gear-getting-started">&#x2699;&#xfe0f; Getting Started</a></li>
-    <li><a href="#gear-introduction">&#x2699;&#xfe0f; Introduction</a></li>
-    <li><a href="#gear-features">&#x2699;&#xfe0f; Features</a></li>
-    <li><a href="#camera-demo">&#x1f4f7; Demo</a></li>
+    <li><a href="#installation-">Installation 🛠️</a></li>
+    <li><a href="#introduction-">Introduction 📚</a></li>
+    <li><a href="#step-1-dataset-preparation-and-task-initialization-">Step 1: Dataset Preparation and Task Initialization 🚀</a></li>
+    <li><a href="#step-2-validating-high-confidence-matches-">Step 2: Validating High-Confidence Matches ✅</a></li>
+    <li><a href="#step-3-explore-complex-attribute-matches-">Step 3: Explore Complex Attribute Matches 🧩</a></li>
+    <li><a href="#step-4-leverage-the-llm-agent-for-complex-matching-decisions-">Step 4: Leverage the LLM Agent for Complex Matching Decisions 🤖</a></li>
+    <li><a href="#step-5-systematic-review-of-all-source-attributes-">Step 5: Systematic Review of All Source Attributes 🔍</a></li>
+    <li><a href="#step-6-exporting-the-gdc-compliant-dataset-">Step 6: Exporting the GDC-Compliant Dataset 📤</a></li>
+    <li><a href="#further-resources-">Further Resources 📖</a></li>
   </ul>
 </nav></div>
                                         <div class="docs-content col-12 col-xl-9 mt-0">
                                             <div class="mb-0 d-flex">
                                                 
                                                 <h1 class="content-title mb-0">
-                                                    Overview
+                                                    Dataset to GDC Schema Alignment
                                                     
                                                 </h1>
                                             </div>
                                             
-                                                <p class="lead mb-3">BDIViz: An Interactive Visualization System for Biomedical Schema Matching with LLM-Supported Validation</p>
+                                                <p class="lead mb-3">Comprehensive guide for mapping biomedical datasets to the GDC schema standard</p>
                                             
                                             <div id="content" class="main-content" data-bs-spy="scroll" data-bs-root-margin="0px 0px -65%" data-bs-target="#toc-mobile">
                                                 
     
     <div data-prismjs-copy="" data-prismjs-copy-success="" data-prismjs-copy-error="">
-        <h2 id="gear-getting-started">&#x2699;&#xfe0f; Getting Started <a href="#gear-getting-started" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>First, install the required dependencies:</p>
-
-
-
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-
-  <div class="prism-codeblock ">
-  <pre id="93826af" class="language-bash ">
-  <code>npm i .</code>
-  </pre>
-  </div>
-<p>Then, run the development server:</p>
-
-
-
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-
-  <div class="prism-codeblock ">
-  <pre id="a41f5dc" class="language-bash ">
-  <code>npm run dev</code>
-  </pre>
-  </div>
-<h2 id="gear-introduction">&#x2699;&#xfe0f; Introduction <a href="#gear-introduction" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p><strong>BDIViz</strong> is an interactive web-based application developed as part of the ARPA-H ASKEM project to support schema matching and value mapping tasks in biomedical data integration. It provides users with a rich visual interface—including heatmaps, explanations, and value comparisons—to streamline the process of aligning raw biomedical datasets with standardized data schemas such as the Genomic Data Commons (GDC) and Proteomic Data Commons (PDC).</p>
-<p><strong>BDIViz</strong> is model agnostic, meaning it can be used with any schema matching model. It is designed to work with the <a href="https://github.com/VIDA-NYU/bdi-kit" rel="external" target="_blank">BDI-Kit<svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M14 5c-.552 0-1-.448-1-1s.448-1 1-1h6c.552 0 1 .448 1 1v6c0 .552-.448 1-1 1s-1-.448-1-1v-3.586l-7.293 7.293c-.391.39-1.024.39-1.414 0-.391-.391-.391-1.024 0-1.414l7.293-7.293h-3.586zm-9 2c-.552 0-1 .448-1 1v11c0 .552.448 1 1 1h11c.552 0 1-.448 1-1v-4.563c0-.552.448-1 1-1s1 .448 1 1v4.563c0 1.657-1.343 3-3 3h-11c-1.657 0-3-1.343-3-3v-11c0-1.657 1.343-3 3-3h4.563c.552 0 1 .448 1 1s-.448 1-1 1h-4.563z"/></svg></a> module, which is a Python library that provides a set of tools for schema matching and value mapping tasks. The BDI-Kit module includes a variety of schema matching algorithms, including supervised and unsupervised methods, as well as tools for data preprocessing and feature extraction.</p>
-<h2 id="gear-features">&#x2699;&#xfe0f; Features <a href="#gear-features" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><ul>
-<li>🔍 <strong>Interactive Heatmap</strong> for exploring source-target column match candidates</li>
-<li>📊 <strong>Value Comparison Table</strong> using fuzzy matching on raw values</li>
-<li>🤖 <strong>LLM-Powered Agent Panel</strong> for dynamic match explanations and feedback</li>
-<li>⏪ <strong>Timeline View</strong> to trace user actions (accept, reject, discard)</li>
-<li>🎯 <strong>Control Panel</strong> for adjusting similarity threshold and navigating source columns</li>
-<li>📤 <strong>Export Curated Mappings</strong> as JSON or CSV for downstream use</li>
+        <h2 id="installation-">Installation 🛠️ <a href="#installation-" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>For system-specific installation instructions:</p>
+<ul>
+<li>AMD64 architecture: Follow the <a href="/bdi-viz-manual/docs/installation/install-on-linux/">Linux/Unix installation guide</a></li>
+<li>ARM64 architecture (Apple Silicon): Follow the <a href="/bdi-viz-manual/docs/installation/install-on-macos/">MacOS installation guide</a></li>
 </ul>
-<h2 id="camera-demo">&#x1f4f7; Demo <a href="#camera-demo" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>Video demo:
-<a href="https://drive.google.com/file/d/1RY3XjRmLIkBNjcZWkUZhG3vA-ZvPc6Ug/view?usp=drive_link" rel="external" target="_blank">
+<h2 id="introduction-">Introduction 📚 <a href="#introduction-" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>This guide demonstrates the process of aligning a biomedical dataset with the Genomic Data Commons (GDC) schema using BDIViz. The GDC maintains standardized data repositories that require specific formatting and schema compliance for successful data submission and integration.</p>
+<h2 id="step-1-dataset-preparation-and-task-initialization-">Step 1: Dataset Preparation and Task Initialization 🚀 <a href="#step-1-dataset-preparation-and-task-initialization-" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><ol>
+<li>Download the <a href="https://drive.google.com/file/d/1N3rbTHtnVDe19kMNei0opy_g-8Hr_Hl5/view?usp=drive_link" rel="external" target="_blank">Clark et al. sample dataset<svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M14 5c-.552 0-1-.448-1-1s.448-1 1-1h6c.552 0 1 .448 1 1v6c0 .552-.448 1-1 1s-1-.448-1-1v-3.586l-7.293 7.293c-.391.39-1.024.39-1.414 0-.391-.391-.391-1.024 0-1.414l7.293-7.293h-3.586zm-9 2c-.552 0-1 .448-1 1v11c0 .552.448 1 1 1h11c.552 0 1-.448 1-1v-4.563c0-.552.448-1 1-1s1 .448 1 1v4.563c0 1.657-1.343 3-3 3h-11c-1.657 0-3-1.343-3-3v-11c0-1.657 1.343-3 3-3h4.563c.552 0 1 .448 1 1s-.448 1-1 1h-4.563z"/></svg></a></li>
+<li>Navigate to <code>http://localhost:3000</code> in your web browser</li>
+<li>Select <strong>&ldquo;New Matching Task&rdquo;</strong> from the navigation bar</li>
+<li>Upload the Clark dataset CSV file to the <strong>Source CSV File</strong> drop zone</li>
+<li>Leave the <strong>Target CSV File</strong> and <strong>Target Schema JSON File</strong> fields empty to utilize the default GDC v3.3.0 schema</li>
+<li>Click <strong>&ldquo;Import CSV&rdquo;</strong> to initiate the matching process</li>
+</ol>
+<p>
 
 
 
@@ -396,35 +377,204 @@
 
 
   
-<svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M14 5c-.552 0-1-.448-1-1s.448-1 1-1h6c.552 0 1 .448 1 1v6c0 .552-.448 1-1 1s-1-.448-1-1v-3.586l-7.293 7.293c-.391.39-1.024.39-1.414 0-.391-.391-.391-1.024 0-1.414l7.293-7.293h-3.586zm-9 2c-.552 0-1 .448-1 1v11c0 .552.448 1 1 1h11c.552 0 1-.448 1-1v-4.563c0-.552.448-1 1-1s1 .448 1 1v4.563c0 1.657-1.343 3-3 3h-11c-1.657 0-3-1.343-3-3v-11c0-1.657 1.343-3 3-3h4.563c.552 0 1 .448 1 1s-.448 1-1 1h-4.563z"/></svg></a></p>
-<!-- [BDIViz Demo](https://drive.google.com/file/d/1eAbDicO0oXIbbVg56m3H8xdNDDsBGBLI/view?usp=drive_link) -->
-<p>Live Demo:
-<a href="https://bdiviz-dev.users.hsrn.nyu.edu/dashboard/" rel="external" target="_blank">https://bdiviz-dev.users.hsrn.nyu.edu/dashboard/<svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M14 5c-.552 0-1-.448-1-1s.448-1 1-1h6c.552 0 1 .448 1 1v6c0 .552-.448 1-1 1s-1-.448-1-1v-3.586l-7.293 7.293c-.391.39-1.024.39-1.414 0-.391-.391-.391-1.024 0-1.414l7.293-7.293h-3.586zm-9 2c-.552 0-1 .448-1 1v11c0 .552.448 1 1 1h11c.552 0 1-.448 1-1v-4.563c0-.552.448-1 1-1s1 .448 1 1v4.563c0 1.657-1.343 3-3 3h-11c-1.657 0-3-1.343-3-3v-11c0-1.657 1.343-3 3-3h4.563c.552 0 1 .448 1 1s-.448 1-1 1h-4.563z"/></svg></a></p>
-<!-- ## :gear: Sequence Diagram
-```mermaid
+    
+      <img src="/bdi-viz-manual/images/new-matching-task.gif" alt="new-matching-task-gif" width="1143" height="607" loading="lazy">
+    
+  
+</p>
+<h2 id="step-2-validating-high-confidence-matches-">Step 2: Validating High-Confidence Matches ✅ <a href="#step-2-validating-high-confidence-matches-" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>The system automatically identifies and suggests high-confidence matches, indicated by darker cells in the heatmap. Review these initial suggestions:</p>
+<ol>
+<li>
+<p><strong>Direct Attribute Matches</strong>:</p>
+<ul>
+<li>Locate the matching candidate <strong>Gender</strong> (source) -&gt; <strong>gender</strong> (GDC) in the heatmap cell</li>
+<li>Click the heatmap cell to expand the embedded node</li>
+<li>The embedded node contains unique value distributions for both attributes</li>
+<li>Verify that both attribute names and values align (Male → Male, Female → Female)</li>
+<li><strong>Note that high-confidence matches are pre-accepted (indicated by green cells with checkmarks)</strong></li>
+</ul>
+<p>
 
-sequenceDiagram
-    actor U as User
-    box Lightyellow BDI-Viz
-    participant B as React App
-    participant S as Flask Server
-    end
 
-    U->>B: Input Source/Target csv
-    B->>S: Request Schema Matching
-    Note right of S: Default Model
-    S->>B: Response Matching Candidates
 
-    U->>B: Accept/Reject/Refine Matches
-    B->>S: [Agent] Digest User Actions
-    S->>B: [Agent] Possible Reasons
-    Note left of B: Reason 1: Exact Match <br>Reason 2: Value Similarity <br>Reason 3: Prefix/Suffix Match <br>Reason 4: Synonym Match <br>Reason 5: etc.
-    B->>U: What do you think is the best reason for this action?
-    U->>B: Select Reason 3
-    B->>S: [Agent] Update Model/Dataset
-    Note right of S: FT Model 3
-    S->>B: Response Matching Candidates
-``` -->
+
+
+  
+
+
+
+  
+    
+      <img src="/bdi-viz-manual/images/clark-gender.gif" alt="clark-gender-gif" width="1108" height="666" loading="lazy">
+    
+  
+</p>
+</li>
+<li>
+<p><strong>Numerical Attribute Alignment</strong>:</p>
+<ul>
+<li>Examine the matching candidate <strong>BMI</strong> (source) -&gt; <strong>bmi</strong> (GDC) in the heatmap cell</li>
+<li>Click the heatmap cell to expand the embedded node</li>
+<li>The embedded node shows value bin distributions for numerical data</li>
+<li>Observe that both attribute names and numerical distributions correspond appropriately</li>
+<li><strong>This match should also be pre-accepted (green cell with checkmark)</strong></li>
+</ul>
+<p>
+
+
+
+
+
+  
+
+
+
+  
+    
+      <img src="/bdi-viz-manual/images/clark-bmi.gif" alt="clark-bmi-gif" width="1108" height="666" loading="lazy">
+    
+  
+</p>
+</li>
+</ol>
+<h2 id="step-3-explore-complex-attribute-matches-">Step 3: Explore Complex Attribute Matches 🧩 <a href="#step-3-explore-complex-attribute-matches-" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>Address more nuanced matching scenarios that require human judgment:</p>
+<ol>
+<li>
+<p><strong>Evaluating Semantic Differences</strong>:</p>
+<ul>
+<li>Locate the matching candidate <strong>Ethnicity_Self_Identify</strong> (source) -&gt; <strong>ethnicity</strong> (GDC) in the heatmap cell</li>
+<li>Click the heatmap cell to expand the embedded node</li>
+<li>Scroll down to check the value comparisons table in the embedded node</li>
+<li>Note the significant value discrepancies:
+<ul>
+<li>Source values include &ldquo;Asian&rdquo;, &ldquo;White&rdquo;, etc.</li>
+<li>GDC ethnicity values include &ldquo;hispanic or latino&rdquo;, &ldquo;not hispanic or latino&rdquo;, etc.</li>
+</ul>
+</li>
+<li>Click the <strong>Reject</strong> (✕) button on the top left Shortcut Panel to invalidate this incorrect match</li>
+</ul>
+</li>
+<li>
+<p><strong>Identifying Cross-Category Matches</strong>:</p>
+<ul>
+<li>Examine the matching candidate <strong>Ethnicity_Self_Identify</strong> (source) -&gt; <strong>race</strong> (GDC) in the heatmap cell</li>
+<li>Click the heatmap cell to expand the embedded node</li>
+<li>Scroll down to check the value comparisons table in the embedded node</li>
+<li>Confirm that the values correspond appropriately:
+<ul>
+<li>&ldquo;Asian&rdquo; in source aligns with &ldquo;asian&rdquo; in GDC</li>
+<li>&ldquo;White&rdquo; in source aligns with &ldquo;white&rdquo; in GDC</li>
+</ul>
+</li>
+<li>Click the <strong>Accept</strong> (✓) button on the top left Shortcut Panel to confirm this cross-category match</li>
+</ul>
+<p>
+
+
+
+
+
+  
+
+
+
+  
+    
+      <img src="/bdi-viz-manual/images/clark-ethnicity.gif" alt="clark-ethnicity-gif" width="1108" height="666" loading="lazy">
+    
+  
+</p>
+</li>
+</ol>
+<h2 id="step-4-leverage-the-llm-agent-for-complex-matching-decisions-">Step 4: Leverage the LLM Agent for Complex Matching Decisions 🤖 <a href="#step-4-leverage-the-llm-agent-for-complex-matching-decisions-" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>The integrated LLM Agent provides valuable insights for challenging attribute matches:</p>
+<ol>
+<li>
+<p><strong>Evaluating Pathological Staging to Lymph Node Count</strong>:</p>
+<ul>
+<li>Examine the potential match <strong>Path_Stage_Reg_Lymph_Nodes_pN</strong> (source) -&gt; <strong>lymph_nodes_positive</strong> (GDC)</li>
+<li>Consult the Agent Panel on the left side of the interface</li>
+<li>Review the &ldquo;Semantic No Match&rdquo; card which indicates:
+<ul>
+<li>Source attribute represents a classification system (pN0, pN1, etc.)</li>
+<li>Target attribute represents a numerical count of positive lymph nodes</li>
+</ul>
+</li>
+<li>Based on this analysis, reject this match using the Shortcut Panel</li>
+</ul>
+</li>
+<li>
+<p><strong>Distinguishing Staging from Testing Metrics</strong>:</p>
+<ul>
+<li>Evaluate the potential match <strong>Path_Stage_Reg_Lymph_Nodes_pN</strong> (source) -&gt; <strong>lymph_nodes_tested</strong> (GDC)</li>
+<li>Expand the &ldquo;Pattern No Match&rdquo; card in the Agent Panel</li>
+<li>Note the critical insight that source values (pN0, pN1, pNX) represent staging categories</li>
+<li>Confirm these do not align with the expected numeric values for lymph nodes tested</li>
+<li>Reject this match using the Shortcut Panel</li>
+</ul>
+</li>
+<li>
+<p><strong>Identifying Non-Obvious Semantic Equivalence</strong>:</p>
+<ul>
+<li>Assess the potential match <strong>Path_Stage_Reg_Lymph_Nodes_pN</strong> (source) -&gt; <strong>ajcc_pathologic_n</strong> (GDC)</li>
+<li>Despite different naming conventions, examine the value distributions</li>
+<li>Consult the &ldquo;Semantic Match&rdquo; card in the Agent Panel</li>
+<li>Verify that both attributes represent pathological lymph node staging in cancer systems</li>
+<li>Accept this match using the Shortcut Panel</li>
+</ul>
+</li>
+</ol>
+<p>
+
+
+
+
+
+  
+
+
+
+  
+    
+      <img src="/bdi-viz-manual/images/clark-pn.gif" alt="clark-pn-gif" width="1418" height="666" loading="lazy">
+    
+  
+</p>
+<h2 id="step-5-systematic-review-of-all-source-attributes-">Step 5: Systematic Review of All Source Attributes 🔍 <a href="#step-5-systematic-review-of-all-source-attributes-" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>Methodically evaluate each remaining source attribute:</p>
+<ol>
+<li>Prioritize heatmap cells with darker shading (indicating stronger match candidates)</li>
+<li>Click each heatmap cell to expand the embedded node and evaluate both attribute names and value distributions</li>
+<li>Utilize the top left Shortcut Panel to:
+<ul>
+<li><strong>Accept</strong> (✓) valid and appropriate matches</li>
+<li><strong>Reject</strong> (✕) invalid or misaligned matches</li>
+<li><strong>Discard</strong> (🗑️) attributes that should be excluded from the mapping process</li>
+</ul>
+</li>
+</ol>
+<h2 id="step-6-exporting-the-gdc-compliant-dataset-">Step 6: Exporting the GDC-Compliant Dataset 📤 <a href="#step-6-exporting-the-gdc-compliant-dataset-" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>After completing the evaluation process:</p>
+<ol>
+<li>Select the <strong>Export</strong> button from the top left Shortcut Panel</li>
+<li>Choose CSV format to generate a dataset with GDC-compliant column names</li>
+<li>Save the transformed file to your local system</li>
+</ol>
+<p>
+
+
+
+
+
+  
+
+
+
+  
+    
+      <img src="/bdi-viz-manual/images/export-matches.gif" alt="export-matches-gif" width="1202" height="620" loading="lazy">
+    
+  
+</p>
+<h2 id="further-resources-">Further Resources 📖 <a href="#further-resources-" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>For advanced functionality and detailed operational guidance, please refer to the comprehensive <a href="/bdi-viz-manual/docs/manual/">User Manual</a>.</p>
+
     </div>
 
     
@@ -436,22 +586,22 @@ sequenceDiagram
 
 	<div class="row flex-xl-nowrap ">
 	<div class="col-sm-6 pt-2 doc-next">
-		<a href="/bdi-viz-manual/docs/installation/install-on-macos/">
+		<a href="/bdi-viz-manual/docs/manual/upload-your-data/">
 			<div class="card h-100 my-1">
 				<div class="card-body py-2">
-                    <p class="card-title fs-5 fw-semibold lh-base mb-0"><i class="material-icons align-middle">navigate_before</i> Install on MacOS</p>
-					<p class="card-text ms-2">Step-by-step guide for …</p>
+                    <p class="card-title fs-5 fw-semibold lh-base mb-0"><i class="material-icons align-middle">navigate_before</i> Upload Your Data</p>
+					<p class="card-text ms-2">Begin a new schema matching …</p>
 					
 				</div>
 			</div>
 		</a>
         </div>
 	<div class="col-sm-6 pt-2 doc-prev">
-		<a class="ms-auto" href="/bdi-viz-manual/docs/manual/user-operation/">
+		<a class="ms-auto" href="/bdi-viz-manual/docs/manual/explore-matches/">
 			<div class="card h-100 my-1 text-end">
 				<div class="card-body py-2">
-                    <p class="card-title fs-5 fw-semibold lh-base mb-0">Perform User Operations <i class="material-icons align-middle">navigate_next</i></p>
-					<p class="card-text me-2">Interactively evaluate and …</p>
+                    <p class="card-title fs-5 fw-semibold lh-base mb-0">Explore Matches <i class="material-icons align-middle">navigate_next</i></p>
+					<p class="card-text me-2">Explore schema alignment …</p>
 					
 				</div>
 			</div>
