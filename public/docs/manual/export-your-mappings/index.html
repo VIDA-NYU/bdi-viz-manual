@@ -14,10 +14,10 @@
 
 <html lang="en-us"><head><script src="/bdi-viz-manual/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=bdi-viz-manual/livereload" data-no-instant defer></script>
     <meta charset="utf-8" />
-    <title>Install on MacOS | BDIViz User Manual</title>
+    <title>Export Your Mappings | BDIViz User Manual</title>
     <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Step-by-step guide for installing and configuring BDIViz on MacOS(ARM64) systems">
+    <meta name="description" content="Export the results of your schema matching task in multiple formats for downstream integration and analysis.">
     <meta name="keywords" content="Documentation, Hugo, Hugo Theme, Bootstrap" />
     <meta name="author" content="Colin Wilson - Lotus Labs" />
     <meta name="email" content="support@aigis.uk" />
@@ -30,15 +30,15 @@
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/bdi-viz-manual/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/bdi-viz-manual/favicon-16x16.png">
 <link rel="manifest" crossorigin="use-credentials" href="http://localhost:1313/bdi-viz-manual/site.webmanifest">
-<meta property="og:title" content="Install on MacOS" />
-<meta property="og:description" content="Step-by-step guide for installing and configuring BDIViz on MacOS(ARM64) systems" />
+<meta property="og:title" content="Export Your Mappings" />
+<meta property="og:description" content="Export the results of your schema matching task in multiple formats for downstream integration and analysis." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/bdi-viz-manual/docs/installation/install-on-macos/" /><meta property="og:image" content="http://localhost:1313/bdi-viz-manual/opengraph/card-base-2_hu_b926fa185f938cb.png"/><meta property="article:section" content="docs" />
+<meta property="og:url" content="http://localhost:1313/bdi-viz-manual/docs/manual/export-your-mappings/" /><meta property="og:image" content="http://localhost:1313/bdi-viz-manual/opengraph/card-base-2_hu_b208637c3772567c.png"/><meta property="article:section" content="docs" />
 <meta property="article:published_time" content="2025-04-19T13:38:17-04:00" />
 <meta property="article:modified_time" content="2025-04-21T11:00:00-04:00" /><meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="http://localhost:1313/bdi-viz-manual/opengraph/card-base-2_hu_b926fa185f938cb.png"/>
-<meta name="twitter:title" content="Install on MacOS"/>
-<meta name="twitter:description" content="Step-by-step guide for installing and configuring BDIViz on MacOS(ARM64) systems"/>
+<meta name="twitter:image" content="http://localhost:1313/bdi-viz-manual/opengraph/card-base-2_hu_b208637c3772567c.png"/>
+<meta name="twitter:title" content="Export Your Mappings"/>
+<meta name="twitter:description" content="Export the results of your schema matching task in multiple formats for downstream integration and analysis."/>
 
     
         <link rel="alternate" type="application/atom+xml" title="Atom feed for BDIViz User Manual" href="/index.xml" />
@@ -100,11 +100,11 @@
                 
                     
                     
-                        <li class="sidebar-dropdown no-icon current active">
+                        <li class="sidebar-dropdown no-icon ">
                             <button class="btn">
                                 Installation
                             </button>
-                            <div class="sidebar-submenu d-block">
+                            <div class="sidebar-submenu ">
                                 <ul>
                                     
                                         
@@ -114,7 +114,7 @@
                                     
                                         
                                         
-                                            <li class="current no-icon"><a class="sidebar-nested-link" href="http://localhost:1313/bdi-viz-manual/docs/installation/install-on-macos/">Install on MacOS</a></li>
+                                            <li class=" no-icon"><a class="sidebar-nested-link" href="http://localhost:1313/bdi-viz-manual/docs/installation/install-on-macos/">Install on MacOS</a></li>
                                         
                                     
                                 </ul>
@@ -124,11 +124,11 @@
                 
                     
                     
-                        <li class="sidebar-dropdown no-icon ">
+                        <li class="sidebar-dropdown no-icon current active">
                             <button class="btn">
                                 User Manual
                             </button>
-                            <div class="sidebar-submenu ">
+                            <div class="sidebar-submenu d-block">
                                 <ul>
                                     
                                         
@@ -148,7 +148,7 @@
                                     
                                         
                                         
-                                            <li class=" no-icon"><a class="sidebar-nested-link" href="http://localhost:1313/bdi-viz-manual/docs/manual/export-your-mappings/">Export Your Mappings</a></li>
+                                            <li class="current no-icon"><a class="sidebar-nested-link" href="http://localhost:1313/bdi-viz-manual/docs/manual/export-your-mappings/">Export Your Mappings</a></li>
                                         
                                     
                                 </ul>
@@ -266,15 +266,15 @@
             
             
                 <li class="breadcrumb-item text-capitalize" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <a itemprop="item" href="/bdi-viz-manual/docs/installation/">
-                        <span itemprop="name">Installation</span>
+                    <a itemprop="item" href="/bdi-viz-manual/docs/manual/">
+                        <span itemprop="name">User Manual</span>
                     </a>
                     <meta itemprop="position" content='2' />
                 </li>
             
         
             <li class="breadcrumb-item text-capitalize active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <span itemprop="name">Install on MacOS</span>
+                <span itemprop="name">Export Your Mappings</span>
                 <meta itemprop="position" content='3' />
             </li>
         
@@ -287,18 +287,10 @@
     <div class="fw-bold text-uppercase mb-2">On this page</div>
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#prerequisites">Prerequisites</a></li>
-    <li><a href="#install-docker-desktop-for-mac">Install Docker Desktop for Mac</a></li>
-    <li><a href="#run-bdiviz-using-docker">Run BDIViz Using Docker</a>
-      <ul>
-        <li><a href="#1-pull-the-docker-image">1. Pull the Docker image</a></li>
-        <li><a href="#2-run-the-container">2. Run the container</a></li>
-        <li><a href="#3-verify-the-container-is-running">3. Verify the container is running</a></li>
-        <li><a href="#4-stop-the-container">4. Stop the container</a></li>
-        <li><a href="#note">Note</a></li>
-      </ul>
-    </li>
-    <li><a href="#troubleshooting">Troubleshooting</a></li>
+    <li><a href="#overview-">Overview 📊</a></li>
+    <li><a href="#how-to-export-">How to Export 📤</a></li>
+    <li><a href="#export-formats-">Export Formats 📋</a></li>
+    <li><a href="#final-notes-">Final Notes 📝</a></li>
   </ul>
 </nav>
     </toc></div>
@@ -310,234 +302,151 @@
                                             </button>
 <nav id="toc-mobile">
   <ul class="dropdown-menu">
-    <li><a href="#prerequisites">Prerequisites</a></li>
-    <li><a href="#install-docker-desktop-for-mac">Install Docker Desktop for Mac</a></li>
-    <li><a href="#run-bdiviz-using-docker">Run BDIViz Using Docker</a>
-      <ul>
-        <li><a href="#1-pull-the-docker-image">1. Pull the Docker image</a></li>
-        <li><a href="#2-run-the-container">2. Run the container</a></li>
-        <li><a href="#3-verify-the-container-is-running">3. Verify the container is running</a></li>
-        <li><a href="#4-stop-the-container">4. Stop the container</a></li>
-        <li><a href="#note">Note</a></li>
-      </ul>
-    </li>
-    <li><a href="#troubleshooting">Troubleshooting</a></li>
+    <li><a href="#overview-">Overview 📊</a></li>
+    <li><a href="#how-to-export-">How to Export 📤</a></li>
+    <li><a href="#export-formats-">Export Formats 📋</a></li>
+    <li><a href="#final-notes-">Final Notes 📝</a></li>
   </ul>
 </nav></div>
                                         <div class="docs-content col-12 col-xl-9 mt-0">
                                             <div class="mb-0 d-flex">
                                                 
                                                 <h1 class="content-title mb-0">
-                                                    Install on MacOS
+                                                    Export Your Mappings
                                                     
                                                 </h1>
                                             </div>
                                             
-                                                <p class="lead mb-3">Step-by-step guide for installing and configuring BDIViz on MacOS(ARM64) systems</p>
+                                                <p class="lead mb-3">Export the results of your schema matching task in multiple formats for downstream integration and analysis.</p>
                                             
                                             <div id="content" class="main-content" data-bs-spy="scroll" data-bs-root-margin="0px 0px -65%" data-bs-target="#toc-mobile">
                                                 
     
     <div data-prismjs-copy="" data-prismjs-copy-success="" data-prismjs-copy-error="">
-        <h2 id="prerequisites">Prerequisites <a href="#prerequisites" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>Before setting up BDIViz on your Mac, ensure your system meets the following requirements:</p>
-<ul>
-<li>Mac computer with Apple Silicon (M1, M2, M3, etc.) – ARM64 architecture</li>
-<li>macOS 12.0 Monterey or later</li>
-<li>Docker Desktop for Mac (ARM64 version)</li>
-<li>At least 4GB of RAM and 10GB of free disk space</li>
-<li>Internet connection to pull the Docker image</li>
-</ul>
+        <h2 id="overview-">Overview 📊 <a href="#overview-" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>Once your schema matching task is complete, BDIViz enables you to export the validated mappings for use in data integration pipelines, reporting workflows, or system submissions.</p>
+<p>
+
+
+
+
+
+  
+
+
+
+  
+    
+      <img src="/bdi-viz-manual/images/export-matches.gif" alt="export-matches-gif" width="1202" height="620" loading="lazy">
+    
+  
+</p>
 <hr>
-<h2 id="install-docker-desktop-for-mac">Install Docker Desktop for Mac <a href="#install-docker-desktop-for-mac" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><ol>
-<li>
-<p>Download Docker Desktop for Mac (Apple Silicon):
-👉 <a href="https://www.docker.com/products/docker-desktop/" rel="external" target="_blank">https://www.docker.com/products/docker-desktop/<svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M14 5c-.552 0-1-.448-1-1s.448-1 1-1h6c.552 0 1 .448 1 1v6c0 .552-.448 1-1 1s-1-.448-1-1v-3.586l-7.293 7.293c-.391.39-1.024.39-1.414 0-.391-.391-.391-1.024 0-1.414l7.293-7.293h-3.586zm-9 2c-.552 0-1 .448-1 1v11c0 .552.448 1 1 1h11c.552 0 1-.448 1-1v-4.563c0-.552.448-1 1-1s1 .448 1 1v4.563c0 1.657-1.343 3-3 3h-11c-1.657 0-3-1.343-3-3v-11c0-1.657 1.343-3 3-3h4.563c.552 0 1 .448 1 1s-.448 1-1 1h-4.563z"/></svg></a></p>
-</li>
-<li>
-<p>Open the downloaded <code>.dmg</code> file and drag Docker to your Applications folder.</p>
-</li>
-<li>
-<p>Launch Docker Desktop from Spotlight or Applications.</p>
-</li>
-<li>
-<p>Grant permissions if prompted and wait for Docker to start (you should see the Docker icon in the menu bar).</p>
-</li>
-<li>
-<p>Open Terminal and verify installation:</p>
-</li>
+<h2 id="how-to-export-">How to Export 📤 <a href="#how-to-export-" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>To begin exporting your results:</p>
+<ol>
+<li>Navigate to the <strong>Shortcut Panel</strong> (top-left corner of the interface).</li>
+<li>Click the <strong>Export</strong> button.</li>
+<li>A dialog will appear prompting you to select your preferred export format (CSV or JSON).</li>
 </ol>
+<hr>
+<h2 id="export-formats-">Export Formats 📋 <a href="#export-formats-" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>BDIViz supports two export options designed for different use cases:</p>
+
+<nav>
+	<div class="nav nav-tabs" id="nav-tab" role="tablist">
+
+		
+		
+		
+		
+
+		
+
+		<a class="nav-link  active"
+		   id="cedbfaTab" data-bs-toggle="tab" data-bs-target="#cedbfa"
+		   type="button" role="tab" aria-controls="cedbfa" aria-selected="true">CSV Format</a>
+
+		
+
+		<a class="nav-link "
+		   id="afbdceTab" data-bs-toggle="tab" data-bs-target="#afbdce"
+		   type="button" role="tab" aria-controls="afbdce" aria-selected="true">JSON Format</a>
+
+		
+
+	</div>
+</nav>
+
+<div class="tab-content" id="nav-tab-content">
+
+	
 
 
 
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-
-  <div class="prism-codeblock ">
-  <pre id="9d3970d" class="language-bash ">
-  <code>docker --version</code>
-  </pre>
-  </div>
-<p>You should see an output like:</p>
 
 
 
-  
-  
-  
 
-  
-  
-  
-  
+<div class="tab-pane fade show active" id="cedbfa" role="tabpanel" aria-labelledby="nav-1">
 
-  
-
-  <div class="prism-codeblock ">
-  <pre id="d7054f1" class="language-nginx ">
-  <code>Docker version 24.0.0, build xxxxxxxx</code>
-  </pre>
-  </div>
-<h2 id="run-bdiviz-using-docker">Run BDIViz Using Docker <a href="#run-bdiviz-using-docker" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><h3 id="1-pull-the-docker-image">1. Pull the Docker image <a href="#1-pull-the-docker-image" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h3>
-
-
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-
-  <div class="prism-codeblock ">
-  <pre id="17b7561" class="language-bash ">
-  <code>docker pull edenwu/bdi-viz-react:arm64</code>
-  </pre>
-  </div>
-<h3 id="2-run-the-container">2. Run the container <a href="#2-run-the-container" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h3>
-
-
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-
-  <div class="prism-codeblock ">
-  <pre id="75c4549" class="language-bash ">
-  <code>docker run -d \
-  --name bdiviz \
-  -p 3000:3000 \
-  edenwu/bdi-viz-react:arm64</code>
-  </pre>
-  </div>
-<p>This will start the BDIViz container in detached mode and expose the web application at http://localhost:3000.</p>
-<h3 id="3-verify-the-container-is-running">3. Verify the container is running <a href="#3-verify-the-container-is-running" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h3><p>You can verify the container is up using:</p>
-
-
-
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-
-  <div class="prism-codeblock ">
-  <pre id="f478dca" class="language-bash ">
-  <code>docker ps</code>
-  </pre>
-  </div>
-<p>If everything is working correctly, you should see <code>bdiviz</code> listed in the output.</p>
-<h3 id="4-stop-the-container">4. Stop the container <a href="#4-stop-the-container" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h3><p>When you&rsquo;re done, you can stop the container with:</p>
-
-
-
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-
-  <div class="prism-codeblock ">
-  <pre id="32d69a7" class="language-bash ">
-  <code>docker stop bdiviz</code>
-  </pre>
-  </div>
-<p>And if needed, remove it:</p>
-
-
-
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-
-  <div class="prism-codeblock ">
-  <pre id="b643faa" class="language-bash ">
-  <code>docker rm bdiviz</code>
-  </pre>
-  </div>
-<h3 id="note">Note <a href="#note" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h3><ul>
-<li>Make sure port <code>3000</code> is available on your host machine.</li>
-<li>You can bind-mount local volumes or customize environment variables for advanced use (e.g., persistent storage, configuration injection).</li>
-<li>To update the image, simply pull the latest tag again and restart the container:
-
-
-
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-
-  <div class="prism-codeblock ">
-  <pre id="1a364d1" class="language-bash ">
-  <code>docker pull edenwu/bdi-viz-react:amd64
-docker stop bdiviz &amp;&amp; docker rm bdiviz
-docker run -d --name bdiviz -p 3000:3000 edenwu/bdi-viz-react:amd64</code>
-  </pre>
-  </div>
-</li>
+	<p>The CSV export transforms your original dataset using only the accepted column mappings.</p>
+<h3 id="key-features">Key Features: <a href="#key-features" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h3><ul>
+<li>Source columns are renamed to their matched target attributes</li>
+<li>Only accepted matches are included</li>
+<li>Resulting dataset is ready for immediate analysis or upload</li>
 </ul>
-<h2 id="troubleshooting">Troubleshooting <a href="#troubleshooting" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><ul>
-<li><strong>Port already in use?</strong> Try using a different port:
+<h3 id="example-output">Example Output: <a href="#example-output" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h3><table>
+  <thead>
+      <tr>
+          <th>submitter_id</th>
+          <th>gender</th>
+          <th>race</th>
+          <th>ajcc_pathologic_n</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>C1234</td>
+          <td>Male</td>
+          <td>Asian</td>
+          <td>pN1</td>
+      </tr>
+      <tr>
+          <td>C5678</td>
+          <td>Female</td>
+          <td>White</td>
+          <td>pN2</td>
+      </tr>
+      <tr>
+          <td>C1111</td>
+          <td>Unknown</td>
+          <td>Unknown</td>
+          <td>pNX</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="best-for">Best For: <a href="#best-for" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h3><ul>
+<li>Data harmonization pipelines</li>
+<li>Uploads to repositories (e.g., GDC, PDC)</li>
+<li>Sharing aligned datasets with collaborators</li>
+</ul>
 
+
+</div>
+
+
+
+
+
+
+
+<div class="tab-pane fade" id="afbdce" role="tabpanel" aria-labelledby="nav-1">
+
+	<p>The JSON export provides a structured record of all mapping operations with detailed metadata.</p>
+<h3 id="key-features">Key Features: <a href="#key-features" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h3><ul>
+<li>Includes column-level mappings and value-level match pairs</li>
+<li>Records additional metadata like match scores and timestamps</li>
+<li>Machine-readable for downstream processing or reproducibility</li>
+</ul>
+<h3 id="example-output">Example Output: <a href="#example-output" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h3>
 
 
   
@@ -552,13 +461,43 @@ docker run -d --name bdiviz -p 3000:3000 edenwu/bdi-viz-react:amd64</code>
   
 
   <div class="prism-codeblock ">
-  <pre id="3c22d0e" class="language-bash ">
-  <code>docker run -d --name bdiviz-mac -p 8080:3000 edenwu/bdi-viz-react:arm64</code>
+  <pre id="c27f3b0" class="language-json ">
+  <code>[
+  {
+    &#34;sourceColumn&#34;: &#34;Tumor_Focality&#34;,
+    &#34;targetColumn&#34;: &#34;tumor_focality&#34;,
+    &#34;valueMatches&#34;: [
+      { &#34;from&#34;: &#34;Multifocal&#34;, &#34;to&#34;: &#34;Multifocal&#34; },
+      { &#34;from&#34;: &#34;Unifocal&#34;, &#34;to&#34;: &#34;Unifocal&#34; }
+    ]
+  },
+  {
+    &#34;sourceColumn&#34;: &#34;Ethnicity&#34;,
+    &#34;targetColumn&#34;: &#34;ethnicity&#34;,
+    &#34;valueMatches&#34;: [
+      { &#34;from&#34;: &#34;Hispanic or Latino&#34;, &#34;to&#34;: &#34;hispanic or latino&#34; },
+      { &#34;from&#34;: &#34;Not reported&#34;, &#34;to&#34;: &#34;not reported&#34; },
+      { &#34;from&#34;: &#34;Not-Hispanic or Latino&#34;, &#34;to&#34;: &#34;not hispanic or latino&#34; }
+    ]
+  }
+]</code>
   </pre>
   </div>
-Then access it at http://localhost:8080.</li>
-<li><strong>Docker daemon not running?</strong> Open Docker Desktop and make sure it&rsquo;s active.</li>
-<li><strong>Still stuck?</strong> Feel free to reach out or open an issue on the <a href="https://github.com/VIDA-NYU/bdi-viz-react/issues" rel="external" target="_blank">GitHub repository<svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M14 5c-.552 0-1-.448-1-1s.448-1 1-1h6c.552 0 1 .448 1 1v6c0 .552-.448 1-1 1s-1-.448-1-1v-3.586l-7.293 7.293c-.391.39-1.024.39-1.414 0-.391-.391-.391-1.024 0-1.414l7.293-7.293h-3.586zm-9 2c-.552 0-1 .448-1 1v11c0 .552.448 1 1 1h11c.552 0 1-.448 1-1v-4.563c0-.552.448-1 1-1s1 .448 1 1v4.563c0 1.657-1.343 3-3 3h-11c-1.657 0-3-1.343-3-3v-11c0-1.657 1.343-3 3-3h4.563c.552 0 1 .448 1 1s-.448 1-1 1h-4.563z"/></svg></a>.</li>
+<h3 id="best-for">Best For: <a href="#best-for" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h3><ul>
+<li>Programmatic ingestion and audit trails</li>
+<li>Reuse in automated systems</li>
+<li>Reconstructing or refining schema alignment processes</li>
+</ul>
+
+
+</div>
+
+
+</div>
+<h2 id="final-notes-">Final Notes 📝 <a href="#final-notes-" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><ul>
+<li>Ensure all intended mappings are <strong>accepted</strong> before exporting; rejected and discarded mappings will not be included.</li>
+<li>Use the <strong>Timeline Panel</strong> to review decisions prior to export.</li>
+<li>Both formats can be downloaded directly to your local machine.</li>
 </ul>
 
     </div>
@@ -572,22 +511,11 @@ Then access it at http://localhost:8080.</li>
 
 	<div class="row flex-xl-nowrap ">
 	<div class="col-sm-6 pt-2 doc-next">
-		<a href="/bdi-viz-manual/docs/installation/install-on-linux/">
+		<a href="/bdi-viz-manual/docs/manual/user-operation/">
 			<div class="card h-100 my-1">
 				<div class="card-body py-2">
-                    <p class="card-title fs-5 fw-semibold lh-base mb-0"><i class="material-icons align-middle">navigate_before</i> Install on Linux/Unix</p>
-					<p class="card-text ms-2">Step-by-step guide for …</p>
-					
-				</div>
-			</div>
-		</a>
-        </div>
-	<div class="col-sm-6 pt-2 doc-prev">
-		<a class="ms-auto" href="/bdi-viz-manual/docs/overview/">
-			<div class="card h-100 my-1 text-end">
-				<div class="card-body py-2">
-                    <p class="card-title fs-5 fw-semibold lh-base mb-0">Overview <i class="material-icons align-middle">navigate_next</i></p>
-					<p class="card-text me-2">BDIViz: An Interactive …</p>
+                    <p class="card-title fs-5 fw-semibold lh-base mb-0"><i class="material-icons align-middle">navigate_before</i> Perform User Operations</p>
+					<p class="card-text ms-2">Interactively evaluate and …</p>
 					
 				</div>
 			</div>

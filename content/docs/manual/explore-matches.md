@@ -9,13 +9,13 @@ draft: false
 toc: true
 ---
 
-## Overview
+## Overview 🔍
 
 After uploading your files, BDIViz launches its main interface, allowing you to visually explore match candidates between your source dataset and the target schema.
 
 ---
 
-## Interactive Heatmap
+## Interactive Heatmap 🔥
 
 The heatmap is the primary visualization tool in BDIViz. Each cell represents a match candidate between a source attribute (y-axis) and a target attribute (x-axis).
 
@@ -81,7 +81,7 @@ The top-level filter tabs help narrow your focus:
 
 ---
 
-## Filters and Search Controls
+## Filters and Search Controls 🔍
 
 Fine-tune the heatmap view using a suite of filters:
 
@@ -130,7 +130,7 @@ Quickly locate and highlight target attributes by name or keyword.
 
 ---
 
-## Lower Panel: Match Details
+## Lower Panel: Match Details 🔎
 
 Clicking on any heatmap node reveals deeper insights below:
 
@@ -163,7 +163,7 @@ Visualizes how different matchers contributed to the candidate match score.
 
 ---
 
-## LLM Agent Panel
+## LLM Agent Panel 🤖
 
 ![agent-panel](./images/agent-panel.png)
 
@@ -177,7 +177,7 @@ An embedded LLM-powered assistant provides contextual insights:
 
 ---
 
-## What’s Next?
+## What's Next? 🚀
 
 After reviewing the matches:
 

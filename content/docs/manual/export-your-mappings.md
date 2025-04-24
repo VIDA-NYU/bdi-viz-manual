@@ -2,14 +2,14 @@
 weight: 400
 title: "Export Your Mappings"
 description: "Export the results of your schema matching task in multiple formats for downstream integration and analysis."
-icon: "export"
+icon: "ios_share"
 date: "2025-04-19T13:38:17-04:00"
 lastmod: "2025-04-21T11:00:00-04:00"
 draft: false
 toc: true
 ---
 
-## Overview
+## Overview 📊
 
 Once your schema matching task is complete, BDIViz enables you to export the validated mappings for use in data integration pipelines, reporting workflows, or system submissions.
 
@@ -17,7 +17,7 @@ Once your schema matching task is complete, BDIViz enables you to export the val
 
 ---
 
-## How to Export
+## How to Export 📤
 
 To begin exporting your results:
 
@@ -27,7 +27,7 @@ To begin exporting your results:
 
 ---
 
-## Export Formats
+## Export Formats 📋
 
 BDIViz supports two export options designed for different use cases:
 
@@ -98,7 +98,7 @@ The JSON export provides a structured record of all mapping operations with deta
 {{% /tab %}}
 {{< /tabs >}}
 
-## Final Notes
+## Final Notes 📝
 - Ensure all intended mappings are **accepted** before exporting; rejected and discarded mappings will not be included.
 - Use the **Timeline Panel** to review decisions prior to export.
 - Both formats can be downloaded directly to your local machine.

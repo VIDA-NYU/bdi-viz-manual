@@ -9,7 +9,7 @@ draft: false
 toc: true
 ---
 
-## Overview
+## Overview 🔍
 
 BDIViz provides a streamlined interface for managing match candidates directly within the heatmap view. The **Shortcut Panel**, located at the top-left of the screen, offers essential interactive tools for evaluating and adjusting alignment results.
 
@@ -19,7 +19,7 @@ These operations allow users to mark candidates as accepted, rejected, or discar
 
 ---
 
-## Available Actions
+## Available Actions 🎮
 
 The table below summarizes the core user operations available via the Shortcut Panel:
 
@@ -35,7 +35,7 @@ The table below summarizes the core user operations available via the Shortcut P
 
 ---
 
-## Best Practices
+## Best Practices 💡
 
 - **Leverage Keyboard Shortcuts**: Speed up match decisions using shortcut buttons or hotkeys (where supported).
 - **Work Iteratively**: Use **Undo** and **Redo** freely to experiment and refine decisions without permanent impact.
@@ -47,7 +47,7 @@ The table below summarizes the core user operations available via the Shortcut P
 
 ---
 
-## Next Steps
+## What's Next? 🚀
 
 After reviewing and operating on match candidates:
 

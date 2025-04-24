@@ -1,6 +1,6 @@
 ---
 weight: 999
-title: "Get Started"
+title: "User Manual"
 description: "Start your first BDIViz workflow."
 icon: "rocket"
 date: "2025-04-19T13:38:17-04:00"

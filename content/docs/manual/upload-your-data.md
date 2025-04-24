@@ -9,7 +9,7 @@ draft: false
 toc: true
 ---
 
-## 1. Start a New Matching Task
+## 1. Start a New Matching Task 🔄
 
 To begin, click the **"New Matching Task"** button located on the far right of the navigation bar. This will open the upload interface.
 
@@ -25,7 +25,7 @@ These files are essential for initiating schema matching and visual comparison.
 
 ---
 
-## 2. Upload Required Files
+## 2. Upload Required Files 📂
 
 ### A. Source CSV File (Required)
 
@@ -93,7 +93,7 @@ Upload a `.json` file that defines metadata and attributes for the target schema
 }
 ```
 
-## 3. Launch the Matching Task
+## 3. Launch the Matching Task 🚀
 
 Once all necessary files are uploaded, click the **"Import CSV"** button to start processing.
 
@@ -104,7 +104,7 @@ The system will:
 
 This step may take several minutes depending on the size of your dataset.
 
-## Next Steps
+## What's Next? 🚀
 After the task is launched, you will be redirected to the schema matching workspace where you can:
 
 - Review alignment suggestions

@@ -2,7 +2,7 @@
 weight: 300
 title: "Install on MacOS"
 description: "Step-by-step guide for installing and configuring BDIViz on MacOS(ARM64) systems"
-icon: "apple"
+icon: "nutrition"
 date: "2025-04-19T13:38:17-04:00"
 lastmod: "2025-04-21T11:00:00-04:00"
 draft: false
