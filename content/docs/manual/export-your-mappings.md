@@ -1,5 +1,5 @@
 ---
-weight: 400
+weight: 500
 title: "Export Your Mappings"
 description: "Export the results of your schema matching task in multiple formats for downstream integration and analysis."
 icon: "ios_share"

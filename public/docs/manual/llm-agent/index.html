@@ -14,10 +14,10 @@
 
 <html lang="en-us"><head><script src="/bdi-viz-manual/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=bdi-viz-manual/livereload" data-no-instant defer></script>
     <meta charset="utf-8" />
-    <title>Get Started | BDIViz User Manual</title>
+    <title>LLM Agent | BDIViz User Manual</title>
     <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Start your first BDIViz workflow">
+    <meta name="description" content="Explore schema alignment candidates using the BDIViz LLM Agent.">
     <meta name="keywords" content="Documentation, Hugo, Hugo Theme, Bootstrap" />
     <meta name="author" content="Colin Wilson - Lotus Labs" />
     <meta name="email" content="support@aigis.uk" />
@@ -30,13 +30,15 @@
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/bdi-viz-manual/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/bdi-viz-manual/favicon-16x16.png">
 <link rel="manifest" crossorigin="use-credentials" href="http://localhost:1313/bdi-viz-manual/site.webmanifest">
-<meta property="og:title" content="Get Started" />
-<meta property="og:description" content="Start your first BDIViz workflow" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://localhost:1313/bdi-viz-manual/docs/get-started/" /><meta property="og:image" content="http://localhost:1313/bdi-viz-manual/opengraph/card-base-2_hu_e4c3ac8ee11d1005.png"/><meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="http://localhost:1313/bdi-viz-manual/opengraph/card-base-2_hu_e4c3ac8ee11d1005.png"/>
-<meta name="twitter:title" content="Get Started"/>
-<meta name="twitter:description" content="Start your first BDIViz workflow"/>
+<meta property="og:title" content="LLM Agent" />
+<meta property="og:description" content="Explore schema alignment candidates using the BDIViz LLM Agent." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/bdi-viz-manual/docs/manual/llm-agent/" /><meta property="og:image" content="http://localhost:1313/bdi-viz-manual/opengraph/card-base-2_hu_caa461737b989aae.png"/><meta property="article:section" content="docs" />
+<meta property="article:published_time" content="2025-04-19T13:38:17-04:00" />
+<meta property="article:modified_time" content="2025-04-21T11:00:00-04:00" /><meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://localhost:1313/bdi-viz-manual/opengraph/card-base-2_hu_caa461737b989aae.png"/>
+<meta name="twitter:title" content="LLM Agent"/>
+<meta name="twitter:description" content="Explore schema alignment candidates using the BDIViz LLM Agent."/>
 
     
         <link rel="alternate" type="application/atom+xml" title="Atom feed for BDIViz User Manual" href="/index.xml" />
@@ -98,11 +100,11 @@
                 
                     
                     
-                        <li class="sidebar-dropdown no-icon current active">
+                        <li class="sidebar-dropdown no-icon ">
                             <button class="btn">
                                 Get Started
                             </button>
-                            <div class="sidebar-submenu d-block">
+                            <div class="sidebar-submenu ">
                                 <ul>
                                     
                                         
@@ -141,11 +143,11 @@
                 
                     
                     
-                        <li class="sidebar-dropdown no-icon ">
+                        <li class="sidebar-dropdown no-icon current active">
                             <button class="btn">
                                 User Manual
                             </button>
-                            <div class="sidebar-submenu ">
+                            <div class="sidebar-submenu d-block">
                                 <ul>
                                     
                                         
@@ -160,7 +162,7 @@
                                     
                                         
                                         
-                                            <li class=" no-icon"><a class="sidebar-nested-link" href="http://localhost:1313/bdi-viz-manual/docs/manual/llm-agent/">LLM Agent</a></li>
+                                            <li class="current no-icon"><a class="sidebar-nested-link" href="http://localhost:1313/bdi-viz-manual/docs/manual/llm-agent/">LLM Agent</a></li>
                                         
                                     
                                         
@@ -286,10 +288,18 @@
                     <meta itemprop="position" content='1' />
                 </li>
             
+            
+                <li class="breadcrumb-item text-capitalize" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a itemprop="item" href="/bdi-viz-manual/docs/manual/">
+                        <span itemprop="name">User Manual</span>
+                    </a>
+                    <meta itemprop="position" content='2' />
+                </li>
+            
         
             <li class="breadcrumb-item text-capitalize active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <span itemprop="name">Get Started</span>
-                <meta itemprop="position" content='2' />
+                <span itemprop="name">LLM Agent</span>
+                <meta itemprop="position" content='3' />
             </li>
         
     </ul>
@@ -297,54 +307,378 @@
                                     
                                     <div class="row flex-xl-nowrap">
                                         
-                                        <div class="docs-toc col-xl-3 visually-hidden visually-hidden  d-xl-block"><toc>
+                                        <div class="docs-toc col-xl-3    d-xl-block"><toc>
     <div class="fw-bold text-uppercase mb-2">On this page</div>
-    <nav id="TableOfContents"></nav>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#overview-">Overview 🔍</a></li>
+    <li><a href="#llm-validation-panel-">LLM Validation Panel 🤖</a></li>
+    <li><a href="#harmonization-assistant-">Harmonization Assistant 🤖</a>
+      <ul>
+        <li><a href="#how-to-access">How to Access</a></li>
+        <li><a href="#example-qa-interactions">Example Q&amp;A Interactions</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </toc></div>
                                         
                                         
-                                        <div class="docs-toc-mobile visually-hidden visually-hidden  d-print-none d-xl-none">
+                                        <div class="docs-toc-mobile    d-print-none d-xl-none">
                                             <button id="toc-dropdown-btn" class="btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-offset="0,0" aria-expanded="false">
                                                 Table of Contents
                                             </button>
-<nav id="toc-mobile"></nav></div>
-                                        <div class="docs-content col-12  mt-0">
+<nav id="toc-mobile">
+  <ul class="dropdown-menu">
+    <li><a href="#overview-">Overview 🔍</a></li>
+    <li><a href="#llm-validation-panel-">LLM Validation Panel 🤖</a></li>
+    <li><a href="#harmonization-assistant-">Harmonization Assistant 🤖</a>
+      <ul>
+        <li><a href="#how-to-access">How to Access</a></li>
+        <li><a href="#example-qa-interactions">Example Q&amp;A Interactions</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+                                        <div class="docs-content col-12 col-xl-9 mt-0">
                                             <div class="mb-0 d-flex">
                                                 
                                                 <h1 class="content-title mb-0">
-                                                    Get Started
+                                                    LLM Agent
                                                     
                                                 </h1>
                                             </div>
                                             
-                                                <p class="lead mb-3">Start your first BDIViz workflow</p>
+                                                <p class="lead mb-3">Explore schema alignment candidates using the BDIViz LLM Agent.</p>
                                             
                                             <div id="content" class="main-content" data-bs-spy="scroll" data-bs-root-margin="0px 0px -65%" data-bs-target="#toc-mobile">
                                                 
-    <div class="row flex-xl-wrap">
-        
-        <div id="list-item" class="col-md-4 col-12 mt-4 pt-2">
-            <a class="text-decoration-none text-reset" href="http://localhost:1313/bdi-viz-manual/docs/get-started/dataset-to-gdc/">
-                <div class="card h-100 features feature-full-bg rounded p-4 position-relative overflow-hidden border-1">
-                    <span class="icon-color d-flex my-3">
-                        <i class="material-icons align-middle">prescriptions</i>
-                        
-                        
-                    </span>
-                    <div class="card-body p-0 content">
-                        <p class="fs-5 fw-semibold card-title mb-1">Dataset to GDC Schema Alignment</p>
-                        <p class="para card-text mb-0">Comprehensive guide for mapping biomedical datasets to the GDC schema standard</p>
-                    </div>
-                    
-                </div>
-            </a>
-        </div>
-        
+    
+    <div data-prismjs-copy="" data-prismjs-copy-success="" data-prismjs-copy-error="">
+        <h2 id="overview-">Overview 🔍 <a href="#overview-" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>BDIViz features an embedded LLM-powered assistant to help you validate, explain, and refine schema alignment candidates. The agent provides contextual insights, interactive feedback, and harmonization support throughout your data mapping workflow.</p>
+<hr>
+<h2 id="llm-validation-panel-">LLM Validation Panel 🤖 <a href="#llm-validation-panel-" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>
+
+
+
+
+
+  
+
+
+
+  
+    
+      <img src="/bdi-viz-manual/images/agent-panel.png" alt="agent-panel" width="400" height="756" loading="lazy">
+    
+  
+</p>
+<p>The LLM Validation Panel offers real-time, context-aware suggestions and explanations for each match candidate:</p>
+<ul>
+<li><strong>Diagnosis Summary</strong>: Evaluates if a match is likely valid based on metadata, column names, and user history.</li>
+<li><strong>Explanation Cards</strong>: Highlights key reasons for each suggestion (e.g., name similarity, value overlap).
+<ul>
+<li>Click to expand for more detail.</li>
+<li>Provide feedback via 👍/👎 to refine model accuracy.</li>
+</ul>
+</li>
+<li><strong>Target Schema Metadata</strong>: Enriched descriptions pulled from sources such as GDC.</li>
+</ul>
+<hr>
+<h2 id="harmonization-assistant-">Harmonization Assistant 🤖 <a href="#harmonization-assistant-" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>
+
+
+
+
+
+  
+
+
+
+  
+</p>
+<p>The Harmonization Assistant acts as your copilot for schema mapping and harmonization tasks, offering interactive, conversational support.</p>
+<h3 id="how-to-access">How to Access <a href="#how-to-access" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h3>
+<nav>
+	<div class="nav nav-tabs" id="nav-tab" role="tablist">
+
+		
+		
+		
+		
+
+		
+
+		<a class="nav-link  active"
+		   id="cdfbaeTab" data-bs-toggle="tab" data-bs-target="#cdfbae"
+		   type="button" role="tab" aria-controls="cdfbae" aria-selected="true">Toggle Top Search Bar</a>
+
+		
+
+		<a class="nav-link "
+		   id="deacbfTab" data-bs-toggle="tab" data-bs-target="#deacbf"
+		   type="button" role="tab" aria-controls="deacbf" aria-selected="true">Right-click Expanded Node</a>
+
+		
+
+	</div>
+</nav>
+
+<div class="tab-content" id="nav-tab-content">
+
+	
+
+
+
+
+
+
+
+<div class="tab-pane fade show active" id="cdfbae" role="tabpanel" aria-labelledby="nav-1">
+
+	<ul>
+<li>Toggle the assistant button on the right side of the search bar.
+
+
+
+
+
+
+  
+
+
+
+  
+    
+      <img src="/bdi-viz-manual/images/harmonization-assistant-open-top.png" alt="harmonization-assistant-open-top" width="2368" height="1460" loading="lazy">
+    
+  
+</li>
+</ul>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="tab-pane fade" id="deacbf" role="tabpanel" aria-labelledby="nav-1">
+
+	<ul>
+<li>Right-click on a selected or expanded node.
+
+
+
+
+
+
+  
+
+
+
+  
+    
+      <img src="/bdi-viz-manual/images/harmonization-assistant-open-expand.png" alt="harmonization-assistant-open-expand" width="3192" height="1928" loading="lazy">
+    
+  
+</li>
+</ul>
+
+
+</div>
+
+
+
+</div>
+<hr>
+<h3 id="example-qa-interactions">Example Q&amp;A Interactions <a href="#example-qa-interactions" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h3><h4 id="q-what-is-this-candidate-about">Q: What is this candidate about? <a href="#q-what-is-this-candidate-about" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h4><p><em>A:</em> Ask the assistant for a summary or description of the selected candidate.<br>
+<em>Prompt:</em> <code>What is this candidate about?</code>
+
+
+
+
+
+
+  
+
+
+
+  
+    
+      <img src="/bdi-viz-manual/images/harmonization-assistant-about.png" alt="harmonization-assistant-about" width="3196" height="1386" loading="lazy">
+    
+  
+</p>
+<h4 id="q-what-are-the-potential-value-mappings-between-the-selected-source-and-target-attribute">Q: What are the potential value mappings between the selected source and target attribute? <a href="#q-what-are-the-potential-value-mappings-between-the-selected-source-and-target-attribute" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h4><p><em>A:</em> Request the assistant to show possible value mappings between the source and target attributes.<br>
+<em>Prompt:</em> <code>What are the potential value mappings between the selected source and target attribute?</code><br>
+
+
+
+
+
+
+  
+
+
+
+  
+    
+      <img src="/bdi-viz-manual/images/harmonization-assistant-values.png" alt="harmonization-assistant-values" width="3168" height="1384" loading="lazy">
+    
+  
+</p>
+<h4 id="q-does-the-candidate-i-selected-make-sense-why">Q: Does the candidate I selected make sense? Why? <a href="#q-does-the-candidate-i-selected-make-sense-why" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h4><p><em>A:</em> Ask the assistant to explain the reasoning behind a suggested match.<br>
+<em>Prompt:</em> <code>Does the candidate I selected make sense? Why?</code><br>
+
+
+
+
+
+
+  
+
+
+
+  
+    
+      <img src="/bdi-viz-manual/images/harmonization-assistant-why.png" alt="harmonization-assistant-why" width="3196" height="1394" loading="lazy">
+    
+  
+</p>
+<h4 id="q-can-you-suggest-more-candidates-from-the-schema">Q: Can you suggest more candidates from the schema? <a href="#q-can-you-suggest-more-candidates-from-the-schema" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h4><p><em>A:</em> Ask the assistant to search for additional candidates from the top recommendations or the entire target schema.<br>
+<em>Prompt:</em> <code>Besides the current recommendations, show me more candidates related to tumor sites or organs.</code><br>
+
+
+
+
+
+
+  
+
+
+
+  
+    
+      <img src="/bdi-viz-manual/images/harmonization-assistant-more-candidates.png" alt="harmonization-assistant-more-candidates" width="3784" height="1922" loading="lazy">
+    
+  
+</p>
+<h4 id="q-can-you-accept-or-reject-candidates-for-me">Q: Can you accept or reject candidates for me? <a href="#q-can-you-accept-or-reject-candidates-for-me" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h4><p><em>A:</em> Let the assistant accept or reject candidates based on chat history and its own suggestions.<br>
+<em>Prompt:</em> <code>From your memory and our chat, can you accept the candidate that makes the most sense?</code><br>
+
+
+
+
+
+
+  
+
+
+
+  
+    
+      <img src="/bdi-viz-manual/images/harmonization-assistant-accept.png" alt="harmonization-assistant-accept" width="3800" height="1926" loading="lazy">
+    
+  
+</p>
+<h4 id="q-can-you-remember-custom-notes-or-metadata-for-later">Q: Can you remember custom notes or metadata for later? <a href="#q-can-you-remember-custom-notes-or-metadata-for-later" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h4><p><em>A:</em> Add custom notes or metadata to the assistant’s memory for future reference.<br>
+<em>Prompt:</em> <code>Remember this metadata for the source dataset: CCRCC is a common problem among...</code><br>
+
+
+
+
+
+
+  
+
+
+
+  
+    
+      <img src="/bdi-viz-manual/images/harmonization-assistant-metadata.png" alt="harmonization-assistant-metadata" width="3256" height="1664" loading="lazy">
+    
+  
+</p>
+<h4 id="q-can-you-remind-me-what-this-task-is-about">Q: Can you remind me what this task is about? <a href="#q-can-you-remind-me-what-this-task-is-about" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h4><p><em>A:</em> Ask the assistant to recall the current task or context.<br>
+<em>Prompt:</em> <code>Recall from your memory, what is the context of this task?</code><br>
+
+
+
+
+
+
+  
+
+
+
+  
+    
+      <img src="/bdi-viz-manual/images/harmonization-assistant-context.png" alt="harmonization-assistant-context" width="3192" height="1510" loading="lazy">
+    
+  
+</p>
+<h4 id="q-can-you-filter-or-rematch-nodes-based-on-criteria">Q: Can you filter or rematch nodes based on criteria? <a href="#q-can-you-filter-or-rematch-nodes-based-on-criteria" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h4><p><em>A:</em> Start a new task or filter nodes based on clinical or semantic criteria.<br>
+<em>Prompt:</em> <code>Rematch with nodes related to clinical criteria.</code><br>
+
+
+
+
+
+
+  
+
+
+
+  
+    
+      <img src="/bdi-viz-manual/images/harmonization-assistant-about.png" alt="harmonization-assistant-about" width="3196" height="1386" loading="lazy">
+    
+  
+</p>
+<h4 id="q-can-you-reorder-or-rescore-candidates">Q: Can you reorder or rescore candidates? <a href="#q-can-you-reorder-or-rescore-candidates" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h4><p><em>A:</em> Request the assistant to reorder or rescore candidates (feature in development).<br>
+<em>Prompt:</em> <code>Reorder the candidates based on relevance to AJCC. Rescore and update them.</code></p>
+<h4 id="q-can-you-help-me-create-a-custom-matcher-task">Q: Can you help me create a custom matcher task? <a href="#q-can-you-help-me-create-a-custom-matcher-task" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h4><p><em>A:</em> Ask the assistant to help create new matcher tasks (experimental).<br>
+<em>Prompt:</em> <code>Help me add a matcher using the rapidfuzz library.</code></p>
+<hr>
+<blockquote>
+<p><strong>Tip:</strong> The Harmonization Assistant learns from your feedback and memory, improving its recommendations over time. Use the thumbs up/down and memory features to tailor the assistant to your project needs.</p></blockquote>
+
     </div>
 
+    
+
+    
                                             </div>
                                             <div><hr class="doc-hr">
 <div id="doc-nav" class="d-print-none">
+
+	<div class="row flex-xl-nowrap ">
+	<div class="col-sm-6 pt-2 doc-next">
+		<a href="/bdi-viz-manual/docs/installation/install-on-macos/">
+			<div class="card h-100 my-1">
+				<div class="card-body py-2">
+                    <p class="card-title fs-5 fw-semibold lh-base mb-0"><i class="material-icons align-middle">navigate_before</i> Install on MacOS</p>
+					<p class="card-text ms-2">Step-by-step guide for …</p>
+					
+				</div>
+			</div>
+		</a>
+        </div>
+	<div class="col-sm-6 pt-2 doc-prev">
+		<a class="ms-auto" href="/bdi-viz-manual/docs/overview/">
+			<div class="card h-100 my-1 text-end">
+				<div class="card-body py-2">
+                    <p class="card-title fs-5 fw-semibold lh-base mb-0">Overview <i class="material-icons align-middle">navigate_next</i></p>
+					<p class="card-text me-2">BDIViz: An Interactive …</p>
+					
+				</div>
+			</div>
+		</a>
+        </div>
+	</div>
 </div></div>
                                         </div>
                                     </div>
@@ -648,7 +982,7 @@
                 href: "\/bdi-viz-manual\/docs\/manual\/llm-agent\/",
                 title: "LLM Agent",
                 description: "Explore schema alignment candidates using the BDIViz LLM Agent.",
-                content: "Overview 🔍 linkBDIViz features an embedded LLM-powered assistant to help you validate, explain, and refine schema alignment candidates. The agent provides contextual insights, interactive feedback, and harmonization support throughout your data mapping workflow.\nLLM Validation Panel 🤖 link The LLM Validation Panel offers real-time, context-aware suggestions and explanations for each match candidate:\nDiagnosis Summary: Evaluates if a match is likely valid based on metadata, column names, and user history. Explanation Cards: Highlights key reasons for each suggestion (e.g., name similarity, value overlap). Click to expand for more detail. Provide feedback via 👍/👎 to refine model accuracy. Target Schema Metadata: Enriched descriptions pulled from sources such as GDC. Harmonization Assistant 🤖 link The Harmonization Assistant acts as your copilot for schema mapping and harmonization tasks, offering interactive, conversational support.\nHow to Access link Toggle Top Search Bar Right-click Expanded Node Toggle the assistant button on the right side of the search bar. Right-click on a selected or expanded node. Example Q\u0026A Interactions linkQ: What is this candidate about? linkA: Ask the assistant for a summary or description of the selected candidate.\nPrompt: What is this candidate about? Q: What are the potential value mappings between the selected source and target attribute? linkA: Request the assistant to show possible value mappings between the source and target attributes.\nPrompt: What are the potential value mappings between the selected source and target attribute?\nQ: Does the candidate I selected make sense? Why? linkA: Ask the assistant to explain the reasoning behind a suggested match.\nPrompt: Does the candidate I selected make sense? Why?\nQ: Can you suggest more candidates from the schema? linkA: Ask the assistant to search for additional candidates from the top recommendations or the entire target schema.\nPrompt: Besides the current recommendations, show me more candidates related to tumor sites or organs.\nQ: Can you accept or reject candidates for me? linkA: Let the assistant accept or reject candidates based on chat history and its own suggestions.\nPrompt: From your memory and our chat, can you accept the candidate that makes the most sense?\nQ: Can you remember custom notes or metadata for later? linkA: Add custom notes or metadata to the assistant’s memory for future reference.\nPrompt: Remember this metadata for the source dataset: CCRCC is a common problem among...\nQ: Can you remind me what this task is about? linkA: Ask the assistant to recall the current task or context.\nPrompt: Remind me what this task is about.\nQ: Can you filter or rematch nodes based on criteria? linkA: Start a new task or filter nodes based on clinical or semantic criteria.\nPrompt: Rematch with nodes related to clinical criteria.\nQ: Can you reorder or rescore candidates? linkA: Request the assistant to reorder or rescore candidates (feature in development).\nPrompt: Reorder the candidates based on relevance.\nQ: Can you help me create a custom matcher task? linkA: Ask the assistant to help create new matcher tasks (experimental).\nPrompt: Help me add a matcher using the rapidfuzz library.\nTip: The Harmonization Assistant learns from your feedback and memory, improving its recommendations over time. Use the thumbs up/down and memory features to tailor the assistant to your project needs.\n"
+                content: "Overview 🔍 linkBDIViz features an embedded LLM-powered assistant to help you validate, explain, and refine schema alignment candidates. The agent provides contextual insights, interactive feedback, and harmonization support throughout your data mapping workflow.\nLLM Validation Panel 🤖 link The LLM Validation Panel offers real-time, context-aware suggestions and explanations for each match candidate:\nDiagnosis Summary: Evaluates if a match is likely valid based on metadata, column names, and user history. Explanation Cards: Highlights key reasons for each suggestion (e.g., name similarity, value overlap). Click to expand for more detail. Provide feedback via 👍/👎 to refine model accuracy. Target Schema Metadata: Enriched descriptions pulled from sources such as GDC. Harmonization Assistant 🤖 link The Harmonization Assistant acts as your copilot for schema mapping and harmonization tasks, offering interactive, conversational support.\nHow to Access link Toggle Top Search Bar Right-click Expanded Node Toggle the assistant button on the right side of the search bar. Right-click on a selected or expanded node. Example Q\u0026A Interactions linkQ: What is this candidate about? linkA: Ask the assistant for a summary or description of the selected candidate.\nPrompt: What is this candidate about? Q: What are the potential value mappings between the selected source and target attribute? linkA: Request the assistant to show possible value mappings between the source and target attributes.\nPrompt: What are the potential value mappings between the selected source and target attribute?\nQ: Does the candidate I selected make sense? Why? linkA: Ask the assistant to explain the reasoning behind a suggested match.\nPrompt: Does the candidate I selected make sense? Why?\nQ: Can you suggest more candidates from the schema? linkA: Ask the assistant to search for additional candidates from the top recommendations or the entire target schema.\nPrompt: Besides the current recommendations, show me more candidates related to tumor sites or organs.\nQ: Can you accept or reject candidates for me? linkA: Let the assistant accept or reject candidates based on chat history and its own suggestions.\nPrompt: From your memory and our chat, can you accept the candidate that makes the most sense?\nQ: Can you remember custom notes or metadata for later? linkA: Add custom notes or metadata to the assistant’s memory for future reference.\nPrompt: Remember this metadata for the source dataset: CCRCC is a common problem among...\nQ: Can you remind me what this task is about? linkA: Ask the assistant to recall the current task or context.\nPrompt: Recall from your memory, what is the context of this task?\nQ: Can you filter or rematch nodes based on criteria? linkA: Start a new task or filter nodes based on clinical or semantic criteria.\nPrompt: Rematch with nodes related to clinical criteria.\nQ: Can you reorder or rescore candidates? linkA: Request the assistant to reorder or rescore candidates (feature in development).\nPrompt: Reorder the candidates based on relevance to AJCC. Rescore and update them.\nQ: Can you help me create a custom matcher task? linkA: Ask the assistant to help create new matcher tasks (experimental).\nPrompt: Help me add a matcher using the rapidfuzz library.\nTip: The Harmonization Assistant learns from your feedback and memory, improving its recommendations over time. Use the thumbs up/down and memory features to tailor the assistant to your project needs.\n"
             }
         );
     index.add(

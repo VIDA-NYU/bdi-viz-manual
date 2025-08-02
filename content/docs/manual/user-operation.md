@@ -1,5 +1,5 @@
 ---
-weight: 300
+weight: 400
 title: "Perform User Operations"
 description: "Interactively evaluate and manage each schema match candidate."
 icon: "edit"

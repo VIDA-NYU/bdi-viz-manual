@@ -107,7 +107,7 @@
                                     
                                         
                                         
-                                            <li class=" no-icon"><a class="sidebar-nested-link" href="http://localhost:1313/bdi-viz-manual/docs/get-started/dataset-to-gdc/">Dataset to GDC Usecase</a></li>
+                                            <li class=" no-icon"><a class="sidebar-nested-link" href="http://localhost:1313/bdi-viz-manual/docs/get-started/dataset-to-gdc/">Dataset to GDC Schema Alignment</a></li>
                                         
                                     
                                 </ul>
@@ -156,6 +156,11 @@
                                         
                                         
                                             <li class=" no-icon"><a class="sidebar-nested-link" href="http://localhost:1313/bdi-viz-manual/docs/manual/explore-matches/">Explore Matches</a></li>
+                                        
+                                    
+                                        
+                                        
+                                            <li class=" no-icon"><a class="sidebar-nested-link" href="http://localhost:1313/bdi-viz-manual/docs/manual/llm-agent/">LLM Agent</a></li>
                                         
                                     
                                         
@@ -596,6 +601,13 @@
     
     
     
+    
+    
+    
+    
+    
+    
+    
 
 
     
@@ -615,9 +627,9 @@
             {
                 id:  1 ,
                 href: "\/bdi-viz-manual\/docs\/get-started\/dataset-to-gdc\/",
-                title: "Dataset to GDC Usecase",
-                description: "Step-by-step guide for a Dataset to GDC matching case",
-                content: "Install BDIViz to Your Machine 🚀 linkIf you are using a AMD64 machine, refer to this guide. If you are using an ARM64 machine (like Apple Silicon Macs), refer to this guide.\nOverview 🔍 linkThis guide walks you through the process of matching your biomedical dataset to the Genomic Data Commons (GDC) schema using BDIViz. The GDC is a standardized data repository that requires specific formatting and schema alignment.\nStep 1: Load the Clark Dataset and Start a New Task 📊 link Download the sample dataset by Clark et al Open your web browser and navigate to http://localhost:3000 Click the “New Matching Task” button in the navigation bar Drag and drop the Clark dataset CSV file into the Source CSV File drop zone Leave the Target CSV File and Target Schema JSON File fields empty to use the default GDC v3.3.0 schema Click “Import CSV” to begin processing Step 2: Identify and Confirm Easy Matches 🔎 linkOnce the heatmap appears, you’ll notice some obvious matches with darker cells that have already been automatically accepted (indicated by green cells with checkmarks):\nExact Name and Value Matches: Find the cell where Gender (source) intersects with gender (GDC) Click on this cell to examine the match details You’ll see that both attribute names are similar and the values align perfectly (Male → Male, Female → Female) Note that this match is already accepted by default (green color with checkmark) Similar Names with Aligned Distributions: Locate the cell where BMI (source) intersects with bmi (GDC) Click to review the match details Notice that both the attribute names match and the numerical distributions align This match is also already accepted by default (green color with checkmark) Step 3: Explore and Evaluate Complex Matches 🧐 linkNow let’s handle more complex matching scenarios:\nEthnicity_Self_Identify Evaluation:\nFind the cell where Ethnicity_Self_Identify (source) intersects with ethnicity (GDC) Click to examine the match details Despite the similar attribute names, you’ll notice the values are very different: Source values include “Asian”, “White”, etc. GDC ethnicity values include “hispanic or latino”, “not hispanic or latino”, etc. Click the Reject (✕) button to mark this as an invalid match Finding the Correct Match for Ethnicity_Self_Identify:\nNow check the cell where Ethnicity_Self_Identify (source) intersects with race (GDC) Click to review the match details You’ll see that the values align well: “Asian” in source matches “asian” in GDC “White” in source matches “white” in GDC Click the Accept (✓) button to confirm this match Step 4: Continue Reviewing All Source Attributes 📋 linkRepeat this process for each source attribute:\nClick on cells with darker shading (indicating stronger match candidates) Review the attribute names and value distributions Use the Shortcut Panel to: Accept (✓) valid matches Reject (✕) invalid matches Discard (🗑️) attributes you don’t want to match Step 5: Export Your Mapped Dataset 📤 linkOnce you’ve evaluated all matches:\nClick the Export button in the Shortcut Panel Choose CSV format to get your dataset with GDC-compliant column names Download the file to your computer What’s Next? 🚀 linkFor exploring more BDIViz usages and detailed manual, please see User Manual\n"
+                title: "Dataset to GDC Schema Alignment",
+                description: "Comprehensive guide for mapping biomedical datasets to the GDC schema standard",
+                content: "Installation 🛠️ linkFor system-specific installation instructions:\nAMD64 architecture: Follow the Linux/Unix installation guide ARM64 architecture (Apple Silicon): Follow the MacOS installation guide Introduction 📚 linkThis guide demonstrates the process of aligning a biomedical dataset with the Genomic Data Commons (GDC) schema using BDIViz. The GDC maintains standardized data repositories that require specific formatting and schema compliance for successful data submission and integration.\nStep 1: Dataset Preparation and Task Initialization 🚀 link Download the Clark et al. sample dataset Navigate to http://localhost:3000 in your web browser Select “New Matching Task” from the navigation bar Upload the Clark dataset CSV file to the Source CSV File drop zone Leave the Target CSV File and Target Schema JSON File fields empty to utilize the default GDC v3.3.0 schema Click “Import CSV” to initiate the matching process Step 2: Validating High-Confidence Matches ✅ linkThe system automatically identifies and suggests high-confidence matches, indicated by darker cells in the heatmap. Review these initial suggestions:\nDirect Attribute Matches:\nLocate the matching candidate Gender (source) -\u003e gender (GDC) in the heatmap cell Click the heatmap cell to expand the embedded node The embedded node contains unique value distributions for both attributes Verify that both attribute names and values align (Male → Male, Female → Female) Note that high-confidence matches are pre-accepted (indicated by green cells with checkmarks) Numerical Attribute Alignment:\nExamine the matching candidate BMI (source) -\u003e bmi (GDC) in the heatmap cell Click the heatmap cell to expand the embedded node The embedded node shows value bin distributions for numerical data Observe that both attribute names and numerical distributions correspond appropriately This match should also be pre-accepted (green cell with checkmark) Step 3: Explore Complex Attribute Matches 🧩 linkAddress more nuanced matching scenarios that require human judgment:\nEvaluating Semantic Differences:\nLocate the matching candidate Ethnicity_Self_Identify (source) -\u003e ethnicity (GDC) in the heatmap cell Click the heatmap cell to expand the embedded node Scroll down to check the value comparisons table in the embedded node Note the significant value discrepancies: Source values include “Asian”, “White”, etc. GDC ethnicity values include “hispanic or latino”, “not hispanic or latino”, etc. Click the Reject (✕) button on the top left Shortcut Panel to invalidate this incorrect match Identifying Cross-Category Matches:\nExamine the matching candidate Ethnicity_Self_Identify (source) -\u003e race (GDC) in the heatmap cell Click the heatmap cell to expand the embedded node Scroll down to check the value comparisons table in the embedded node Confirm that the values correspond appropriately: “Asian” in source aligns with “asian” in GDC “White” in source aligns with “white” in GDC Click the Accept (✓) button on the top left Shortcut Panel to confirm this cross-category match Step 4: Leverage the LLM Agent for Complex Matching Decisions 🤖 linkThe integrated LLM Agent provides valuable insights for challenging attribute matches:\nEvaluating Pathological Staging to Lymph Node Count:\nExamine the potential match Path_Stage_Reg_Lymph_Nodes_pN (source) -\u003e lymph_nodes_positive (GDC) Consult the Agent Panel on the left side of the interface Review the “Semantic No Match” card which indicates: Source attribute represents a classification system (pN0, pN1, etc.) Target attribute represents a numerical count of positive lymph nodes Based on this analysis, reject this match using the Shortcut Panel Distinguishing Staging from Testing Metrics:\nEvaluate the potential match Path_Stage_Reg_Lymph_Nodes_pN (source) -\u003e lymph_nodes_tested (GDC) Expand the “Pattern No Match” card in the Agent Panel Note the critical insight that source values (pN0, pN1, pNX) represent staging categories Confirm these do not align with the expected numeric values for lymph nodes tested Reject this match using the Shortcut Panel Identifying Non-Obvious Semantic Equivalence:\nAssess the potential match Path_Stage_Reg_Lymph_Nodes_pN (source) -\u003e ajcc_pathologic_n (GDC) Despite different naming conventions, examine the value distributions Consult the “Semantic Match” card in the Agent Panel Verify that both attributes represent pathological lymph node staging in cancer systems Accept this match using the Shortcut Panel Step 5: Systematic Review of All Source Attributes 🔍 linkMethodically evaluate each remaining source attribute:\nPrioritize heatmap cells with darker shading (indicating stronger match candidates) Click each heatmap cell to expand the embedded node and evaluate both attribute names and value distributions Utilize the top left Shortcut Panel to: Accept (✓) valid and appropriate matches Reject (✕) invalid or misaligned matches Discard (🗑️) attributes that should be excluded from the mapping process Step 6: Exporting the GDC-Compliant Dataset 📤 linkAfter completing the evaluation process:\nSelect the Export button from the top left Shortcut Panel Choose CSV format to generate a dataset with GDC-compliant column names Save the transformed file to your local system Further Resources 📖 linkFor advanced functionality and detailed operational guidance, please refer to the comprehensive User Manual.\n"
             }
         );
     index.add(
@@ -626,7 +638,7 @@
                 href: "\/bdi-viz-manual\/docs\/manual\/explore-matches\/",
                 title: "Explore Matches",
                 description: "Explore schema alignment candidates using the BDIViz interactive heatmap interface.",
-                content: "Overview 🔍 linkAfter uploading your files, BDIViz launches its main interface, allowing you to visually explore match candidates between your source dataset and the target schema.\nInteractive Heatmap 🔥 linkThe heatmap is the primary visualization tool in BDIViz. Each cell represents a match candidate between a source attribute (y-axis) and a target attribute (x-axis).\nKey Features link Heatmap Cells X-Axis Hierarchy Expandable Nodes Heatmap Top Tabs Each cell corresponds to a potential match:\nColor intensity indicates similarity score (darker = stronger match). Green = accepted match, Red = rejected match. Click on a cell to inspect match details. The x-axis displays the target schema’s structure as a semantic hierarchy:\nCategory Level: e.g., clinical, biospecimen Node Level: e.g., diagnosis, treatment Leaf Nodes: individual target attributes Color and curved connectors help clarify relationships and improve navigation.\nClicking a heatmap node reveals a stacked histogram panel:\nTop Chart: Source column value distribution Bottom Chart: Target column value distribution Use this to evaluate whether the two columns share meaningful overlap.\nTip: Similar distributions (e.g., shared categories like “Male” and “Female”) often suggest semantic alignment.\nThe top-level filter tabs help narrow your focus:\nAll: View all candidate matches Accepted: Only show confirmed matches Unmatched: Only show source columns with no confirmed match Expand on Hover: Toggle whether expanded histograms appear on hover or click Filters and Search Controls 🔍 linkFine-tune the heatmap view using a suite of filters:\nSource Attribute Selector Similarity Threshold Similar Attributes Displayed Search Bar Select a specific source column to examine.\nDropdown key:\nGreen: Already matched Grey: Manually discarded All: Show all source attributes Set a minimum similarity score for visible candidates. Range: 0.0 – 1.0.\n0.0: Show all matches 1.0: Show only perfect matches Controls how many similar source attributes appear on the heatmap when a single source column is selected.\nNote: Only applies when Source Attribute ≠ “All”.\nQuickly locate and highlight target attributes by name or keyword.\nLower Panel: Match Details 🔎 linkClicking on any heatmap node reveals deeper insights below:\nValue Comparisons UpSet Plot Visualizes string-based fuzzy matching between source and target values.\nEach row: one source value + its closest matches Use to validate whether mapping is semantically and syntactically justified Visualizes how different matchers contributed to the candidate match score.\nEach row: a matcher Each column: a candidate Dots indicate support from that matcher LLM Agent Panel 🤖 link An embedded LLM-powered assistant provides contextual insights:\nDiagnosis Summary: Determines if a match is likely valid based on metadata, column names, and user history Explanation Cards: Highlight key reasons (e.g., name similarity, value overlap) Click to expand for more detail Provide feedback via 👍/👎 to refine model accuracy Target Schema Metadata: Enriched descriptions pulled from sources such as GDC What’s Next? 🚀 linkAfter reviewing the matches:\nAccept or reject individual match suggestions Use filtering to prioritize high-confidence matches Proceed to export, refine, or apply your matched schema for downstream harmonization tasks "
+                content: "Overview 🔍 linkAfter uploading your files, BDIViz launches its main interface, allowing you to visually explore match candidates between your source dataset and the target schema.\nInteractive Heatmap 🔥 linkThe heatmap is the primary visualization tool in BDIViz. Each cell represents a match candidate between a source attribute (y-axis) and a target attribute (x-axis).\nKey Features link Heatmap Cells X-Axis Hierarchy Expandable Nodes Heatmap Top Tabs Each cell corresponds to a potential match:\nColor intensity indicates similarity score (darker = stronger match). Green = accepted match, Red = rejected match. Click on a cell to inspect match details. The x-axis displays the target schema’s structure as a semantic hierarchy:\nCategory Level: e.g., clinical, biospecimen Node Level: e.g., diagnosis, treatment Leaf Nodes: individual target attributes Color and curved connectors help clarify relationships and improve navigation.\nClicking a heatmap node reveals a stacked histogram panel:\nTop Chart: Source column value distribution Bottom Chart: Target column value distribution Use this to evaluate whether the two columns share meaningful overlap.\nTip: Similar distributions (e.g., shared categories like “Male” and “Female”) often suggest semantic alignment.\nThe top-level filter tabs help narrow your focus:\nAll: View all candidate matches Accepted: Only show confirmed matches Unmatched: Only show source columns with no confirmed match Expand on Hover: Toggle whether expanded histograms appear on hover or click Filters and Search Controls 🔍 linkFine-tune the heatmap view using a suite of filters:\nSource Attribute Selector Similarity Threshold Similar Attributes Displayed Search Bar Select a specific source column to examine.\nDropdown key:\nGreen: Already matched Grey: Manually discarded All: Show all source attributes Set a minimum similarity score for visible candidates. Range: 0.0 – 1.0.\n0.0: Show all matches 1.0: Show only perfect matches Controls how many similar source attributes appear on the heatmap when a single source column is selected.\nNote: Only applies when Source Attribute ≠ “All”.\nQuickly locate and highlight target attributes by name or keyword.\nLower Panel: Match Details 🔎 linkClicking on any heatmap node reveals deeper insights below:\nValue Comparisons UpSet Plot Visualizes string-based fuzzy matching between source and target values.\nEach row: one source value + its closest matches Use to validate whether mapping is semantically and syntactically justified Visualizes how different matchers contributed to the candidate match score.\nEach row: a matcher Each column: a candidate Dots indicate support from that matcher What’s Next? 🚀 linkAfter reviewing the matches:\nAccept or reject individual match suggestions Use filtering to prioritize high-confidence matches Proceed to export, refine, or apply your matched schema for downstream harmonization tasks "
             }
         );
     index.add(
@@ -650,6 +662,15 @@
     index.add(
             {
                 id:  5 ,
+                href: "\/bdi-viz-manual\/docs\/manual\/llm-agent\/",
+                title: "LLM Agent",
+                description: "Explore schema alignment candidates using the BDIViz LLM Agent.",
+                content: "Overview 🔍 linkBDIViz features an embedded LLM-powered assistant to help you validate, explain, and refine schema alignment candidates. The agent provides contextual insights, interactive feedback, and harmonization support throughout your data mapping workflow.\nLLM Validation Panel 🤖 link The LLM Validation Panel offers real-time, context-aware suggestions and explanations for each match candidate:\nDiagnosis Summary: Evaluates if a match is likely valid based on metadata, column names, and user history. Explanation Cards: Highlights key reasons for each suggestion (e.g., name similarity, value overlap). Click to expand for more detail. Provide feedback via 👍/👎 to refine model accuracy. Target Schema Metadata: Enriched descriptions pulled from sources such as GDC. Harmonization Assistant 🤖 link The Harmonization Assistant acts as your copilot for schema mapping and harmonization tasks, offering interactive, conversational support.\nHow to Access link Toggle Top Search Bar Right-click Expanded Node Toggle the assistant button on the right side of the search bar. Right-click on a selected or expanded node. Example Q\u0026A Interactions linkQ: What is this candidate about? linkA: Ask the assistant for a summary or description of the selected candidate.\nPrompt: What is this candidate about? Q: What are the potential value mappings between the selected source and target attribute? linkA: Request the assistant to show possible value mappings between the source and target attributes.\nPrompt: What are the potential value mappings between the selected source and target attribute?\nQ: Does the candidate I selected make sense? Why? linkA: Ask the assistant to explain the reasoning behind a suggested match.\nPrompt: Does the candidate I selected make sense? Why?\nQ: Can you suggest more candidates from the schema? linkA: Ask the assistant to search for additional candidates from the top recommendations or the entire target schema.\nPrompt: Besides the current recommendations, show me more candidates related to tumor sites or organs.\nQ: Can you accept or reject candidates for me? linkA: Let the assistant accept or reject candidates based on chat history and its own suggestions.\nPrompt: From your memory and our chat, can you accept the candidate that makes the most sense?\nQ: Can you remember custom notes or metadata for later? linkA: Add custom notes or metadata to the assistant’s memory for future reference.\nPrompt: Remember this metadata for the source dataset: CCRCC is a common problem among...\nQ: Can you remind me what this task is about? linkA: Ask the assistant to recall the current task or context.\nPrompt: Remind me what this task is about.\nQ: Can you filter or rematch nodes based on criteria? linkA: Start a new task or filter nodes based on clinical or semantic criteria.\nPrompt: Rematch with nodes related to clinical criteria.\nQ: Can you reorder or rescore candidates? linkA: Request the assistant to reorder or rescore candidates (feature in development).\nPrompt: Reorder the candidates based on relevance.\nQ: Can you help me create a custom matcher task? linkA: Ask the assistant to help create new matcher tasks (experimental).\nPrompt: Help me add a matcher using the rapidfuzz library.\nTip: The Harmonization Assistant learns from your feedback and memory, improving its recommendations over time. Use the thumbs up/down and memory features to tailor the assistant to your project needs.\n"
+            }
+        );
+    index.add(
+            {
+                id:  6 ,
                 href: "\/bdi-viz-manual\/docs\/overview\/",
                 title: "Overview",
                 description: "BDIViz: An Interactive Visualization System for Biomedical Schema Matching with LLM-Supported Validation",
@@ -658,7 +679,7 @@
         );
     index.add(
             {
-                id:  6 ,
+                id:  7 ,
                 href: "\/bdi-viz-manual\/docs\/manual\/user-operation\/",
                 title: "Perform User Operations",
                 description: "Interactively evaluate and manage each schema match candidate.",
@@ -667,7 +688,7 @@
         );
     index.add(
             {
-                id:  7 ,
+                id:  8 ,
                 href: "\/bdi-viz-manual\/docs\/manual\/export-your-mappings\/",
                 title: "Export Your Mappings",
                 description: "Export the results of your schema matching task in multiple formats for downstream integration and analysis.",
@@ -676,7 +697,7 @@
         );
     index.add(
             {
-                id:  8 ,
+                id:  9 ,
                 href: "\/bdi-viz-manual\/docs\/",
                 title: "BDIViz Documentations",
                 description: "Explore our guides and examples to deploy and improve your data integration workflow with BDIViz.",
@@ -685,7 +706,7 @@
         );
     index.add(
             {
-                id:  9 ,
+                id:  10 ,
                 href: "\/bdi-viz-manual\/docs\/get-started\/",
                 title: "Get Started",
                 description: "Start your first BDIViz workflow",
@@ -694,7 +715,7 @@
         );
     index.add(
             {
-                id:  10 ,
+                id:  11 ,
                 href: "\/bdi-viz-manual\/docs\/installation\/",
                 title: "Installation",
                 description: "Installation guide for setting up BDIViz on your system",
@@ -703,7 +724,7 @@
         );
     index.add(
             {
-                id:  11 ,
+                id:  12 ,
                 href: "\/bdi-viz-manual\/docs\/manual\/",
                 title: "User Manual",
                 description: "Detailed user manual to BDIViz workflow",

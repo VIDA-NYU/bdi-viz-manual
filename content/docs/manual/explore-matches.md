@@ -163,20 +163,6 @@ Visualizes how different matchers contributed to the candidate match score.
 
 ---
 
-## LLM Agent Panel 🤖
-
-![agent-panel](./images/agent-panel.png)
-
-An embedded LLM-powered assistant provides contextual insights:
-
-- **Diagnosis Summary**: Determines if a match is likely valid based on metadata, column names, and user history
-- **Explanation Cards**: Highlight key reasons (e.g., name similarity, value overlap)
-  - Click to expand for more detail
-  - Provide feedback via 👍/👎 to refine model accuracy
-- **Target Schema Metadata**: Enriched descriptions pulled from sources such as GDC
-
----
-
 ## What's Next? 🚀
 
 After reviewing the matches:
