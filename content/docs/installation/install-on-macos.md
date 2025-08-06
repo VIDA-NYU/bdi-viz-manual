@@ -87,9 +87,9 @@ docker rm bdiviz
 - You can bind-mount local volumes or customize environment variables for advanced use (e.g., persistent storage, configuration injection).
 - To update the image, simply pull the latest tag again and restart the container:
   ```bash
-  docker pull edenwu/bdi-viz-react:amd64
+  docker pull edenwu/bdi-viz-react:arm64
   docker stop bdiviz && docker rm bdiviz
-  docker run -d --name bdiviz -p 3000:3000 edenwu/bdi-viz-react:amd64
+  docker run -d --name bdiviz -p 3000:3000 edenwu/bdi-viz-react:arm64
   ```
 
 ## Troubleshooting

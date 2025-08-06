@@ -140,7 +140,7 @@ docker rm bdiviz
 ## Troubleshooting
 - **Port already in use?** Try using a different port:
   ```bash
-  docker run -d --name bdiviz-mac -p 8080:3000 edenwu/bdi-viz-react:arm64
+  docker run -d --name bdiviz-mac -p 8080:3000 edenwu/bdi-viz-react:amd64
   ```
   Then access it at http://localhost:8080.
 - **Docker daemon not running?** Open Docker Desktop and make sure it's active.
