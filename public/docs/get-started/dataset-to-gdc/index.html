@@ -112,6 +112,11 @@
                                             <li class="current no-icon"><a class="sidebar-nested-link" href="http://localhost:1313/bdi-viz-manual/docs/get-started/dataset-to-gdc/">Dataset to GDC Schema Alignment</a></li>
                                         
                                     
+                                        
+                                        
+                                            <li class=" no-icon"><a class="sidebar-nested-link" href="http://localhost:1313/bdi-viz-manual/docs/get-started/verify-value-mappings/">Verify Value Matching</a></li>
+                                        
+                                    
                                 </ul>
                             </div>
                         </li>
@@ -574,7 +579,7 @@
 
   
     
-      <img src="/bdi-viz-manual/images/export-matches.gif" alt="export-matches-gif" width="1202" height="620" loading="lazy">
+      <img src="/bdi-viz-manual/images/export-matches.gif" alt="export-matches-gif" width="1530" height="690" loading="lazy">
     
   
 </p>
@@ -859,6 +864,13 @@
     
     
     
+    
+    
+    
+    
+    
+    
+    
 
 
     
@@ -904,6 +916,15 @@
     index.add(
             {
                 id:  4 ,
+                href: "\/bdi-viz-manual\/docs\/get-started\/verify-value-mappings\/",
+                title: "Verify Value Matching",
+                description: "Verify the curated source attrbute value to target attribute value mappings",
+                content: "Installation 🛠️ linkFor system-specific installation instructions:\nAMD64 architecture: Follow the Linux/Unix installation guide ARM64 architecture (Apple Silicon): Follow the MacOS installation guide Overview ✅ linkThis guide walks you through verifying value mappings after schema alignment. You will enable Developer Mode, upload a ground truth CSV for value mapping verification, and use the heatmap and Data Wrangler to confirm results.\nStart a New Session 🗂️ link On the far left of the top navbar, enter a name in the New session text input to create a new session. The new session inherits data from the default session, so you can proceed without re-uploading. Toggle Developer Mode 🧰 link How to open: Click the arrow icon on the top-left corner to open the side panel, then toggle Developer Mode. What it enables: Upload pre-annotated ground truth for schema matching (attribute pairs) Upload pre-annotated ground truth for value mappings (value-to-value) Upload custom matchers (not covered here) Developer Mode surfaces additional upload slots and debugging panels designed for power users and evaluators.\nPrepare Data and Start the Task 📦 linkFor verifying value mappings, prepare the following:\nSource table (required): your raw dataset CSV, e.g., Cao.csv. Target table (not needed): leave empty to use the built-in GDC schema as target. Ground truth CSV (required for verification): a file with exactly four columns: source_attribute target_attribute source_value target_value Example (subset):\nsource_attribute,target_attribute,source_value,target_value FIGO_stage,figo_stage,IA,Stage IA FIGO_stage,figo_stage,IIIC1,Stage IIIC1 Ethnicity,ethnicity,Hispanic or Latino,hispanic or latino Race,race,White,white Gender,gender,Female,female After files are ready, click the blue Start Value Matching button at the bottom-right to launch the verification task.\nReview Schema Matches on the Heatmap 🔥 link The heatmap displays candidate matches between source (y-axis) and GDC target attributes (x-axis). Ground-truth schema pairs included in your CSV should appear as heatmap cells. Hover a cell to preview details; click to expand the embedded node with distributions and comparisons. Use the control panel filters to narrow candidates by similarity, attribute, or status. Need a refresher on filters and controls? See /bdi-viz-manual/docs/manual/explore-matches/.\nVerify in the Data Wrangler 📊 linkWhen you click a heatmap node:\nThe lower DATA WRANGLER view focuses on the selected source attribute (highlighted with a blue background). The matched target attribute appears appended to the right of the source attribute. If a value mapping is provided in your ground truth, the target column shows the mapped target values applied to each source value. If no value mapping is provided for a source value, the corresponding cell in the target column will be empty. Use this view to scan for mismatches, missing mappings, or unexpected blanks. Adjust your ground truth and rerun if needed.\nEdit and Correct Mapped Values ✏️ linkIf a mapped value looks incorrect:\nHover the cell in the mapped target column within the DATA WRANGLER table. Choose one of the following: Inline edit: Click the current mapped value to edit directly, then press Enter to apply.\nEdit via popover: Click the edit icon on the right side of the cell to open a popover listing all available target schema values as selectable chips. Click a chip to apply it. Note: When you change the mapped value for a specific source_value, the update is applied to all rows in this source attribute that share the same source_value.\nExport Mapping Results 📤 linkAfter applying all changes, export your finalized value mappings:\nOpen the Shortcut Panel (top-left). Click Export Matching Results. In the format options, select CSV 4-column to generate a ground truth-like file. The exported CSV contains four columns:\nsource_attribute target_attribute source_value target_value "
+            }
+        );
+    index.add(
+            {
+                id:  5 ,
                 href: "\/bdi-viz-manual\/docs\/installation\/install-on-macos\/",
                 title: "Install on MacOS",
                 description: "Step-by-step guide for installing and configuring BDIViz on MacOS(ARM64) systems",
@@ -912,7 +933,7 @@
         );
     index.add(
             {
-                id:  5 ,
+                id:  6 ,
                 href: "\/bdi-viz-manual\/docs\/manual\/llm-agent\/",
                 title: "LLM Agent",
                 description: "Explore schema alignment candidates using the BDIViz LLM Agent.",
@@ -921,7 +942,7 @@
         );
     index.add(
             {
-                id:  6 ,
+                id:  7 ,
                 href: "\/bdi-viz-manual\/docs\/overview\/",
                 title: "Overview",
                 description: "BDIViz: An Interactive Visualization System for Biomedical Schema Matching with LLM-Supported Validation",
@@ -930,7 +951,7 @@
         );
     index.add(
             {
-                id:  7 ,
+                id:  8 ,
                 href: "\/bdi-viz-manual\/docs\/manual\/user-operation\/",
                 title: "Perform User Operations",
                 description: "Interactively evaluate and manage each schema match candidate.",
@@ -939,7 +960,7 @@
         );
     index.add(
             {
-                id:  8 ,
+                id:  9 ,
                 href: "\/bdi-viz-manual\/docs\/manual\/export-your-mappings\/",
                 title: "Export Your Mappings",
                 description: "Export the results of your schema matching task in multiple formats for downstream integration and analysis.",
@@ -948,7 +969,7 @@
         );
     index.add(
             {
-                id:  9 ,
+                id:  10 ,
                 href: "\/bdi-viz-manual\/docs\/",
                 title: "BDIViz Documentations",
                 description: "Explore our guides and examples to deploy and improve your data integration workflow with BDIViz.",
@@ -957,7 +978,7 @@
         );
     index.add(
             {
-                id:  10 ,
+                id:  11 ,
                 href: "\/bdi-viz-manual\/docs\/get-started\/",
                 title: "Get Started",
                 description: "Start your first BDIViz workflow",
@@ -966,7 +987,7 @@
         );
     index.add(
             {
-                id:  11 ,
+                id:  12 ,
                 href: "\/bdi-viz-manual\/docs\/installation\/",
                 title: "Installation",
                 description: "Installation guide for setting up BDIViz on your system",
@@ -975,7 +996,7 @@
         );
     index.add(
             {
-                id:  12 ,
+                id:  13 ,
                 href: "\/bdi-viz-manual\/docs\/manual\/",
                 title: "User Manual",
                 description: "Detailed user manual to BDIViz workflow",

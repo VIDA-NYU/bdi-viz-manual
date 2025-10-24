@@ -14,10 +14,10 @@
 
 <html lang="en-us"><head><script src="/bdi-viz-manual/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=bdi-viz-manual/livereload" data-no-instant defer></script>
     <meta charset="utf-8" />
-    <title>LLM Agent | BDIViz User Manual</title>
+    <title>Verify Value Matching | BDIViz User Manual</title>
     <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore schema alignment candidates using the BDIViz LLM Agent.">
+    <meta name="description" content="Verify the curated source attrbute value to target attribute value mappings">
     <meta name="keywords" content="Documentation, Hugo, Hugo Theme, Bootstrap" />
     <meta name="author" content="Colin Wilson - Lotus Labs" />
     <meta name="email" content="support@aigis.uk" />
@@ -30,15 +30,15 @@
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/bdi-viz-manual/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/bdi-viz-manual/favicon-16x16.png">
 <link rel="manifest" crossorigin="use-credentials" href="http://localhost:1313/bdi-viz-manual/site.webmanifest">
-<meta property="og:title" content="LLM Agent" />
-<meta property="og:description" content="Explore schema alignment candidates using the BDIViz LLM Agent." />
+<meta property="og:title" content="Verify Value Matching" />
+<meta property="og:description" content="Verify the curated source attrbute value to target attribute value mappings" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/bdi-viz-manual/docs/manual/llm-agent/" /><meta property="og:image" content="http://localhost:1313/bdi-viz-manual/opengraph/card-base-2_hu_caa461737b989aae.png"/><meta property="article:section" content="docs" />
-<meta property="article:published_time" content="2025-04-19T13:38:17-04:00" />
-<meta property="article:modified_time" content="2025-04-21T11:00:00-04:00" /><meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="http://localhost:1313/bdi-viz-manual/opengraph/card-base-2_hu_caa461737b989aae.png"/>
-<meta name="twitter:title" content="LLM Agent"/>
-<meta name="twitter:description" content="Explore schema alignment candidates using the BDIViz LLM Agent."/>
+<meta property="og:url" content="http://localhost:1313/bdi-viz-manual/docs/get-started/verify-value-mappings/" /><meta property="og:image" content="http://localhost:1313/bdi-viz-manual/opengraph/card-base-2_hu_b8b9115d1827f617.png"/><meta property="article:section" content="docs" />
+<meta property="article:published_time" content="2025-10-24T17:58:00+00:00" />
+<meta property="article:modified_time" content="2025-10-24T17:58:00+00:00" /><meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://localhost:1313/bdi-viz-manual/opengraph/card-base-2_hu_b8b9115d1827f617.png"/>
+<meta name="twitter:title" content="Verify Value Matching"/>
+<meta name="twitter:description" content="Verify the curated source attrbute value to target attribute value mappings"/>
 
     
         <link rel="alternate" type="application/atom+xml" title="Atom feed for BDIViz User Manual" href="/index.xml" />
@@ -100,11 +100,11 @@
                 
                     
                     
-                        <li class="sidebar-dropdown no-icon ">
+                        <li class="sidebar-dropdown no-icon current active">
                             <button class="btn">
                                 Get Started
                             </button>
-                            <div class="sidebar-submenu ">
+                            <div class="sidebar-submenu d-block">
                                 <ul>
                                     
                                         
@@ -114,7 +114,7 @@
                                     
                                         
                                         
-                                            <li class=" no-icon"><a class="sidebar-nested-link" href="http://localhost:1313/bdi-viz-manual/docs/get-started/verify-value-mappings/">Verify Value Matchings</a></li>
+                                            <li class="current no-icon"><a class="sidebar-nested-link" href="http://localhost:1313/bdi-viz-manual/docs/get-started/verify-value-mappings/">Verify Value Matching</a></li>
                                         
                                     
                                 </ul>
@@ -148,11 +148,11 @@
                 
                     
                     
-                        <li class="sidebar-dropdown no-icon current active">
+                        <li class="sidebar-dropdown no-icon ">
                             <button class="btn">
                                 User Manual
                             </button>
-                            <div class="sidebar-submenu d-block">
+                            <div class="sidebar-submenu ">
                                 <ul>
                                     
                                         
@@ -167,7 +167,7 @@
                                     
                                         
                                         
-                                            <li class="current no-icon"><a class="sidebar-nested-link" href="http://localhost:1313/bdi-viz-manual/docs/manual/llm-agent/">LLM Agent</a></li>
+                                            <li class=" no-icon"><a class="sidebar-nested-link" href="http://localhost:1313/bdi-viz-manual/docs/manual/llm-agent/">LLM Agent</a></li>
                                         
                                     
                                         
@@ -295,15 +295,15 @@
             
             
                 <li class="breadcrumb-item text-capitalize" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <a itemprop="item" href="/bdi-viz-manual/docs/manual/">
-                        <span itemprop="name">User Manual</span>
+                    <a itemprop="item" href="/bdi-viz-manual/docs/get-started/">
+                        <span itemprop="name">Get Started</span>
                     </a>
                     <meta itemprop="position" content='2' />
                 </li>
             
         
             <li class="breadcrumb-item text-capitalize active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <span itemprop="name">LLM Agent</span>
+                <span itemprop="name">Verify Value Matching</span>
                 <meta itemprop="position" content='3' />
             </li>
         
@@ -316,21 +316,15 @@
     <div class="fw-bold text-uppercase mb-2">On this page</div>
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#how-to-access">How to Access</a></li>
-    <li><a href="#example-qa-interactions">Example Q&amp;A Interactions</a>
-      <ul>
-        <li><a href="#what-is-this-candidate-about">What is this candidate about?</a></li>
-        <li><a href="#what-are-the-potential-value-mappings-between-the-selected-source-and-target-attribute">What are the potential value mappings between the selected source and target attribute?</a></li>
-        <li><a href="#does-the-candidate-i-selected-make-sense-why">Does the candidate I selected make sense? Why?</a></li>
-        <li><a href="#can-you-suggest-more-candidates-from-the-schema">Can you suggest more candidates from the schema?</a></li>
-        <li><a href="#can-you-accept-or-reject-candidates-for-me">Can you accept or reject candidates for me?</a></li>
-        <li><a href="#can-you-remember-custom-notes-or-metadata-for-later">Can you remember custom notes or metadata for later?</a></li>
-        <li><a href="#can-you-remind-me-what-this-task-is-about">Can you remind me what this task is about?</a></li>
-        <li><a href="#can-you-filter-or-rematch-nodes-based-on-criteria">Can you filter or rematch nodes based on criteria?</a></li>
-        <li><a href="#can-you-reorder-or-rescore-candidates">Can you reorder or rescore candidates?</a></li>
-        <li><a href="#can-you-help-me-create-a-custom-matcher-task-unstable">Can you help me create a custom matcher task? (unstable)</a></li>
-      </ul>
-    </li>
+    <li><a href="#installation-">Installation 🛠️</a></li>
+    <li><a href="#overview-">Overview ✅</a></li>
+    <li><a href="#start-a-new-session-">Start a New Session 🗂️</a></li>
+    <li><a href="#toggle-developer-mode-">Toggle Developer Mode 🧰</a></li>
+    <li><a href="#prepare-data-and-start-the-task-">Prepare Data and Start the Task 📦</a></li>
+    <li><a href="#review-schema-matches-on-the-heatmap-">Review Schema Matches on the Heatmap 🔥</a></li>
+    <li><a href="#verify-in-the-data-wrangler-">Verify in the Data Wrangler 📊</a></li>
+    <li><a href="#edit-and-correct-mapped-values-">Edit and Correct Mapped Values ✏️</a></li>
+    <li><a href="#export-mapping-results-">Export Mapping Results 📤</a></li>
   </ul>
 </nav>
     </toc></div>
@@ -342,180 +336,133 @@
                                             </button>
 <nav id="toc-mobile">
   <ul class="dropdown-menu">
-    <li><a href="#how-to-access">How to Access</a></li>
-    <li><a href="#example-qa-interactions">Example Q&amp;A Interactions</a>
-      <ul>
-        <li><a href="#what-is-this-candidate-about">What is this candidate about?</a></li>
-        <li><a href="#what-are-the-potential-value-mappings-between-the-selected-source-and-target-attribute">What are the potential value mappings between the selected source and target attribute?</a></li>
-        <li><a href="#does-the-candidate-i-selected-make-sense-why">Does the candidate I selected make sense? Why?</a></li>
-        <li><a href="#can-you-suggest-more-candidates-from-the-schema">Can you suggest more candidates from the schema?</a></li>
-        <li><a href="#can-you-accept-or-reject-candidates-for-me">Can you accept or reject candidates for me?</a></li>
-        <li><a href="#can-you-remember-custom-notes-or-metadata-for-later">Can you remember custom notes or metadata for later?</a></li>
-        <li><a href="#can-you-remind-me-what-this-task-is-about">Can you remind me what this task is about?</a></li>
-        <li><a href="#can-you-filter-or-rematch-nodes-based-on-criteria">Can you filter or rematch nodes based on criteria?</a></li>
-        <li><a href="#can-you-reorder-or-rescore-candidates">Can you reorder or rescore candidates?</a></li>
-        <li><a href="#can-you-help-me-create-a-custom-matcher-task-unstable">Can you help me create a custom matcher task? (unstable)</a></li>
-      </ul>
-    </li>
+    <li><a href="#installation-">Installation 🛠️</a></li>
+    <li><a href="#overview-">Overview ✅</a></li>
+    <li><a href="#start-a-new-session-">Start a New Session 🗂️</a></li>
+    <li><a href="#toggle-developer-mode-">Toggle Developer Mode 🧰</a></li>
+    <li><a href="#prepare-data-and-start-the-task-">Prepare Data and Start the Task 📦</a></li>
+    <li><a href="#review-schema-matches-on-the-heatmap-">Review Schema Matches on the Heatmap 🔥</a></li>
+    <li><a href="#verify-in-the-data-wrangler-">Verify in the Data Wrangler 📊</a></li>
+    <li><a href="#edit-and-correct-mapped-values-">Edit and Correct Mapped Values ✏️</a></li>
+    <li><a href="#export-mapping-results-">Export Mapping Results 📤</a></li>
   </ul>
 </nav></div>
                                         <div class="docs-content col-12 col-xl-9 mt-0">
                                             <div class="mb-0 d-flex">
                                                 
                                                 <h1 class="content-title mb-0">
-                                                    LLM Agent
+                                                    Verify Value Matching
                                                     
                                                 </h1>
                                             </div>
                                             
-                                                <p class="lead mb-3">Explore schema alignment candidates using the BDIViz LLM Agent.</p>
+                                                <p class="lead mb-3">Verify the curated source attrbute value to target attribute value mappings</p>
                                             
                                             <div id="content" class="main-content" data-bs-spy="scroll" data-bs-root-margin="0px 0px -65%" data-bs-target="#toc-mobile">
                                                 
     
     <div data-prismjs-copy="" data-prismjs-copy-success="" data-prismjs-copy-error="">
-        <h1 id="overview-">Overview 🔍 <a href="#overview-" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h1><p>BDIViz features an embedded LLM-powered assistant to help you validate, explain, and refine schema alignment candidates. The agent provides contextual insights, interactive feedback, and harmonization support throughout your data mapping workflow.</p>
-<hr>
-<h1 id="llm-validation-panel-">LLM Validation Panel 🤖 <a href="#llm-validation-panel-" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h1><p>
-
-
-
-
-
-  
-
-
-
-  
-    
-      <img src="/bdi-viz-manual/images/agent-panel.png" alt="agent-panel" width="400" height="756" loading="lazy">
-    
-  
-</p>
-<p>The LLM Validation Panel offers real-time, context-aware suggestions and explanations for each match candidate:</p>
+        <h2 id="installation-">Installation 🛠️ <a href="#installation-" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>For system-specific installation instructions:</p>
 <ul>
-<li><strong>Diagnosis Summary</strong>: Evaluates if a match is likely valid based on metadata, column names, and user history.</li>
-<li><strong>Explanation Cards</strong>: Highlights key reasons for each suggestion (e.g., name similarity, value overlap).
+<li>AMD64 architecture: Follow the <a href="/bdi-viz-manual/docs/installation/install-on-linux/">Linux/Unix installation guide</a></li>
+<li>ARM64 architecture (Apple Silicon): Follow the <a href="/bdi-viz-manual/docs/installation/install-on-macos/">MacOS installation guide</a></li>
+</ul>
+<h2 id="overview-">Overview ✅ <a href="#overview-" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>This guide walks you through verifying value mappings after schema alignment. You will enable Developer Mode, upload a ground truth CSV for value mapping verification, and use the heatmap and Data Wrangler to confirm results.</p>
+<hr>
+<h2 id="start-a-new-session-">Start a New Session 🗂️ <a href="#start-a-new-session-" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>
+
+
+
+
+
+  
+
+
+
+  
+    
+      <img src="/bdi-viz-manual/images/new-session.png" alt="new-session" width="3066" height="1404" loading="lazy">
+    
+  
+</p>
 <ul>
-<li>Click to expand for more detail.</li>
-<li>Provide feedback via 👍/👎 to refine model accuracy.</li>
+<li>On the far left of the top navbar, enter a name in the <strong>New session</strong> text input to create a new session.</li>
+<li>The new session inherits data from the default session, so you can proceed without re-uploading.</li>
+</ul>
+<p>
+
+
+
+
+
+  
+
+
+
+  
+    
+      <img src="/bdi-viz-manual/images/value-mapping-init.gif" alt="value-mapping-init" width="1824" height="892" loading="lazy">
+    
+  
+</p>
+<h2 id="toggle-developer-mode-">Toggle Developer Mode 🧰 <a href="#toggle-developer-mode-" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><ul>
+<li><strong>How to open</strong>: Click the arrow icon on the top-left corner to open the side panel, then toggle <strong>Developer Mode</strong>.</li>
+<li><strong>What it enables</strong>:
+<ul>
+<li><strong>Upload pre-annotated ground truth for schema matching</strong> (attribute pairs)</li>
+<li><strong>Upload pre-annotated ground truth for value mappings</strong> (value-to-value)</li>
+<li><strong>Upload custom matchers</strong> (not covered here)</li>
 </ul>
 </li>
-<li><strong>Target Schema Metadata</strong>: Enriched descriptions pulled from sources such as GDC.</li>
 </ul>
+<p>Developer Mode surfaces additional upload slots and debugging panels designed for power users and evaluators.</p>
 <hr>
-<h1 id="harmonization-assistant-">Harmonization Assistant 🤖 <a href="#harmonization-assistant-" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h1><p>
-
-
-
-
-
-  
-
-
-
-  
-</p>
-<p>The Harmonization Assistant acts as your copilot for schema mapping and harmonization tasks, offering interactive, conversational support.</p>
-<h2 id="how-to-access">How to Access <a href="#how-to-access" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2>
-<nav>
-	<div class="nav nav-tabs" id="nav-tab" role="tablist">
-
-		
-		
-		
-		
-
-		
-
-		<a class="nav-link  active"
-		   id="bafecdTab" data-bs-toggle="tab" data-bs-target="#bafecd"
-		   type="button" role="tab" aria-controls="bafecd" aria-selected="true">Toggle Top Search Bar</a>
-
-		
-
-		<a class="nav-link "
-		   id="daebcfTab" data-bs-toggle="tab" data-bs-target="#daebcf"
-		   type="button" role="tab" aria-controls="daebcf" aria-selected="true">Right-click Expanded Node</a>
-
-		
-
-	</div>
-</nav>
-
-<div class="tab-content" id="nav-tab-content">
-
-	
-
-
-
-
-
-
-
-<div class="tab-pane fade show active" id="bafecd" role="tabpanel" aria-labelledby="nav-1">
-
-	<ul>
-<li>Toggle the assistant button on the right side of the search bar.
-
-
-
-
-
-
-  
-
-
-
-  
-    
-      <img src="/bdi-viz-manual/images/harmonization-assistant-open-top.png" alt="harmonization-assistant-open-top" width="2368" height="1460" loading="lazy">
-    
-  
+<h2 id="prepare-data-and-start-the-task-">Prepare Data and Start the Task 📦 <a href="#prepare-data-and-start-the-task-" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>For verifying value mappings, prepare the following:</p>
+<ul>
+<li><strong>Source table (required)</strong>: your raw dataset CSV, e.g., <code>Cao.csv</code>.</li>
+<li><strong>Target table (not needed)</strong>: leave empty to use the built-in <strong>GDC</strong> schema as target.</li>
+<li><strong>Ground truth CSV (required for verification)</strong>: a file with exactly four columns:
+<ul>
+<li><code>source_attribute</code></li>
+<li><code>target_attribute</code></li>
+<li><code>source_value</code></li>
+<li><code>target_value</code></li>
+</ul>
 </li>
 </ul>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="tab-pane fade" id="daebcf" role="tabpanel" aria-labelledby="nav-1">
-
-	<ul>
-<li>Right-click on a selected or expanded node.
-
-
-
+<p><strong>Example (subset):</strong></p>
 
 
 
   
-
-
+  
+  
 
   
-    
-      <img src="/bdi-viz-manual/images/harmonization-assistant-open-expand.png" alt="harmonization-assistant-open-expand" width="3192" height="1928" loading="lazy">
-    
   
-</li>
+  
+  
+
+  
+
+  <div class="prism-codeblock ">
+  <pre id="ab48537" class="language-csv ">
+  <code>source_attribute,target_attribute,source_value,target_value
+FIGO_stage,figo_stage,IA,Stage IA
+FIGO_stage,figo_stage,IIIC1,Stage IIIC1
+Ethnicity,ethnicity,Hispanic or Latino,hispanic or latino
+Race,race,White,white
+Gender,gender,Female,female</code>
+  </pre>
+  </div>
+<p>After files are ready, click the blue <strong>Start Value Matching</strong> button at the bottom-right to launch the verification task.</p>
+<hr>
+<h2 id="review-schema-matches-on-the-heatmap-">Review Schema Matches on the Heatmap 🔥 <a href="#review-schema-matches-on-the-heatmap-" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><ul>
+<li>The heatmap displays candidate matches between source (y-axis) and GDC target attributes (x-axis). Ground-truth schema pairs included in your CSV should appear as heatmap cells.</li>
+<li><strong>Hover</strong> a cell to preview details; <strong>click</strong> to expand the embedded node with distributions and comparisons.</li>
+<li>Use the control panel filters to narrow candidates by similarity, attribute, or status.</li>
 </ul>
-
-
-</div>
-
-
-
-</div>
-<hr>
-<h2 id="example-qa-interactions">Example Q&amp;A Interactions <a href="#example-qa-interactions" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><h3 id="what-is-this-candidate-about">What is this candidate about? <a href="#what-is-this-candidate-about" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h3><p><em>A:</em> Ask the assistant for a summary or description of the selected candidate.<br>
-<em>Prompt:</em> <code>What is this candidate about?</code>
-
+<p>
 
 
 
@@ -527,143 +474,111 @@
 
   
     
-      <img src="/bdi-viz-manual/images/harmonization-assistant-about.png" alt="harmonization-assistant-about" width="3196" height="1386" loading="lazy">
+      <img src="/bdi-viz-manual/images/interactive-heatmap.gif" alt="interactive-heatmap" width="846" height="600" loading="lazy">
     
   
 </p>
-<h3 id="what-are-the-potential-value-mappings-between-the-selected-source-and-target-attribute">What are the potential value mappings between the selected source and target attribute? <a href="#what-are-the-potential-value-mappings-between-the-selected-source-and-target-attribute" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h3><p><em>A:</em> Request the assistant to show possible value mappings between the source and target attributes.<br>
-<em>Prompt:</em> <code>What are the potential value mappings between the selected source and target attribute?</code><br>
-
-
-
-
-
-
-  
-
-
-
-  
-    
-      <img src="/bdi-viz-manual/images/harmonization-assistant-values.png" alt="harmonization-assistant-values" width="3168" height="1384" loading="lazy">
-    
-  
-</p>
-<h3 id="does-the-candidate-i-selected-make-sense-why">Does the candidate I selected make sense? Why? <a href="#does-the-candidate-i-selected-make-sense-why" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h3><p><em>A:</em> Ask the assistant to explain the reasoning behind a suggested match.<br>
-<em>Prompt:</em> <code>Does the candidate I selected make sense? Why?</code><br>
-
-
-
-
-
-
-  
-
-
-
-  
-    
-      <img src="/bdi-viz-manual/images/harmonization-assistant-why.png" alt="harmonization-assistant-why" width="3196" height="1394" loading="lazy">
-    
-  
-</p>
-<h3 id="can-you-suggest-more-candidates-from-the-schema">Can you suggest more candidates from the schema? <a href="#can-you-suggest-more-candidates-from-the-schema" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h3><p><em>A:</em> Ask the assistant to search for additional candidates from the top recommendations or the entire target schema.<br>
-<em>Prompt:</em> <code>Besides the current recommendations, show me more candidates related to tumor sites or organs.</code><br>
-
-
-
-
-
-
-  
-
-
-
-  
-    
-      <img src="/bdi-viz-manual/images/harmonization-assistant-more-candidates.png" alt="harmonization-assistant-more-candidates" width="3784" height="1922" loading="lazy">
-    
-  
-</p>
-<h3 id="can-you-accept-or-reject-candidates-for-me">Can you accept or reject candidates for me? <a href="#can-you-accept-or-reject-candidates-for-me" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h3><p><em>A:</em> Let the assistant accept or reject candidates based on chat history and its own suggestions.<br>
-<em>Prompt:</em> <code>From your memory and our chat, can you accept the candidate that makes the most sense?</code><br>
-
-
-
-
-
-
-  
-
-
-
-  
-    
-      <img src="/bdi-viz-manual/images/harmonization-assistant-accept.png" alt="harmonization-assistant-accept" width="3800" height="1926" loading="lazy">
-    
-  
-</p>
-<h3 id="can-you-remember-custom-notes-or-metadata-for-later">Can you remember custom notes or metadata for later? <a href="#can-you-remember-custom-notes-or-metadata-for-later" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h3><p><em>A:</em> Add custom notes or metadata to the assistant’s memory for future reference.<br>
-<em>Prompt:</em> <code>Remember this metadata for the source dataset: CCRCC is a common problem among...</code><br>
-
-
-
-
-
-
-  
-
-
-
-  
-    
-      <img src="/bdi-viz-manual/images/harmonization-assistant-metadata.png" alt="harmonization-assistant-metadata" width="3256" height="1664" loading="lazy">
-    
-  
-</p>
-<h3 id="can-you-remind-me-what-this-task-is-about">Can you remind me what this task is about? <a href="#can-you-remind-me-what-this-task-is-about" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h3><p><em>A:</em> Ask the assistant to recall the current task or context.<br>
-<em>Prompt:</em> <code>Recall from your memory, what is the context of this task?</code><br>
-
-
-
-
-
-
-  
-
-
-
-  
-    
-      <img src="/bdi-viz-manual/images/harmonization-assistant-context.png" alt="harmonization-assistant-context" width="3192" height="1510" loading="lazy">
-    
-  
-</p>
-<h3 id="can-you-filter-or-rematch-nodes-based-on-criteria">Can you filter or rematch nodes based on criteria? <a href="#can-you-filter-or-rematch-nodes-based-on-criteria" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h3><p><em>A:</em> Start a new task or filter nodes based on clinical or semantic criteria.<br>
-<em>Prompt:</em> <code>Rematch with nodes related to clinical criteria.</code></p>
-<h3 id="can-you-reorder-or-rescore-candidates">Can you reorder or rescore candidates? <a href="#can-you-reorder-or-rescore-candidates" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h3><p><em>A:</em> Request the assistant to reorder or rescore candidates.<br>
-<em>Prompt:</em> <code>Reorder the candidates based on relevance to AJCC. Rescore and update them.</code>
-
-
-
-
-
-
-  
-
-
-
-  
-    
-      <img src="/bdi-viz-manual/images/harmonization-assistant-reorder.png" alt="harmonization-assistant-reorder" width="3770" height="1806" loading="lazy">
-    
-  
-</p>
-<h3 id="can-you-help-me-create-a-custom-matcher-task-unstable">Can you help me create a custom matcher task? (unstable) <a href="#can-you-help-me-create-a-custom-matcher-task-unstable" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h3><p><em>A:</em> Ask the assistant to help create new matcher tasks.<br>
-<em>Prompt:</em> <code>Help me add a matcher using the rapidfuzz library.</code></p>
-<hr>
 <blockquote>
-<p><strong>Tip:</strong> The Harmonization Assistant learns from your feedback and memory, improving its recommendations over time. Use the thumbs up/down and memory features to tailor the assistant to your project needs.</p></blockquote>
+<p>Need a refresher on filters and controls? See /bdi-viz-manual/docs/manual/explore-matches/.</p></blockquote>
+<hr>
+<h2 id="verify-in-the-data-wrangler-">Verify in the Data Wrangler 📊 <a href="#verify-in-the-data-wrangler-" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>When you click a heatmap node:</p>
+<ul>
+<li>The lower <strong>DATA WRANGLER</strong> view focuses on the selected source attribute (highlighted with a blue background).</li>
+<li>The matched target attribute appears appended to the right of the source attribute.</li>
+<li>If a value mapping is provided in your ground truth, the target column shows the mapped target values applied to each source value.</li>
+<li>If no value mapping is provided for a source value, the corresponding cell in the target column will be empty.</li>
+</ul>
+<p>Use this view to scan for mismatches, missing mappings, or unexpected blanks. Adjust your ground truth and rerun if needed.</p>
+<p>
+
+
+
+
+
+  
+
+
+
+  
+    
+      <img src="/bdi-viz-manual/images/data-wrangler.gif" alt="data-wrangler" width="1347" height="833" loading="lazy">
+    
+  
+</p>
+<hr>
+<h2 id="edit-and-correct-mapped-values-">Edit and Correct Mapped Values ✏️ <a href="#edit-and-correct-mapped-values-" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>If a mapped value looks incorrect:</p>
+<ul>
+<li><strong>Hover the cell</strong> in the mapped target column within the <strong>DATA WRANGLER</strong> table.</li>
+<li>Choose one of the following:
+<ul>
+<li><strong>Inline edit</strong>: Click the current mapped value to edit directly, then press Enter to apply.<br>
+
+
+
+
+
+
+  
+
+
+
+  
+    
+      <img src="/bdi-viz-manual/images/data-wrangler-inline-edit.png" alt="inline-edit" width="359" height="240" loading="lazy">
+    
+  
+</li>
+<li><strong>Edit via popover</strong>: Click the edit icon on the right side of the cell to open a popover listing all available target schema values as selectable chips. Click a chip to apply it.
+
+
+
+
+
+
+  
+
+
+
+  
+    
+      <img src="/bdi-viz-manual/images/data-wrangler-popover-edit.png" alt="inline-edit" width="659" height="684" loading="lazy">
+    
+  
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Note:</strong> When you change the mapped value for a specific <code>source_value</code>, the update is applied to all rows in this source attribute that share the same <code>source_value</code>.</p>
+<hr>
+<h2 id="export-mapping-results-">Export Mapping Results 📤 <a href="#export-mapping-results-" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>After applying all changes, export your finalized value mappings:</p>
+<ul>
+<li>Open the <strong>Shortcut Panel</strong> (top-left).</li>
+<li>Click <strong>Export Matching Results</strong>.</li>
+<li>In the format options, select <strong>CSV 4-column</strong> to generate a ground truth-like file.</li>
+</ul>
+<p>The exported CSV contains four columns:</p>
+<ul>
+<li><code>source_attribute</code></li>
+<li><code>target_attribute</code></li>
+<li><code>source_value</code></li>
+<li><code>target_value</code></li>
+</ul>
+<p>
+
+
+
+
+
+  
+
+
+
+  
+    
+      <img src="/bdi-viz-manual/images/export-matches.gif" alt="export-matches" width="1530" height="690" loading="lazy">
+    
+  
+</p>
 
     </div>
 
@@ -676,10 +591,10 @@
 
 	<div class="row flex-xl-nowrap ">
 	<div class="col-sm-6 pt-2 doc-next">
-		<a href="/bdi-viz-manual/docs/installation/install-on-macos/">
+		<a href="/bdi-viz-manual/docs/installation/install-on-linux/">
 			<div class="card h-100 my-1">
 				<div class="card-body py-2">
-                    <p class="card-title fs-5 fw-semibold lh-base mb-0"><i class="material-icons align-middle">navigate_before</i> Install on MacOS</p>
+                    <p class="card-title fs-5 fw-semibold lh-base mb-0"><i class="material-icons align-middle">navigate_before</i> Install on Linux/Unix</p>
 					<p class="card-text ms-2">Step-by-step guide for …</p>
 					
 				</div>
@@ -687,11 +602,11 @@
 		</a>
         </div>
 	<div class="col-sm-6 pt-2 doc-prev">
-		<a class="ms-auto" href="/bdi-viz-manual/docs/overview/">
+		<a class="ms-auto" href="/bdi-viz-manual/docs/installation/install-on-macos/">
 			<div class="card h-100 my-1 text-end">
 				<div class="card-body py-2">
-                    <p class="card-title fs-5 fw-semibold lh-base mb-0">Overview <i class="material-icons align-middle">navigate_next</i></p>
-					<p class="card-text me-2">BDIViz: An Interactive …</p>
+                    <p class="card-title fs-5 fw-semibold lh-base mb-0">Install on MacOS <i class="material-icons align-middle">navigate_next</i></p>
+					<p class="card-text me-2">Step-by-step guide for …</p>
 					
 				</div>
 			</div>
@@ -997,9 +912,9 @@
             {
                 id:  4 ,
                 href: "\/bdi-viz-manual\/docs\/get-started\/verify-value-mappings\/",
-                title: "Verify Value Matchings",
+                title: "Verify Value Matching",
                 description: "Verify the curated source attrbute value to target attribute value mappings",
-                content: "Installation 🛠️ linkFor system-specific installation instructions:\nAMD64 architecture: Follow the Linux/Unix installation guide ARM64 architecture (Apple Silicon): Follow the MacOS installation guide Overview ✅ linkThis guide walks you through verifying value mappings after schema alignment. You will enable Developer Mode, upload a ground truth CSV for value mapping verification, and use the heatmap and Data Wrangler to confirm results.\nToggle Developer Mode 🧰 link How to open: Click the arrow icon on the top-left corner to open the side panel, then toggle Developer Mode. What it enables: Upload pre-annotated ground truth for schema matching (attribute pairs) Upload pre-annotated ground truth for value mappings (value-to-value) Upload custom matchers (not covered here) Developer Mode surfaces additional upload slots and debugging panels designed for power users and evaluators.\nPrepare Data and Start the Task 📦 linkFor verifying value mappings, prepare the following:\nSource table (required): your raw dataset CSV, e.g., Cao.csv. Target table (not needed): leave empty to use the built-in GDC schema as target. Ground truth CSV (required for verification): a file with exactly four columns: source_attribute target_attribute source_value target_value Example (subset):\nsource_attribute,target_attribute,source_value,target_value FIGO_stage,figo_stage,IA,Stage IA FIGO_stage,figo_stage,IIIC1,Stage IIIC1 Ethnicity,ethnicity,Hispanic or Latino,hispanic or latino Race,race,White,white Gender,gender,Female,female After files are ready, click the blue Start Value Matching button at the bottom-right to launch the verification task.\nTip: If you haven’t created a task yet, see /bdi-viz-manual/docs/get-started/dataset-to-gdc/ and /bdi-viz-manual/docs/manual/upload-your-data/.\nReview Schema Matches on the Heatmap 🔥 link The heatmap displays candidate matches between source (y-axis) and GDC target attributes (x-axis). Ground-truth schema pairs included in your CSV should appear as heatmap cells. Hover a cell to preview details; click to expand the embedded node with distributions and comparisons. Use the control panel filters to narrow candidates by similarity, attribute, or status. Need a refresher on filters and controls? See /bdi-viz-manual/docs/manual/explore-matches/.\nVerify in the Data Wrangler 📊 linkWhen you click a heatmap node:\nThe lower DATA WRANGLER view focuses on the selected source attribute (highlighted with a blue background). The matched target attribute appears appended to the right of the source attribute. If a value mapping is provided in your ground truth, the target column shows the mapped target values applied to each source value. If no value mapping is provided for a source value, the corresponding cell in the target column will be empty. Use this view to scan for mismatches, missing mappings, or unexpected blanks. Adjust your ground truth and rerun if needed.\nEdit and Correct Mapped Values ✏️ linkIf a mapped value looks incorrect:\nHover the cell in the mapped target column within the DATA WRANGLER table. Choose one of the following: Inline edit: Click the current mapped value to edit directly, then press Enter to apply. Edit via popover: Click the edit icon on the right side of the cell to open a popover listing all available target schema values as selectable chips. Click a chip to apply it. Note: When you change the mapped value for a specific source_value, the update is applied to all rows in this source attribute that share the same source_value.\nWhat’s Next 🚀 link Continue validating remaining attributes via the heatmap and Data Wrangler. When satisfied, proceed to export or iterate further using tools in the left shortcut panel. For broader workflows, see /bdi-viz-manual/docs/get-started/dataset-to-gdc/. "
+                content: "Installation 🛠️ linkFor system-specific installation instructions:\nAMD64 architecture: Follow the Linux/Unix installation guide ARM64 architecture (Apple Silicon): Follow the MacOS installation guide Overview ✅ linkThis guide walks you through verifying value mappings after schema alignment. You will enable Developer Mode, upload a ground truth CSV for value mapping verification, and use the heatmap and Data Wrangler to confirm results.\nStart a New Session 🗂️ link On the far left of the top navbar, enter a name in the New session text input to create a new session. The new session inherits data from the default session, so you can proceed without re-uploading. Toggle Developer Mode 🧰 link How to open: Click the arrow icon on the top-left corner to open the side panel, then toggle Developer Mode. What it enables: Upload pre-annotated ground truth for schema matching (attribute pairs) Upload pre-annotated ground truth for value mappings (value-to-value) Upload custom matchers (not covered here) Developer Mode surfaces additional upload slots and debugging panels designed for power users and evaluators.\nPrepare Data and Start the Task 📦 linkFor verifying value mappings, prepare the following:\nSource table (required): your raw dataset CSV, e.g., Cao.csv. Target table (not needed): leave empty to use the built-in GDC schema as target. Ground truth CSV (required for verification): a file with exactly four columns: source_attribute target_attribute source_value target_value Example (subset):\nsource_attribute,target_attribute,source_value,target_value FIGO_stage,figo_stage,IA,Stage IA FIGO_stage,figo_stage,IIIC1,Stage IIIC1 Ethnicity,ethnicity,Hispanic or Latino,hispanic or latino Race,race,White,white Gender,gender,Female,female After files are ready, click the blue Start Value Matching button at the bottom-right to launch the verification task.\nReview Schema Matches on the Heatmap 🔥 link The heatmap displays candidate matches between source (y-axis) and GDC target attributes (x-axis). Ground-truth schema pairs included in your CSV should appear as heatmap cells. Hover a cell to preview details; click to expand the embedded node with distributions and comparisons. Use the control panel filters to narrow candidates by similarity, attribute, or status. Need a refresher on filters and controls? See /bdi-viz-manual/docs/manual/explore-matches/.\nVerify in the Data Wrangler 📊 linkWhen you click a heatmap node:\nThe lower DATA WRANGLER view focuses on the selected source attribute (highlighted with a blue background). The matched target attribute appears appended to the right of the source attribute. If a value mapping is provided in your ground truth, the target column shows the mapped target values applied to each source value. If no value mapping is provided for a source value, the corresponding cell in the target column will be empty. Use this view to scan for mismatches, missing mappings, or unexpected blanks. Adjust your ground truth and rerun if needed.\nEdit and Correct Mapped Values ✏️ linkIf a mapped value looks incorrect:\nHover the cell in the mapped target column within the DATA WRANGLER table. Choose one of the following: Inline edit: Click the current mapped value to edit directly, then press Enter to apply.\nEdit via popover: Click the edit icon on the right side of the cell to open a popover listing all available target schema values as selectable chips. Click a chip to apply it. Note: When you change the mapped value for a specific source_value, the update is applied to all rows in this source attribute that share the same source_value.\nExport Mapping Results 📤 linkAfter applying all changes, export your finalized value mappings:\nOpen the Shortcut Panel (top-left). Click Export Matching Results. In the format options, select CSV 4-column to generate a ground truth-like file. The exported CSV contains four columns:\nsource_attribute target_attribute source_value target_value "
             }
         );
     index.add(
