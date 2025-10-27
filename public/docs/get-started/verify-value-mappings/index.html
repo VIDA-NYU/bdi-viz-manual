@@ -17,7 +17,7 @@
     <title>Verify Value Matching | BDIViz User Manual</title>
     <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Verify the curated source attrbute value to target attribute value mappings">
+    <meta name="description" content="Verify curated mappings from source attribute values to target attribute values">
     <meta name="keywords" content="Documentation, Hugo, Hugo Theme, Bootstrap" />
     <meta name="author" content="Colin Wilson - Lotus Labs" />
     <meta name="email" content="support@aigis.uk" />
@@ -31,14 +31,14 @@
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/bdi-viz-manual/favicon-16x16.png">
 <link rel="manifest" crossorigin="use-credentials" href="http://localhost:1313/bdi-viz-manual/site.webmanifest">
 <meta property="og:title" content="Verify Value Matching" />
-<meta property="og:description" content="Verify the curated source attrbute value to target attribute value mappings" />
+<meta property="og:description" content="Verify curated mappings from source attribute values to target attribute values" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/bdi-viz-manual/docs/get-started/verify-value-mappings/" /><meta property="og:image" content="http://localhost:1313/bdi-viz-manual/opengraph/card-base-2_hu_b8b9115d1827f617.png"/><meta property="article:section" content="docs" />
+<meta property="og:url" content="http://localhost:1313/bdi-viz-manual/docs/get-started/verify-value-mappings/" /><meta property="og:image" content="http://localhost:1313/bdi-viz-manual/opengraph/card-base-2_hu_6445a9f739196e47.png"/><meta property="article:section" content="docs" />
 <meta property="article:published_time" content="2025-10-24T17:58:00+00:00" />
 <meta property="article:modified_time" content="2025-10-24T17:58:00+00:00" /><meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="http://localhost:1313/bdi-viz-manual/opengraph/card-base-2_hu_b8b9115d1827f617.png"/>
+<meta name="twitter:image" content="http://localhost:1313/bdi-viz-manual/opengraph/card-base-2_hu_6445a9f739196e47.png"/>
 <meta name="twitter:title" content="Verify Value Matching"/>
-<meta name="twitter:description" content="Verify the curated source attrbute value to target attribute value mappings"/>
+<meta name="twitter:description" content="Verify curated mappings from source attribute values to target attribute values"/>
 
     
         <link rel="alternate" type="application/atom+xml" title="Atom feed for BDIViz User Manual" href="/index.xml" />
@@ -324,6 +324,7 @@
     <li><a href="#review-schema-matches-on-the-heatmap-">Review Schema Matches on the Heatmap 🔥</a></li>
     <li><a href="#verify-in-the-data-wrangler-">Verify in the Data Wrangler 📊</a></li>
     <li><a href="#edit-and-correct-mapped-values-">Edit and Correct Mapped Values ✏️</a></li>
+    <li><a href="#use-the-harmonization-assistant-for-value-mapping-suggestions">Use the Harmonization Assistant for Value Mapping Suggestions</a></li>
     <li><a href="#export-mapping-results-">Export Mapping Results 📤</a></li>
   </ul>
 </nav>
@@ -344,6 +345,7 @@
     <li><a href="#review-schema-matches-on-the-heatmap-">Review Schema Matches on the Heatmap 🔥</a></li>
     <li><a href="#verify-in-the-data-wrangler-">Verify in the Data Wrangler 📊</a></li>
     <li><a href="#edit-and-correct-mapped-values-">Edit and Correct Mapped Values ✏️</a></li>
+    <li><a href="#use-the-harmonization-assistant-for-value-mapping-suggestions">Use the Harmonization Assistant for Value Mapping Suggestions</a></li>
     <li><a href="#export-mapping-results-">Export Mapping Results 📤</a></li>
   </ul>
 </nav></div>
@@ -356,18 +358,18 @@
                                                 </h1>
                                             </div>
                                             
-                                                <p class="lead mb-3">Verify the curated source attrbute value to target attribute value mappings</p>
+                                                <p class="lead mb-3">Verify curated mappings from source attribute values to target attribute values</p>
                                             
                                             <div id="content" class="main-content" data-bs-spy="scroll" data-bs-root-margin="0px 0px -65%" data-bs-target="#toc-mobile">
                                                 
     
     <div data-prismjs-copy="" data-prismjs-copy-success="" data-prismjs-copy-error="">
-        <h2 id="installation-">Installation 🛠️ <a href="#installation-" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>For system-specific installation instructions:</p>
+        <h2 id="installation-">Installation 🛠️ <a href="#installation-" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>For system-specific installation instructions (<strong>pick ONE</strong> for your <strong>CPU architecture</strong>):</p>
 <ul>
-<li>AMD64 architecture: Follow the <a href="/bdi-viz-manual/docs/installation/install-on-linux/">Linux/Unix installation guide</a></li>
-<li>ARM64 architecture (Apple Silicon): Follow the <a href="/bdi-viz-manual/docs/installation/install-on-macos/">MacOS installation guide</a></li>
+<li><strong>AMD64</strong>: follow the <a href="/bdi-viz-manual/docs/installation/install-on-linux/">Linux/Unix installation guide</a></li>
+<li><strong>ARM64 (Apple Silicon)</strong>: follow the <a href="/bdi-viz-manual/docs/installation/install-on-macos/">macOS installation guide</a></li>
 </ul>
-<h2 id="overview-">Overview ✅ <a href="#overview-" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>This guide walks you through verifying value mappings after schema alignment. You will enable Developer Mode, upload a ground truth CSV for value mapping verification, and use the heatmap and Data Wrangler to confirm results.</p>
+<h2 id="overview-">Overview ✅ <a href="#overview-" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>This guide walks you through verifying value mappings after schema alignment. You will <strong>enable Developer Mode</strong>, <strong>upload a ground truth CSV</strong> for value mapping verification, and use the <strong>heatmap</strong> and <strong>Data Wrangler</strong> to confirm results.</p>
 <hr>
 <h2 id="start-a-new-session-">Start a New Session 🗂️ <a href="#start-a-new-session-" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>
 
@@ -386,8 +388,8 @@
   
 </p>
 <ul>
-<li>On the far left of the top navbar, enter a name in the <strong>New session</strong> text input to create a new session.</li>
-<li>The new session inherits data from the default session, so you can proceed without re-uploading.</li>
+<li>On the far left of the top navbar, <strong>enter a name</strong> in the <strong>New session</strong> field to create a new session.</li>
+<li>The new session <strong>inherits data</strong> from the default session, so you can <strong>proceed without re-uploading</strong>.</li>
 </ul>
 <p>
 
@@ -421,7 +423,7 @@
 <ul>
 <li><strong>Source table (required)</strong>: your raw dataset CSV, e.g., <code>Cao.csv</code>.</li>
 <li><strong>Target table (not needed)</strong>: leave empty to use the built-in <strong>GDC</strong> schema as target.</li>
-<li><strong>Ground truth CSV (required for verification)</strong>: a file with exactly four columns:
+<li><strong>Ground truth CSV (required for verification)</strong>: a file with <strong>exactly four columns</strong>:
 <ul>
 <li><code>source_attribute</code></li>
 <li><code>target_attribute</code></li>
@@ -455,12 +457,12 @@ Race,race,White,white
 Gender,gender,Female,female</code>
   </pre>
   </div>
-<p>After files are ready, click the blue <strong>Start Value Matching</strong> button at the bottom-right to launch the verification task.</p>
+<p>After files are ready, click the blue <strong>Start Value Matching</strong> button at the <strong>bottom-right</strong> to launch the verification task.</p>
 <hr>
 <h2 id="review-schema-matches-on-the-heatmap-">Review Schema Matches on the Heatmap 🔥 <a href="#review-schema-matches-on-the-heatmap-" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><ul>
-<li>The heatmap displays candidate matches between source (y-axis) and GDC target attributes (x-axis). Ground-truth schema pairs included in your CSV should appear as heatmap cells.</li>
-<li><strong>Hover</strong> a cell to preview details; <strong>click</strong> to expand the embedded node with distributions and comparisons.</li>
-<li>Use the control panel filters to narrow candidates by similarity, attribute, or status.</li>
+<li>The heatmap displays candidate matches between <strong>source (y-axis)</strong> and <strong>GDC target attributes (x-axis)</strong>. Ground-truth schema pairs included in your CSV should appear as heatmap cells.</li>
+<li><strong>Hover</strong> a cell to preview details; <strong>click</strong> to expand the embedded node with <strong>distributions</strong> and <strong>comparisons</strong>.</li>
+<li>Use the control panel <strong>filters</strong> to narrow candidates by <strong>similarity</strong>, <strong>attribute</strong>, or <strong>status</strong>.</li>
 </ul>
 <p>
 
@@ -479,16 +481,16 @@ Gender,gender,Female,female</code>
   
 </p>
 <blockquote>
-<p>Need a refresher on filters and controls? See /bdi-viz-manual/docs/manual/explore-matches/.</p></blockquote>
+<p>Need a refresher on filters and controls? See <a href="/bdi-viz-manual/docs/manual/explore-matches/">explore-matches</a>.</p></blockquote>
 <hr>
 <h2 id="verify-in-the-data-wrangler-">Verify in the Data Wrangler 📊 <a href="#verify-in-the-data-wrangler-" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>When you click a heatmap node:</p>
 <ul>
-<li>The lower <strong>DATA WRANGLER</strong> view focuses on the selected source attribute (highlighted with a blue background).</li>
-<li>The matched target attribute appears appended to the right of the source attribute.</li>
-<li>If a value mapping is provided in your ground truth, the target column shows the mapped target values applied to each source value.</li>
-<li>If no value mapping is provided for a source value, the corresponding cell in the target column will be empty.</li>
+<li>The lower <strong>DATA WRANGLER</strong> view focuses on the selected <strong>source attribute</strong> (highlighted with a blue background).</li>
+<li>The matched <strong>target attribute</strong> appears appended to the right of the source attribute.</li>
+<li>If a value mapping is provided in your ground truth, the <strong>target column</strong> shows the <strong>mapped target values</strong> applied to each source value.</li>
+<li>If no value mapping is provided for a source value, the corresponding cell in the <strong>target column</strong> will be <strong>empty</strong>.</li>
 </ul>
-<p>Use this view to scan for mismatches, missing mappings, or unexpected blanks. Adjust your ground truth and rerun if needed.</p>
+<p>Use this view to scan for <strong>mismatches</strong>, <strong>missing mappings</strong>, or <strong>unexpected blanks</strong>. Adjust your ground truth and <strong>rerun</strong> if needed.</p>
 <p>
 
 
@@ -506,12 +508,12 @@ Gender,gender,Female,female</code>
   
 </p>
 <hr>
-<h2 id="edit-and-correct-mapped-values-">Edit and Correct Mapped Values ✏️ <a href="#edit-and-correct-mapped-values-" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>If a mapped value looks incorrect:</p>
+<h2 id="edit-and-correct-mapped-values-">Edit and Correct Mapped Values ✏️ <a href="#edit-and-correct-mapped-values-" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>If a mapped value looks <strong>incorrect</strong>:</p>
 <ul>
 <li><strong>Hover the cell</strong> in the mapped target column within the <strong>DATA WRANGLER</strong> table.</li>
 <li>Choose one of the following:
 <ul>
-<li><strong>Inline edit</strong>: Click the current mapped value to edit directly, then press Enter to apply.<br>
+<li><strong>Inline edit</strong>: Click the current mapped value to edit directly, then press <strong>Enter</strong> to apply.<br>
 
 
 
@@ -528,7 +530,7 @@ Gender,gender,Female,female</code>
     
   
 </li>
-<li><strong>Edit via popover</strong>: Click the edit icon on the right side of the cell to open a popover listing all available target schema values as selectable chips. Click a chip to apply it.
+<li><strong>Edit via popover</strong>: Click the <strong>edit icon</strong> on the right side of the cell to open a popover listing all available <strong>target schema values</strong> as selectable chips. <strong>Click a chip</strong> to apply it.
 
 
 
@@ -548,15 +550,44 @@ Gender,gender,Female,female</code>
 </ul>
 </li>
 </ul>
-<p><strong>Note:</strong> When you change the mapped value for a specific <code>source_value</code>, the update is applied to all rows in this source attribute that share the same <code>source_value</code>.</p>
+<p><strong>Note:</strong> When you change the mapped value for a specific <code>source_value</code>, the update is applied to <strong>all rows</strong> in this source attribute that share the same <code>source_value</code>.</p>
+<h2 id="use-the-harmonization-assistant-for-value-mapping-suggestions">Use the Harmonization Assistant for Value Mapping Suggestions <a href="#use-the-harmonization-assistant-for-value-mapping-suggestions" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>Use the <strong>Harmonization Assistant</strong> to quickly <strong>suggest</strong> or <strong>apply</strong> value mappings for both <strong>categorical</strong> and <strong>numerical</strong> columns.</p>
+<ul>
+<li><strong>Select a heatmap node</strong>, then <strong>right-click</strong> to open the <strong>Harmonization Assistant</strong> panel.</li>
+<li><strong>Ask the agent</strong> with a clear prompt:
+<ul>
+<li>Example (categorical): &ldquo;Map source values in <code>Race</code> to GDC <code>race</code> values.&rdquo;</li>
+<li>Example (numerical): &ldquo;Suggest bins for <code>BMI</code> aligned to GDC categories.&rdquo;</li>
+</ul>
+</li>
+<li><strong>Review and apply</strong> the suggested mappings to update the <strong>target column</strong>.</li>
+</ul>
+<p>To reset the conversation, click the <strong>second</strong> button in the panel&rsquo;s <strong>top-right</strong> to <strong>clear the chat history</strong>.</p>
+<p>See the full assistant guide: /bdi-viz-manual/docs/manual/llm-agent/.</p>
+<p>
+
+
+
+
+
+  
+
+
+
+  
+    
+      <img src="/bdi-viz-manual/images/harmonization-assistant-value.gif" alt="harmonization-assistant-value" width="1371" height="704" loading="lazy">
+    
+  
+</p>
 <hr>
-<h2 id="export-mapping-results-">Export Mapping Results 📤 <a href="#export-mapping-results-" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>After applying all changes, export your finalized value mappings:</p>
+<h2 id="export-mapping-results-">Export Mapping Results 📤 <a href="#export-mapping-results-" class="anchor" aria-hidden="true"><i class="material-icons align-middle">link</i></a></h2><p>After applying all changes, <strong>export</strong> your finalized value mappings:</p>
 <ul>
 <li>Open the <strong>Shortcut Panel</strong> (top-left).</li>
 <li>Click <strong>Export Matching Results</strong>.</li>
-<li>In the format options, select <strong>CSV 4-column</strong> to generate a ground truth-like file.</li>
+<li>In the format options, select <strong>CSV 4-column</strong> to generate a <strong>ground truth-like</strong> file.</li>
 </ul>
-<p>The exported CSV contains four columns:</p>
+<p>The exported CSV contains <strong>four columns</strong>:</p>
 <ul>
 <li><code>source_attribute</code></li>
 <li><code>target_attribute</code></li>
@@ -913,8 +944,8 @@ Gender,gender,Female,female</code>
                 id:  4 ,
                 href: "\/bdi-viz-manual\/docs\/get-started\/verify-value-mappings\/",
                 title: "Verify Value Matching",
-                description: "Verify the curated source attrbute value to target attribute value mappings",
-                content: "Installation 🛠️ linkFor system-specific installation instructions:\nAMD64 architecture: Follow the Linux/Unix installation guide ARM64 architecture (Apple Silicon): Follow the MacOS installation guide Overview ✅ linkThis guide walks you through verifying value mappings after schema alignment. You will enable Developer Mode, upload a ground truth CSV for value mapping verification, and use the heatmap and Data Wrangler to confirm results.\nStart a New Session 🗂️ link On the far left of the top navbar, enter a name in the New session text input to create a new session. The new session inherits data from the default session, so you can proceed without re-uploading. Toggle Developer Mode 🧰 link How to open: Click the arrow icon on the top-left corner to open the side panel, then toggle Developer Mode. What it enables: Upload pre-annotated ground truth for schema matching (attribute pairs) Upload pre-annotated ground truth for value mappings (value-to-value) Upload custom matchers (not covered here) Developer Mode surfaces additional upload slots and debugging panels designed for power users and evaluators.\nPrepare Data and Start the Task 📦 linkFor verifying value mappings, prepare the following:\nSource table (required): your raw dataset CSV, e.g., Cao.csv. Target table (not needed): leave empty to use the built-in GDC schema as target. Ground truth CSV (required for verification): a file with exactly four columns: source_attribute target_attribute source_value target_value Example (subset):\nsource_attribute,target_attribute,source_value,target_value FIGO_stage,figo_stage,IA,Stage IA FIGO_stage,figo_stage,IIIC1,Stage IIIC1 Ethnicity,ethnicity,Hispanic or Latino,hispanic or latino Race,race,White,white Gender,gender,Female,female After files are ready, click the blue Start Value Matching button at the bottom-right to launch the verification task.\nReview Schema Matches on the Heatmap 🔥 link The heatmap displays candidate matches between source (y-axis) and GDC target attributes (x-axis). Ground-truth schema pairs included in your CSV should appear as heatmap cells. Hover a cell to preview details; click to expand the embedded node with distributions and comparisons. Use the control panel filters to narrow candidates by similarity, attribute, or status. Need a refresher on filters and controls? See /bdi-viz-manual/docs/manual/explore-matches/.\nVerify in the Data Wrangler 📊 linkWhen you click a heatmap node:\nThe lower DATA WRANGLER view focuses on the selected source attribute (highlighted with a blue background). The matched target attribute appears appended to the right of the source attribute. If a value mapping is provided in your ground truth, the target column shows the mapped target values applied to each source value. If no value mapping is provided for a source value, the corresponding cell in the target column will be empty. Use this view to scan for mismatches, missing mappings, or unexpected blanks. Adjust your ground truth and rerun if needed.\nEdit and Correct Mapped Values ✏️ linkIf a mapped value looks incorrect:\nHover the cell in the mapped target column within the DATA WRANGLER table. Choose one of the following: Inline edit: Click the current mapped value to edit directly, then press Enter to apply.\nEdit via popover: Click the edit icon on the right side of the cell to open a popover listing all available target schema values as selectable chips. Click a chip to apply it. Note: When you change the mapped value for a specific source_value, the update is applied to all rows in this source attribute that share the same source_value.\nExport Mapping Results 📤 linkAfter applying all changes, export your finalized value mappings:\nOpen the Shortcut Panel (top-left). Click Export Matching Results. In the format options, select CSV 4-column to generate a ground truth-like file. The exported CSV contains four columns:\nsource_attribute target_attribute source_value target_value "
+                description: "Verify curated mappings from source attribute values to target attribute values",
+                content: "Installation 🛠️ linkFor system-specific installation instructions (pick ONE for your CPU architecture):\nAMD64: follow the Linux/Unix installation guide ARM64 (Apple Silicon): follow the macOS installation guide Overview ✅ linkThis guide walks you through verifying value mappings after schema alignment. You will enable Developer Mode, upload a ground truth CSV for value mapping verification, and use the heatmap and Data Wrangler to confirm results.\nStart a New Session 🗂️ link On the far left of the top navbar, enter a name in the New session field to create a new session. The new session inherits data from the default session, so you can proceed without re-uploading. Toggle Developer Mode 🧰 link How to open: Click the arrow icon on the top-left corner to open the side panel, then toggle Developer Mode. What it enables: Upload pre-annotated ground truth for schema matching (attribute pairs) Upload pre-annotated ground truth for value mappings (value-to-value) Upload custom matchers (not covered here) Developer Mode surfaces additional upload slots and debugging panels designed for power users and evaluators.\nPrepare Data and Start the Task 📦 linkFor verifying value mappings, prepare the following:\nSource table (required): your raw dataset CSV, e.g., Cao.csv. Target table (not needed): leave empty to use the built-in GDC schema as target. Ground truth CSV (required for verification): a file with exactly four columns: source_attribute target_attribute source_value target_value Example (subset):\nsource_attribute,target_attribute,source_value,target_value FIGO_stage,figo_stage,IA,Stage IA FIGO_stage,figo_stage,IIIC1,Stage IIIC1 Ethnicity,ethnicity,Hispanic or Latino,hispanic or latino Race,race,White,white Gender,gender,Female,female After files are ready, click the blue Start Value Matching button at the bottom-right to launch the verification task.\nReview Schema Matches on the Heatmap 🔥 link The heatmap displays candidate matches between source (y-axis) and GDC target attributes (x-axis). Ground-truth schema pairs included in your CSV should appear as heatmap cells. Hover a cell to preview details; click to expand the embedded node with distributions and comparisons. Use the control panel filters to narrow candidates by similarity, attribute, or status. Need a refresher on filters and controls? See explore-matches.\nVerify in the Data Wrangler 📊 linkWhen you click a heatmap node:\nThe lower DATA WRANGLER view focuses on the selected source attribute (highlighted with a blue background). The matched target attribute appears appended to the right of the source attribute. If a value mapping is provided in your ground truth, the target column shows the mapped target values applied to each source value. If no value mapping is provided for a source value, the corresponding cell in the target column will be empty. Use this view to scan for mismatches, missing mappings, or unexpected blanks. Adjust your ground truth and rerun if needed.\nEdit and Correct Mapped Values ✏️ linkIf a mapped value looks incorrect:\nHover the cell in the mapped target column within the DATA WRANGLER table. Choose one of the following: Inline edit: Click the current mapped value to edit directly, then press Enter to apply.\nEdit via popover: Click the edit icon on the right side of the cell to open a popover listing all available target schema values as selectable chips. Click a chip to apply it. Note: When you change the mapped value for a specific source_value, the update is applied to all rows in this source attribute that share the same source_value.\nUse the Harmonization Assistant for Value Mapping Suggestions linkUse the Harmonization Assistant to quickly suggest or apply value mappings for both categorical and numerical columns.\nSelect a heatmap node, then right-click to open the Harmonization Assistant panel. Ask the agent with a clear prompt: Example (categorical): “Map source values in Race to GDC race values.” Example (numerical): “Suggest bins for BMI aligned to GDC categories.” Review and apply the suggested mappings to update the target column. To reset the conversation, click the second button in the panel’s top-right to clear the chat history.\nSee the full assistant guide: /bdi-viz-manual/docs/manual/llm-agent/.\nExport Mapping Results 📤 linkAfter applying all changes, export your finalized value mappings:\nOpen the Shortcut Panel (top-left). Click Export Matching Results. In the format options, select CSV 4-column to generate a ground truth-like file. The exported CSV contains four columns:\nsource_attribute target_attribute source_value target_value "
             }
         );
     index.add(
