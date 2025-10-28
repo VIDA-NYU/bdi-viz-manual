@@ -17,7 +17,7 @@ For system-specific installation instructions (**pick ONE** for your **CPU archi
 
 ## Overview ✅
 
-This guide walks you through verifying value mappings after schema alignment. You will **enable Developer Mode**, **upload a ground truth CSV** for value mapping verification, and use the **heatmap** and **Data Wrangler** to confirm results.
+This guide walks you through verifying value mappings after schema alignment. You will **start a new session, enable Developer Mode**, **upload a ground truth CSV** for value mapping verification, and use the **heatmap** and **Data Wrangler** to confirm results.
 
 ---
 
@@ -45,9 +45,9 @@ Developer Mode surfaces additional upload slots and debugging panels designed fo
 
 ---
 
-## Prepare Data and Start the Task 📦
+## Upload Your Data 📦
 
-For verifying value mappings, prepare the following:
+For verifying value mappings, you need to load the following files:
 
 - **Source table (required)**: your raw dataset CSV, e.g., `Cao.csv`.
 - **Target table (not needed)**: leave empty to use the built-in **GDC** schema as target.
